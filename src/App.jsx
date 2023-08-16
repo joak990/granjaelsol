@@ -22,7 +22,8 @@ function App() {
                         </div>
                         <div className='w-1/2 mt-9 text-2xl'>
                             <p className='bg-slate-200 rounded-full' id='quienes-somos'>
-                                somos una empresa dedicada a la carniceria y abonando la deuda de patrick de 4000 usd que el tiene
+                                Somos un negocio dedicado a brindar la mejor atencion a nuestros clienes. En Granja el sol, 
+                                nos enorgullecemos de ofrecer los cortes de la mas alta calidad y al mejor precio.
                             </p>
                             
                         </div>
