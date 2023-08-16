@@ -9,7 +9,7 @@ function Navbar() {
     const scrollToQuienesSomos = () => {
         if (quienesSomosRef.current) {
 
-            // quienesSomosRef.current.scrollIntoView({ behavior: 'smooth' });
+            quienesSomosRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
    
