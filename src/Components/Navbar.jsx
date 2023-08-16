@@ -2,8 +2,17 @@
 
 
 
+import { useRef } from 'react'; // Importa useRef desde 'react'
 
 function Navbar() {
+    const quienesSomosRef = useRef(null); // Crea una referencia al elemento de "Quienes Somos"
+
+    const scrollToQuienesSomos = () => {
+        if (quienesSomosRef.current) {
+            quienesSomosRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+   
     return (
         <nav className="bg-white py-4 px-8">
             <div className="flex items-center justify-between">
@@ -16,13 +25,13 @@ function Navbar() {
                         <a href="#home" className="text-black hover:text-gray-300">Inicio</a>
                     </li>
                     <li>
-                        <a href="#quienes-somos" className="text-black hover:text-gray-300">Quienes Somos</a>
+                        <a href="#quienes-somos" className="text-black hover:text-gray-300" onClick={scrollToQuienesSomos}>Quienes Somos</a>
                     </li>
                     <li>
                         <a href="#productos" className="text-black hover:text-gray-300">Productos</a>
                     </li>
                     <li>
-                        <a href="#contactanos" className="text-black hover:text-gray-300">Contáctanos</a>
+                        <a href="#quienes-somos"className="text-black hover:text-gray-300">Contáctanos</a>
                     </li>
                 </ul>
             </div>
