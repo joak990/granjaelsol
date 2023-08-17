@@ -1,33 +1,33 @@
 
 import product1 from "../img/fotoo1.jpg"
-import product2 from "../img/foto2.jpg"
-import product3 from "../img/foto3.jpg"
-import product4 from "../img/foto4.jpg"
+// import product2 from "../img/foto2.jpg"
+// import product3 from "../img/foto3.jpg"
+// import product4 from "../img/foto4.jpg"
 
 const productos = [
     {
         id: 1,
         image: `${product1}`,
         name: "pollo",
-        desciption: "el mejor pollo",
+        description: "$200",
     },
     {
         id: 2,
-        image: `${product2}`,
+        image: `${product1}`,
         name: "carne",
-        desciption: "la mejor carne",
+        description: "$2300",
     },
     {
         id: 3,
-        image: `${product3}`,
+        image: `${product1}`,
         name: "pollo",
-        desciption: "el mejor pollo entero",
+        description: "$2200",
     },
     {
         id: 4,
-        image: `${product4}`,
+        image: `${product1}`,
         name: "pollo",
-        desciption: "la mejor carne x2",
+        description: "$2100",
     },
 
 ]
@@ -35,31 +35,24 @@ const productos = [
 
 const Products = () => {
     return (
-        <div>
-            {/* <img src = {productos[0].image} alt="product"></img> */}
-            {
-                productos && productos.map((elem,index) => {
-                    return (<>
-                        <div key={index} className="bg-white flex flex-col items-center justify-center rounded-3xl w-80  p-8 shadow-md">
-                            <img
-                                className="mt-1 object-cover h-64 w-64 rounded-full"
-                                src={elem.image}
-                                alt="producto"
-                            />
-                            <div className="flex flex-col items-center justify-end mb-1 mt-3">
-                                <div className="flex flex-col gap-3 items-center justify-start w-full">
-                                    <h6 className="text-gray-900 text-2xl font-semibold text-center">{elem.name}</h6>
-                                    <span className="text-center text-gray-800 w-full font-normal text-sm">
-                                        {elem.desciption}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </>)
-                })
-            }
+        <div className="flex flex-wrap justify-center gap-4 md:gap-7">
+            {productos && productos.map((elem, index) => (
+                <div key={index} className="bg-white flex flex-col items-center justify-center w-full md:w-64 h-60 p-4 md:p-8 shadow-md">
+                    <img
+                        className="mt-1 object-cover h-32 w-32 md:h-44 md:w-44 rounded-2xl"
+                        src={elem.image}
+                        alt="producto"
+                    />
+                    <div className="flex flex-col gap-2 items-center justify-start w-full">
+                        <h6 className="text-gray-900 text-lg md:text-2xl font-semibold text-center">{elem.name}</h6>
+                        <span className="text-center text-gray-800 w-full font-semibold text-base md:text-lg">
+                            {elem.description}
+                        </span>
+                    </div>
+                </div>
+            ))}
         </div>
-    )
+    );
 }
 
 export default Products;
