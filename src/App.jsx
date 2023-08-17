@@ -1,4 +1,5 @@
 import Navbar from './Components/Navbar';
+import Products from './Components/Products';
 import './App.css';
 
 function App() {
@@ -27,6 +28,12 @@ function App() {
                             </p>
                             
                         </div>
+                    </div>
+                </div>
+                <div className='bg-white px-8 py-16'>
+                    <h1 className='text-3xl  font-extralight mb-4 font-serif' >Nustros Productos</h1>
+                    <div>
+                        <Products />
                     </div>
                 </div>
             </div>
