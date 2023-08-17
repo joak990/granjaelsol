@@ -24,7 +24,7 @@ function Navbar() {
                     <span className="text-black font-extralight">Granja el Sol</span>
                 </div>
                 <div className="md:hidden"> {/* Mostrar solo en dispositivos móviles */}
-                    <button className="text-gray-600 hover:text-black focus:outline-none" onClick={toggleMenu}>
+                    <button className="text-gray-600 hover:text-red-600 focus:outline-none" onClick={toggleMenu}>
                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             {menuOpen ? (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -36,24 +36,24 @@ function Navbar() {
                 </div>
                 <ul className={`md:flex ${menuOpen ? 'flex' : 'hidden'} md:space-x-6 mt-4 md:mt-0`}>
                     <li>
-                        <a href="#home" className="text-black hover:text-gray-300">Inicio</a>
+                        <a href="#home" className="text-black hover:text-red-600">Inicio</a>
                     </li>
                     <li>
-                        <a href="#quienes-somos" className="text-black hover:text-gray-300" onClick={scrollToQuienesSomos}>Quienes Somos</a>
+                        <a href="#quienes-somos" className="text-black hover:text-red-600" onClick={scrollToQuienesSomos}>Quienes Somos</a>
                     </li>
                     <li>
-                        <a href="#productos" className="text-black hover:text-gray-300">Productos</a>
+                        <a href="#productos" className="text-black hover:text-red-600">Productos</a>
                     </li>
                     <li>
-                        <a href="#quienes-somos" className="text-black hover:text-gray-300">Contáctanos</a>
+                        <a href="#quienes-somos" className="text-black hover:text-red-600">Contáctanos</a>
                     </li>
                 </ul>
                 <div className="flex space-x-4 hidden md:block"> {/* Contenedor de los iconos */}
                     <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
-                        <BsFacebook />
+                        <BsFacebook className='hover:text-red-600' />
                     </a>
                     <a href="https://www.instagram.com/granja_el_sol1/" target="_blank" rel="noopener noreferrer">
-                        <BsInstagram />
+                        <BsInstagram className='hover:text-red-600' />
                     </a>
                 </div>
             </div>

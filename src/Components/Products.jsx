@@ -29,6 +29,31 @@ const productos = [
         name: "pollo",
         description: "$2100",
     },
+    {
+        id: 1,
+        image: `${product1}`,
+        name: "pollo",
+        description: "$200",
+    },
+    {
+        id: 2,
+        image: `${product1}`,
+        name: "carne",
+        description: "$2300",
+    },
+    {
+        id: 3,
+        image: `${product1}`,
+        name: "pollo",
+        description: "$2200",
+    },
+    {
+        id: 4,
+        image: `${product1}`,
+        name: "pollo",
+        description: "$2100",
+    },
+  
 
 ]
 
