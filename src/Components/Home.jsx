@@ -1,23 +1,13 @@
-
-
 import Products from './Products';
 import { Link } from 'react-router-dom';
 
-
-// const slides = [
-//     "https://i.ibb.co/ncrXc2V/1.png",
-//     "https://i.ibb.co/ncrXc2V/1.png",
-//     "https://i.ibb.co/ncrXc2V/1.png",
-//     "https://i.ibb.co/ncrXc2V/1.png"
-// ]
 function Home() {
-
     return (
         <>
             <div className='bg-white'>
                 <div className="flex justify-end mt-8 ">
                     <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer">
-                        <img src="./wplogo.png" alt="WhatsApp" className=" h-12  md:h-16 md:w-16 fixed bottom-4 right-10" />
+                        <img src="./wplogo.png" alt="WhatsApp" className="h-12  md:h-16 md:w-16 fixed bottom-4 right-10" />
                     </a>
                 </div>
                 <div className='bg-white'>
@@ -67,7 +57,6 @@ function Home() {
                     <div className='mt-24'>
                         <Products />
                     </div>
-
                     <div className='mt-10 flex justify-center'>
                         <Link to="/ofertas">
                             <button
@@ -79,13 +68,33 @@ function Home() {
                         </Link>
                     </div>
                     <div className='mt-24'>
-                        <h1 className='text-center text-3xl md:text-4xl font-extralight mb-4 font-serif'>Contactanos</h1>
+                        <h1 className='text-center text-3xl md:text-5xl font-extralight mb-4 font-serif'>Contactanos</h1>
                     </div>
-
+                    <div className='flex flex-col md:flex-row justify-center items-center'>
+                        <div className='md:w-1/2 pr-0 md:pr-4 md:ml-60'>
+                            <img className='h-72 w-72 rounded-full object-cover' src="./foto2.jpg" alt="Contacto" />
+                        </div>
+                        <div className='w-full md:w-1/2 mt-6 md:mt-0  md:mr-44 text-xl md:text-3xl'>
+                            <div className='bg-gradient-to-r from-red-900 to-red-400 shadow-xl rounded-lg p-6 md:p-8' id='contact-info'>
+                                <p className='text-white mb-4'>
+                                    ¡Estamos aquí para ayudarte!
+                                </p>
+                                <p className='text-white mb-4'>
+                                    Visítanos en: <span className='font-bold'>Calle Colorida, 123</span>
+                                </p>
+                                <p className='text-white mb-4'>
+                                    Llámanos: <span className='font-bold'>(+123) 456-7890</span>
+                                </p>
+                                <p className='text-white'>
+                                    Escríbenos: <span className='font-bold'>info@tunegocio.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
     );
 }
 
-export default Home
+export default Home;
