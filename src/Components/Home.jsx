@@ -1,23 +1,25 @@
 import Products from './Products';
 import { Link } from 'react-router-dom';
-
+import logo from "../img/logo.jpg"
+import wplogo from "../img/wplogo.png"
+import foto1 from "../img/foto1.jpg"
 function Home() {
     return (
         <>
             <div className='bg-white'>
                 <div className="flex justify-end mt-8 ">
                     <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer">
-                        <img src="./wplogo.png" alt="WhatsApp" className="h-12  md:h-16 md:w-16 fixed bottom-4 right-10" />
+                        <img src={wplogo} alt="WhatsApp" className="h-12  md:h-16 md:w-16 fixed bottom-4 right-10" />
                     </a>
                 </div>
                 <div className='bg-white'>
-                    <img className='h-96 w-full object-cover' src="./foto1.jpg" alt="Foto de portada" />
+                    <img className='h-96 w-full object-cover' src={foto1} alt="Foto de portada" />
                 </div>
                 <div className='bg-white px-4 md:px-8 py-16'>
                     <h1 className='text-center text-3xl md:text-4xl font-extralight mb-4 font-serif'>¿Quiénes Somos?</h1>
                     <div className='flex flex-col md:flex-row md:mt-24 justify-center items-center'>
                         <div className='w-full md:w-1/2 pr-0 md:pr-4 md:ml-60'>
-                            <img className='h-72 w-72 rounded-full object-cover' src="./logo.jpg" alt="Quienes Somos" />
+                            <img className='h-72 w-72 rounded-full object-cover' src={logo} alt="Quienes Somos" />
                         </div>
                         <div className='w-full md:w-1/2 mt-6 md:mt-0  md:mr-44 text-xl md:text-3xl'>
                             <div className='bg-slate-100 shadow-xl  rounded-lg p-6 md:p-8' id='quienes-somos'>

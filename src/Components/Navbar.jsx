@@ -1,4 +1,4 @@
-
+import logo from "../img/logo.jpg"
 import { useRef, useState } from 'react';
 
 function Navbar() {
@@ -20,7 +20,7 @@ function Navbar() {
         <nav className="bg-white py-4 px-8">
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                    <img src="./logo.jpg" alt="Logo" className="h-10 w-10 mr-2 rounded-full" />
+                    <img src={logo} alt="Logo" className="h-10 w-10 mr-2 rounded-full" />
                     <span className="text-black font-extralight">Granja el Sol</span>
                 </div>
                 <div className="md:hidden"> {/* Mostrar solo en dispositivos móviles */}
