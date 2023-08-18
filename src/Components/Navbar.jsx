@@ -1,4 +1,4 @@
-import { BsFacebook, BsInstagram } from 'react-icons/Bs';
+
 import { useRef, useState } from 'react';
 
 function Navbar() {
@@ -50,10 +50,10 @@ function Navbar() {
                 </ul>
                 <div className="flex space-x-4 hidden md:block"> {/* Contenedor de los iconos */}
                     <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
-                        <BsFacebook className='hover:text-red-600' />
+                    
                     </a>
                     <a href="https://www.instagram.com/granja_el_sol1/" target="_blank" rel="noopener noreferrer">
-                        <BsInstagram className='hover:text-red-600' />
+                      
                     </a>
                 </div>
             </div>
