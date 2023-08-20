@@ -1,27 +1,20 @@
 import logo from "../img/logo.jpg"
-import { useRef, useState } from 'react';
+import { useState } from 'react';
+import { Link } from "react-scroll"
 
 function Navbar() {
-    const quienesSomosRef = useRef(null);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const scrollToQuienesSomos = () => {
-        if (quienesSomosRef.current) {
-            quienesSomosRef.current.scrollIntoView({ behavior: 'smooth' });
-            toggleMenu(); // Cerrar el menú después de hacer clic en un enlace
-        }
-    };
-
     return (
-        <nav className="bg-white py-4 px-8">
+        <nav className={`bg-white py-4 px-8 fixed top-0 left-0 w-full z-50 ${menuOpen ? 'shadow-md' : 'md:shadow-none'}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
                     <img src={logo} alt="Logo" className="h-10 w-10 mr-2 rounded-full" />
-                    <span className="text-black font-extralight">Granja el Sol</span>
+                    <span className="text-black font-semibold">Granja el Sol</span>
                 </div>
                 <div className="md:hidden"> {/* Mostrar solo en dispositivos móviles */}
                     <button className="text-gray-600 hover:text-red-600 focus:outline-none" onClick={toggleMenu}>
@@ -36,24 +29,24 @@ function Navbar() {
                 </div>
                 <ul className={`md:flex ${menuOpen ? 'flex' : 'hidden'} md:space-x-6 mt-4 md:mt-0`}>
                     <li>
-                        <a href="#home" className="text-black hover:text-red-600">Inicio</a>
+                        <Link to="carrousel" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600">Inicio</Link>
                     </li>
                     <li>
-                        <a href="#quienes-somos" className="text-black hover:text-red-600" onClick={scrollToQuienesSomos}>Quienes Somos</a>
+                        <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600" >Quienes Somos</Link>
                     </li>
                     <li>
-                        <a href="#productos" className="text-black hover:text-red-600">Productos</a>
+                        <Link to="productos" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600">Productos</Link>
                     </li>
                     <li>
-                        <a href="#quienes-somos" className="text-black hover:text-red-600">Contáctanos</a>
+                        <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
                 <div className="flex space-x-4 hidden md:block"> {/* Contenedor de los iconos */}
                     <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
-                    
+
                     </a>
                     <a href="https://www.instagram.com/granja_el_sol1/" target="_blank" rel="noopener noreferrer">
-                      
+
                     </a>
                 </div>
             </div>
