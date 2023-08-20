@@ -2,7 +2,7 @@
 function Footer() {
     return (
         <footer className="bg-gray-800 text-white text-center py-0.5">
-            <p>Todos los derechos pertenecen a Pauin &copy; 2023</p>
+            <p>Diseño Web &copy; Pauin 2023</p>
         </footer>
     )
 }

@@ -27,18 +27,18 @@ function Navbar() {
                         </svg>
                     </button>
                 </div>
-                <ul className={`md:flex ${menuOpen ? 'flex' : 'hidden'} md:space-x-6 mt-4 md:mt-0`}>
+                <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'} md:space-x-6 mt-4  md:mt-0`}>
                     <li>
-                        <Link to="carrousel" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600">Inicio</Link>
+                        <Link to="carrousel" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Inicio</Link>
                     </li>
                     <li>
-                        <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600" >Quienes Somos</Link>
+                        <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="text-black  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
                     </li>
                     <li>
-                        <Link to="productos" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600">Productos</Link>
+                        <Link to="productos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
                     </li>
                     <li>
-                        <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black hover:text-red-600">Contáctanos</Link>
+                        <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
                 <div className="flex space-x-4 hidden md:block"> {/* Contenedor de los iconos */}
