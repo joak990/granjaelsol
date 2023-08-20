@@ -1,8 +1,9 @@
 import logo from "../img/logo.jpg"
 import { useState } from 'react';
 import { Link } from "react-scroll"
-// import { BsInstagram } from 'react-icons/Bs';
-//import {} from 'react-icons/Ai'
+import insta from "../img/insta.png"
+import facebook from "../img/facebook.png"
+
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,9 +43,19 @@ function Navbar() {
                         <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
-                <div>  
+               
+                <div> 
+                <div className="flex">
+                    <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
+                        <img  className=" h-5 mb-1  mr-3 md:h-7" src={insta} alt="" />
+                    </a>
+                    <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
+                        <img  className=" h-5 mb-1  mr-3 md:h-7 text-gray" src={facebook} alt="" />
+                    </a>
+                </div> 
             </div>
         </div>
+        
     </nav>
     );
 }

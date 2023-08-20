@@ -1,5 +1,6 @@
 // import { FaInstagram, FaFacebook } from "react-icons/Fa";
-
+import insta from "../img/insta.png"
+import facebook from "../img/facebook.png"
 function Contactos() {
     return (
         <div className='bg-red-700 p-4 md:p-8' id="contactos">
@@ -22,14 +23,14 @@ function Contactos() {
                         <p className='mb-4'>
                             Escríbenos: <span className='font-bold text-white'>armando@granjaelsol.com</span>
                         </p>
-                        {/* <div className="flex gap-4">
-                            <a href="https://www.instagram.com/granja_el_sol1/" target="_blank" rel="noopener noreferrer" className="hover:bg-red-500 hover:text-red-700 rounded-full p-2">
-                                <FaInstagram className="text-white" />
-                            </a>
-                            <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" className="hover:bg-red-500 hover:text-red-700 rounded-full p-2">
-                                <FaFacebook className="text-white" />
-                            </a>
-                        </div> */}
+                        <div className="flex">
+                    <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
+                        <img  className=" h-4 mb-1  mr-3 md:h-7" src={insta} alt="" />
+                    </a>
+                    <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
+                        <img  className=" h-4 mb-1  mr-3 md:h-7" src={facebook} alt="" />
+                    </a>
+                </div> 
                     </div>
                 </div>
             </div>
