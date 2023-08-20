@@ -26,7 +26,7 @@ function Contactos() {
                             <a href="https://www.instagram.com/granja_el_sol1/" target="_blank" rel="noopener noreferrer" className="hover:bg-red-500 hover:text-red-700 rounded-full p-2">
                                 <FaInstagram className="text-white" />
                             </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:bg-red-500 hover:text-red-700 rounded-full p-2">
+                            <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" className="hover:bg-red-500 hover:text-red-700 rounded-full p-2">
                                 <FaFacebook className="text-white" />
                             </a>
                         </div> */}
