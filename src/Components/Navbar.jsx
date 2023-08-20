@@ -2,7 +2,6 @@ import logo from "../img/logo.jpg"
 import { useState } from 'react';
 import { Link } from "react-scroll"
 import { BsInstagram } from 'react-icons/Bs';
-import { BsFacebook } from 'react-icons/Bs';
 //import {} from 'react-icons/Ai'
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -48,9 +47,7 @@ function Navbar() {
                     <a className="text-2xl" href="https://www.instagram.com/tu_usuario_de_instagram" target="_blank" rel="noopener noreferrer">
                         <BsInstagram/>
                     </a>
-                    <a className="text-2xl" href="https://www.instagram.com/tu_usuario_de_instagram" target="_blank" rel="noopener noreferrer">
-                        <BsFacebook/>
-                    </a>
+                  
                 </div>
             </div>
         </div>
