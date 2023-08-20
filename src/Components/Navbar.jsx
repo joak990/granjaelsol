@@ -42,13 +42,7 @@ function Navbar() {
                         <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
-                <div>
-                    <div className="flex">
-                    <a className="text-2xl" href="https://www.instagram.com/tu_usuario_de_instagram" target="_blank" rel="noopener noreferrer">
-                        <BsInstagram/>
-                    </a>
-                  
-                </div>
+                <div>  
             </div>
         </div>
     </nav>
