@@ -1,7 +1,9 @@
 import logo from "../img/logo.jpg"
 import { useState } from 'react';
 import { Link } from "react-scroll"
-
+import { BsInstagram } from 'react-icons/Bs';
+import { BsFacebook } from 'react-icons/Bs';
+//import {} from 'react-icons/Ai'
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -41,16 +43,18 @@ function Navbar() {
                         <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
-                <div className="flex space-x-4 hidden md:block"> {/* Contenedor de los iconos */}
-                    <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
-
+                <div>
+                    <div className="flex">
+                    <a className="text-2xl" href="https://www.instagram.com/tu_usuario_de_instagram" target="_blank" rel="noopener noreferrer">
+                        <BsInstagram/>
                     </a>
-                    <a href="https://www.instagram.com/granja_el_sol1/" target="_blank" rel="noopener noreferrer">
-
+                    <a className="text-2xl" href="https://www.instagram.com/tu_usuario_de_instagram" target="_blank" rel="noopener noreferrer">
+                        <BsFacebook/>
                     </a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
     );
 }
 
