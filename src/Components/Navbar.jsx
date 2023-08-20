@@ -1,7 +1,7 @@
 import logo from "../img/logo.jpg"
 import { useState } from 'react';
 import { Link } from "react-scroll"
-import { BsInstagram } from 'react-icons/Bs';
+// import { BsInstagram } from 'react-icons/Bs';
 //import {} from 'react-icons/Ai'
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
