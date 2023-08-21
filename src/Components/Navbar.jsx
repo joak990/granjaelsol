@@ -49,7 +49,7 @@ function Navbar() {
                     <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
                         <img  className=" h-5 mb-1  mr-3 md:h-7" src={insta} alt="" />
                     </a>
-                    <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
                         <img  className=" h-5 mb-1  mr-3 md:h-7 text-gray" src={facebook} alt="" />
                     </a>
                 </div> 

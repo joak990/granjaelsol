@@ -8,6 +8,7 @@ import Productos from './Components/Productos'
 import Footer from './Components/Footer'
 import Contactos from './Components/Contactos'
 import wplogo from "./img/wplogo.png"
+import Ofertas from './Components/Ofertas';
 
 const App = () => {
     return (
@@ -20,6 +21,10 @@ const App = () => {
             <Navbar />
             <Carrousel />
             <About />
+            <div className="mt-12 md:mt-44 flex justify-center text-3xl md:text-5xl">
+                    <h1>Nuestras Ofertas</h1>
+                </div>
+            <Ofertas />
             <Productos />
             <Contactos />
             <Footer />

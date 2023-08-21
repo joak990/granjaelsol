@@ -284,16 +284,7 @@ function Productos() {
           {showMore4 ? "Ver Menos" : "Ver Más"}
         </button>
       </div>
-      <div className="md:mt-60 mt-32">
-      <h1 className="text-center text-4xl mt-20 md:text-5xl font-extralight mb-4 md:mt-28 font-serif">
-        {" "}
-        Nuevas Ofertas
-      </h1>
-      </div>
-      <div className="mt-32">
-      <Ofertas />
-      </div>
-    
+      
     </div>
   );
 }

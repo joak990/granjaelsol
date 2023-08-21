@@ -50,15 +50,18 @@ function Carrousel() {
     }, [currentIndex]);
 
     return (
-        <div className="max-w-[2000px]  w-full m-auto py-8 md:py-16 px-4 relative group" id="carrousel">
-        <div
-            style={{
-                backgroundImage: `url(${slides[currentIndex].url})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-            className="w-full h-[360px] md:h-[500px] rounded-2xl duration-500"
-        ></div>
+        <div className="max-w-[1280px]  w-full m-auto py-8 md:py-16 px-4 relative group" id="carrousel">
+            <div className="w-full h-[360px] md:h-[500px] rounded-2xl overflow-hidden relative">
+                {slides.map((slide, slideIndex) => (
+                    <img
+                        key={slideIndex}
+                        src={slide.url}
+                        alt={`Slide ${slideIndex}`}
+                        className={`w-full h-full absolute top-0 left-0 transition-opacity duration-1000 opacity-0  ${slideIndex === currentIndex ? "opacity-100" : "opacity-0"
+                            }`}
+                    />
+                ))}
+            </div>
             {/* left arrow*/}
             <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 traslate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white  cursor-pointer">
                 <BsFillArrowLeftCircleFill onClick={prevSlide} size={30} />
