@@ -30,16 +30,16 @@ function Navbar() {
                     </button>
                 </div>
                 <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'} md:space-x-6 mt-4  md:mt-0`}>
-                    <li>
+                    <li data-aos="zoom-im" data-aos-duration="3000" >
                         <Link to="carrousel" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Inicio</Link>
                     </li>
-                    <li>
+                    <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="text-black  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
                     </li>
-                    <li >
+                    <li data-aos="zoom-im" data-aos-duration="3000" >
                         <Link to="productos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
                     </li>
-                    <li >
+                    <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
