@@ -12,7 +12,7 @@ function About() {
                 <div  className=' font-semibold rounded-lg p-6 md:p-8' id='quienes-somos'>
                     Somos un negocio dedicado a brindar la mejor atención a nuestros clientes. En Granja el sol, nos enorgullecemos de ofrecer los cortes de la más alta calidad y al mejor precio.
                 </div>
-                <div data-aos="zoom-in-left" data-aos-duration="1500"  className='mt-16 mr-8 justify-center flex md:mt-8 '>
+                <div data-aos="fade-right" data-aos-duration="1500"  className='mt-16 mr-8 justify-center flex md:mt-8 '>
                     <div  className='flex  md:ml-6 flex-col gap-2 items-start md:mt-24 '>
                         <p className='text-center text-xl  font-semibold md:text-3xl'>
                             <span>✅</span> Carne de calidad.
