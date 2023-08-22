@@ -51,140 +51,140 @@ const carne = [
     id: 1,
     image: `${asado}`,
     name: "Asado",
-    description: "$2300",
+    description: "$3519",
   },
   {
     id: 2,
     image: `${americano}`,
     name: "Americano",
-    description: "$2300",
+    description: "$2",
   },
   {
     id: 3,
     image: `${matambre}`,
     name: "Matambre",
-    description: "$2200",
+    description: "$2",
   },
   {
     id: 4,
     image: `${entraña}`,
     name: "Entraña",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 1,
     image: `${vacio}`,
     name: "Vacio",
-    description: "$200",
+    description: "$3990",
   },
   {
     id: 2,
     image: `${lomo}`,
     name: "Lomo",
-    description: "$2300",
+    description: "$2",
   },
   {
     id: 3,
     image: `${bifeangosto}`,
     name: "Bife angosto",
-    description: "$2200",
+    description: "$2",
   },
   {
     id: 4,
     image: `${bifeancho}`,
     name: "Bife ancho",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 5,
     image: `${palomita}`,
     name: "Palomita",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 6,
     image: `${roastbeff}`,
     name: "Roastbeff",
-    description: "$2100",
+    description: "$3565",
   },
   {
     id: 7,
     image: `${tapadeasado}`,
     name: "Tapa de asado",
-    description: "$2100",
+    description: "$3565",
   },
   {
     id: 8,
     image: `${tapadenalga}`,
     name: "Tapa de nalga",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 9,
     image: `${osobuco}`,
     name: "Osobuco",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 10,
     image: `${paleta}`,
     name: "Paleta",
-    description: "$2100",
+    description: "$3565",
   },
   {
     id: 11,
     image: `${peceto}`,
     name: "Peceto",
-    description: "$2100",
+    description: "$4539",
   },
   {
     id: 12,
     image: `${ojodebife}`,
     name: "Ojo de bife",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 13,
     image: `${picaña}`,
     name: "Picaña",
-    description: "$2100",
+    description: "$2",
   },
 
   {
     id: 14,
     image: `${colitacuadril}`,
     name: "Colita de cuadril",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$2100",
+    description: "$3989",
   },
   {
     id: 16,
     image: `${cuadril}`,
     name: "Cuadril",
-    description: "$2100",
+    description: "$3989",
   },
   {
     id: 17,
     image: `${faldaparrillera}`,
     name: "Falda parrillera",
-    description: "$2100",
+    description: "$2",
   },
   {
     id: 18,
     image: `${nalga}`,
     name: "Nalga",
-    description: "$2100",
+    description: "$4370",
   },
   {
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$2100",
+    description: "$",
   },
   {
     id: 20,
@@ -231,37 +231,37 @@ const cerdo = [
   {
     id: 1,
     image: `${bondiola}`,
-    name: "bondiola",
+    name: "Bondiola",
     description: "$200",
   },
   {
     id: 2,
     image: `${carre}`,
-    name: "carre",
+    name: "Carre",
     description: "$2300",
   },
   {
     id: 3,
     image: `${churrasquito}`,
-    name: "churrasquito",
+    name: "Churrasquito",
     description: "$2200",
   },
   {
     id: 4,
     image: `${lechon}`,
-    name: "lechon",
+    name: "Lechon",
     description: "$2100",
   },
   {
     id: 1,
     image: `${matambrito}`,
-    name: "matambrito",
+    name: "Matambrito",
     description: "$200",
   },
   {
     id: 2,
     image: `${pechito}`,
-    name: "pechito",
+    name: "Pechito",
     description: "$2300",
   },
 ];
@@ -276,31 +276,31 @@ const pollos = [
   {
     id: 2,
     image: `${mila}`,
-    name: "mila",
+    name: "Milanesa de pollo",
     description: "$2300",
   },
   {
     id: 3,
     image: `${patamuslo}`,
-    name: "patamuslo",
+    name: "Pata y muslo",
     description: "$2200",
   },
   {
     id: 4,
     image: `${pechuga}`,
-    name: "pechuga",
+    name: "Pechuga",
     description: "$2100",
   },
   {
     id: 1,
     image: `${pollo}`,
-    name: "pollo",
+    name: "Pollo",
     description: "$200",
   },
   {
     id: 2,
     image: `${suprema}`,
-    name: "carne",
+    name: "Suprema",
     description: "$2300",
   },
 ];
@@ -340,7 +340,7 @@ function Productos() {
       </h1>
       <div className="mt-24 md:mt-44">
         <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Carnes
+          Carne
         </div>
         <CardProducts products={productsToShow} />
       </div>
@@ -349,13 +349,13 @@ function Productos() {
           className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore}
         >
-          {showMore ? "Ver Menos" : "Ver Más"}
+          {showMore ? "Ver menos" : "Ver más"}
         </button>
       </div>
 
       <div className="mt-24">
         <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Cerdos
+          Cerdo
         </div>
         <CardProducts products={productsToShow3} />
       </div>
@@ -364,13 +364,13 @@ function Productos() {
           className="bg-red-600  rounded-lg w-44 items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore3}
         >
-          {showMore3 ? "Ver Menos" : "Ver Más"}
+          {showMore3 ? "Ver menos" : "Ver más"}
         </button>
       </div>
 
       <div className="mt-24">
         <div data-aos="zoom-in-left" data-aos-duration="1500"  className="text-2xl font-extralight flex justify-center mb-6">
-          Pollos
+          Pollo
         </div>
         <CardProducts products={productsToShow4} />
       </div>
@@ -379,7 +379,7 @@ function Productos() {
           className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore4}
         >
-          {showMore4 ? "Ver Menos" : "Ver Más"}
+          {showMore4 ? "Ver menos" : "Ver más"}
         </button>
       </div>
       

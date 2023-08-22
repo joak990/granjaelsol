@@ -1,6 +1,3 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Home from './Components/Home';
-import Menu from './Components/Menu';
 import Navbar from './Components/Navbar';
 import Carrousel from './Components/Carrousel'
 import About from './Components/About'
@@ -28,11 +25,6 @@ const App = () => {
             <Productos />
             <Contactos />
             <Footer />
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/Menu" element={<Menu />}></Route>
-                </Routes>
-            </BrowserRouter>
         </div>
     );
 }
