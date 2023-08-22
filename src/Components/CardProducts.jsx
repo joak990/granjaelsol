@@ -1,9 +1,14 @@
 
-const CardProducts = ({products}) => {
+
+const CardProducts = ({ products }) => {
     return (
-        <div className="flex flex-wrap justify-center gap-4 md:gap-7">
-            {products && products.map((elem, index) => (
-                <div key={index} className="bg-white flex flex-col items-center justify-center w-full md:w-64 h-60 p-4 md:p-8 shadow-md">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-7">
+        {products &&
+          products.map((elem, index) => (
+            <div
+              key={index}
+              className="bg-white flex flex-col items-center justify-center w-full md:w-64 h-60 p-4 md:p-8 shadow-md transition-transform transform-gpu hover:scale-125 hover:transition-transform duration-700"
+            >
                     <img
                         className="mt-1 object-cover h-32 w-32 md:h-44 md:w-44 rounded-2xl"
                         src={elem.image}
