@@ -334,13 +334,13 @@ function Productos() {
   const productsToShow4 = showMore4 ? pollos : limitedProducts4;
 
   return (
-    <div data-aos-duration="1500" data-aos="zoom-in-right" className=" md:mt-28 bg-white px-4 md:px-8 py-16 " id="productos">
+    <div data-aos="zoom-in-right"  data-aos-duration="1500" className=" md:mt-28 bg-white px-4 md:px-8 py-16 " id="productos">
       <h1 className="text-center text-4xl md:text-5xl font-extralight mb-6 font-serif">
         Nuestros Productos
       </h1>
       <div className="mt-24 md:mt-44">
-        <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Carne
+        <div data-aos="fade-down" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
+          Carnes
         </div>
         <CardProducts products={productsToShow} />
       </div>
@@ -355,7 +355,7 @@ function Productos() {
 
       <div className="mt-24">
         <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Cerdo
+          Cerdos
         </div>
         <CardProducts products={productsToShow3} />
       </div>
@@ -370,7 +370,7 @@ function Productos() {
 
       <div className="mt-24">
         <div data-aos="zoom-in-left" data-aos-duration="1500"  className="text-2xl font-extralight flex justify-center mb-6">
-          Pollo
+          Pollos
         </div>
         <CardProducts products={productsToShow4} />
       </div>
