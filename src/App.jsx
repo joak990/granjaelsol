@@ -21,7 +21,7 @@ const App = () => {
             <Navbar />
             <Carrousel />
             <About />
-            <div className="mt-12 md:mt-44 flex justify-center text-3xl md:text-5xl">
+            <div data-aos="zoom-in-right" data-aos-duration="1500" className="mt-12 md:mt-44 flex justify-center text-3xl md:text-5xl">
                     <h1>Nuestras Ofertas</h1>
                 </div>
             <Ofertas />
