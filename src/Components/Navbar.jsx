@@ -15,8 +15,8 @@ function Navbar() {
         <nav className={`bg-white py-4 px-8 fixed top-0 left-0 w-full z-50 ${menuOpen ? 'shadow-md' : 'md:shadow-none'}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                    <img src={logo} alt="Logo" className="h-10 w-10 mr-2 rounded-full" />
-                    <span className="text-black font-semibold">Granja el Sol</span>
+                    <img data-aos="fade-right" data-aos-duration="3000" src={logo} alt="Logo" className="h-10 w-10 mr-2 rounded-full" />
+                    <span  data-aos="zoom-im" data-aos-duration="3000" className="text-black font-semibold">Granja el Sol</span>
                 </div>
                 <div className="md:hidden"> {/* Mostrar solo en dispositivos móviles */}
                     <button className="text-gray-600 hover:text-red-600 focus:outline-none" onClick={toggleMenu}>
@@ -30,22 +30,22 @@ function Navbar() {
                     </button>
                 </div>
                 <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'} md:space-x-6 mt-4  md:mt-0`}>
-                    <li>
+                    <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="carrousel" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Inicio</Link>
                     </li>
-                    <li>
+                    <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="text-black  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
                     </li>
-                    <li>
+                    <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="productos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
                     </li>
-                    <li>
+                    <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
                
                 <div> 
-                <div className="flex">
+                <div data-aos="zoom-im" data-aos-duration="3000" className="flex">
                     <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
                         <img  className=" h-5 mb-1  mr-3 md:h-7" src={insta} alt="" />
                     </a>
