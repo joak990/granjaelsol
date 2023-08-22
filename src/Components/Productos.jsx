@@ -8,6 +8,28 @@ import vacio from "../img/carnes/vacio.jpg";
 import lomo from "../img/carnes/lomo.jpg";
 import bifeangosto from "../img/carnes/bifeangosto.jpg";
 import bifeancho from "../img/carnes/bifeancho.jpg";
+import palomita from "../img/carnes/palomita.jpg";
+import roastbeff from "../img/carnes/roastbeef.jpg";
+import tapadeasado from "../img/carnes/tapadeasado.jpg";
+import tapadenalga from "../img/carnes/tapadenalga.png";
+import osobuco from "../img/carnes/osobuco.jpg";
+import paleta from "../img/carnes/paleta.jpg";
+import peceto from "../img/carnes/peceto.jpg";
+import picaña from "../img/carnes/picaña.jpg";
+import ojodebife from "../img/carnes/ojodebife.png";
+import colitacuadril from "../img/carnes/colitacuadril.jpg";
+import cuadrada from "../img/carnes/cuadrada.png";
+import cuadril from "../img/carnes/cuadril.png";
+import faldaparrillera from "../img/carnes/faldaparrillera.jpg";
+import nalga from "../img/carnes/nalga.png";
+import boladelomo from "../img/carnes/boladelomo.png";
+import bifedechorizo from "../img/carnes/bifedechorizo.jpg";
+import espinazo from "../img/carnes/espinazo.jpg";
+import tortuguita from "../img/carnes/tortuguita.jpg";
+import faldapuchero from "../img/carnes/faldapuchero.jpg";
+import hamburguesas from "../img/carnes/hamburguesas.png";
+import miladecarne from "../img/carnes/miladecarne.jpg";
+
 
 import bondiola from "../img/cerdo/bondiola.jpg";
 import carre from "../img/cerdo/carre.jpg";
@@ -23,9 +45,6 @@ import pechuga from "../img/pollo/pechuga.jpg";
 import pollo from "../img/pollo/pollo.png";
 import suprema from "../img/pollo/suprema.jpg";
 
-import product1 from "../img/foto1.jpg";
-import Ofertas from "./Ofertas";
-// import { Link } from 'react-router-dom';
 
 const carne = [
   {
@@ -76,6 +95,136 @@ const carne = [
     name: "Bife ancho",
     description: "$2100",
   },
+  {
+    id: 5,
+    image: `${palomita}`,
+    name: "Palomita",
+    description: "$2100",
+  },
+  {
+    id: 6,
+    image: `${roastbeff}`,
+    name: "Roastbeff",
+    description: "$2100",
+  },
+  {
+    id: 7,
+    image: `${tapadeasado}`,
+    name: "Tapa de asado",
+    description: "$2100",
+  },
+  {
+    id: 8,
+    image: `${tapadenalga}`,
+    name: "Tapa de nalga",
+    description: "$2100",
+  },
+  {
+    id: 9,
+    image: `${osobuco}`,
+    name: "Osobuco",
+    description: "$2100",
+  },
+  {
+    id: 10,
+    image: `${paleta}`,
+    name: "Paleta",
+    description: "$2100",
+  },
+  {
+    id: 11,
+    image: `${peceto}`,
+    name: "Peceto",
+    description: "$2100",
+  },
+  {
+    id: 12,
+    image: `${ojodebife}`,
+    name: "Ojo de bife",
+    description: "$2100",
+  },
+  {
+    id: 13,
+    image: `${picaña}`,
+    name: "Picaña",
+    description: "$2100",
+  },
+
+  {
+    id: 14,
+    image: `${colitacuadril}`,
+    name: "Colita de cuadril",
+    description: "$2100",
+  },
+  {
+    id: 15,
+    image: `${cuadrada}`,
+    name: "Cuadrada",
+    description: "$2100",
+  },
+  {
+    id: 16,
+    image: `${cuadril}`,
+    name: "Cuadril",
+    description: "$2100",
+  },
+  {
+    id: 17,
+    image: `${faldaparrillera}`,
+    name: "Falda parrillera",
+    description: "$2100",
+  },
+  {
+    id: 18,
+    image: `${nalga}`,
+    name: "Nalga",
+    description: "$2100",
+  },
+  {
+    id: 19,
+    image: `${boladelomo}`,
+    name: "Bola de lomo",
+    description: "$2100",
+  },
+  {
+    id: 20,
+    image: `${bifedechorizo}`,
+    name: "Bife de chorizo",
+    description: "$2100",
+  },
+  {
+    id: 21,
+    image: `${espinazo}`,
+    name: "Espinazo",
+    description: "$2100",
+  },
+  {
+    id: 22,
+    image: `${tortuguita}`,
+    name: "Tortuguita",
+    description: "$2100",
+  },
+  {
+    id: 23,
+    image: `${faldapuchero}`,
+    name: "Falda puchero",
+    description: "$2100",
+  },
+  {
+    id: 24,
+    image: `${hamburguesas}`,
+    name: "hamburguesas",
+    description: "$2100",
+  },
+  {
+    id: 25,
+    image: `${miladecarne}`,
+    name: "miladecarne",
+    description: "$2100",
+  },
+
+
+
 ];
 
 const cerdo = [
@@ -153,57 +302,6 @@ const pollos = [
     image: `${suprema}`,
     name: "carne",
     description: "$2300",
-  },
-];
-
-const ofertas = [
-  {
-    id: 1,
-    image: `${product1}`,
-    name: "pollo",
-    description: "$200",
-  },
-  {
-    id: 2,
-    image: `${product1}`,
-    name: "carne",
-    description: "$2300",
-  },
-  {
-    id: 3,
-    image: `${product1}`,
-    name: "pollo",
-    description: "$2200",
-  },
-  {
-    id: 4,
-    image: `${product1}`,
-    name: "pollo",
-    description: "$2100",
-  },
-  {
-    id: 1,
-    image: `${product1}`,
-    name: "pollo",
-    description: "$200",
-  },
-  {
-    id: 2,
-    image: `${product1}`,
-    name: "carne",
-    description: "$2300",
-  },
-  {
-    id: 3,
-    image: `${product1}`,
-    name: "pollo",
-    description: "$2200",
-  },
-  {
-    id: 4,
-    image: `${product1}`,
-    name: "pollo",
-    description: "$2100",
   },
 ];
 
