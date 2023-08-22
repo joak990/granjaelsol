@@ -1,4 +1,4 @@
-import logo from "../img/logo.jpg"
+import logo from "../img/granjalogo.jpg"
 import { useState } from 'react';
 import { Link } from "react-scroll"
 import insta from "../img/insta.png"
