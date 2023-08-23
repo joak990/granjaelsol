@@ -15,7 +15,7 @@ function Contactos() {
                 <div  className="flex flex-col justify-center mt-4 md:mt-6">
                     <div data-aos="zoom-in-up" data-aos-duration="1500"  className='text-white text-xl md:text-2xl'>
                         <p    className='mb-2'>
-                            Visítanos en: <span className='font-bold text-white'>Isla 299</span>
+                            Visítanos en: <span className='font-bold text-white'>Isla Jorge 299</span>
                         </p>
                         <p  className='mb-2'>
                             Llámanos: <span className='font-bold text-white'>(+54) 1131666991</span>

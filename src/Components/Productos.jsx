@@ -45,7 +45,7 @@ import pechuga from "../img/pollo/pechuga.jpg";
 import pollo from "../img/pollo/pollo.png";
 import suprema from "../img/pollo/suprema.jpg";
 
-
+import {Link} from "react-scroll"
 const carne = [
   {
     id: 1,
@@ -345,12 +345,21 @@ function Productos() {
         <CardProducts products={productsToShow} />
       </div>
       <div className="mt-10 flex justify-center">
+      {showMore? (
+        <Link to="productos"  spy={true} smooth={true} offset={-100} duration={500}>
         <button
           className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore}
-        >
+          >
           {showMore ? "Ver menos" : "Ver más"}
         </button>
+        </Link>
+      ) : (<button
+        className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
+        onClick={toggleShowMore}
+        >
+        {showMore ? "Ver menos" : "Ver más"}
+      </button>)}
       </div>
 
       <div className="mt-24">
