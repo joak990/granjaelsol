@@ -1,4 +1,4 @@
-import logo from "../img/granjalogo.jpg"
+import logo from "../img/logoposta1.png"
 import { useState } from 'react';
 import { Link } from "react-scroll"
 import insta from "../img/insta.png"
@@ -31,16 +31,16 @@ function Navbar() {
                 </div>
                 <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'} md:space-x-6 mt-4  md:mt-0`}>
                     <li data-aos="zoom-im" data-aos-duration="3000" >
-                        <Link to="carrousel" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Inicio</Link>
+                        <Link to="carrousel" spy={true} smooth={true} offset={-100} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Inicio</Link>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000">
-                        <Link to="about" spy={true} smooth={true} offset={50} duration={500} className="text-black  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
+                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="text-black  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000" >
-                        <Link to="productos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
+                        <Link to="productos" spy={true} smooth={true} offset={-150} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000">
-                        <Link to="contactos" spy={true} smooth={true} offset={50} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
+                        <Link to="contactos" spy={true} smooth={true} offset={-150} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
                     </li>
                 </ul>
                 <div> 

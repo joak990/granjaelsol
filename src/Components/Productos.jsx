@@ -338,7 +338,7 @@ function Productos() {
       <h1 className="text-center text-4xl md:text-5xl font-extralight mb-6 font-serif">
         Nuestros Productos
       </h1>
-      <div className="mt-24 md:mt-44">
+      <div className="mt-24 md:mt-24">
         <div data-aos="fade-down" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
           Carnes
         </div>

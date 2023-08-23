@@ -1,4 +1,4 @@
-import logo from "../img/granjalogo.jpg"
+import logo from "../img/logoposta1.png"
 
 function About() {
     return (

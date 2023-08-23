@@ -1,27 +1,44 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
     BsFillArrowLeftCircleFill,
     BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 import { RxDot } from "react-icons/rx";
 
-import oferta1 from "../img/oferta1.jpg";
-import oferta2 from "../img/oferta2.jpeg";
-import logo3 from "../img/foto3.jpg";
+import ofertaespinazo from "../img/ofertas/ofertaespinazo.png";
+import ofertabifeancho from "../img/ofertas/ofertabifeancho.png";
+import ofertabifeangosto from "../img/ofertas/ofertabifeangosto.png";
+import ofertacosteletacerdo from "../img/ofertas/ofertacosteletacerdo.png";
+import ofertafalda from "../img/ofertas/ofertafalda.png";
+import ofertapatycasero from "../img/ofertas/ofertapatycasero.png";
+import ofertapicadacomun from "../img/ofertas/ofertapicadacomun.png";
 
 function Ofertas() {
     const slides = [
-       
+
         {
-            url: `${oferta1}`,
+            url: `${ofertaespinazo}`,
         },
         {
-            url: `${oferta2}`,
+            url: `${ofertabifeangosto}`,
         },
         {
-            url: `${logo3}`,
+            url: `${ofertabifeancho}`,
         },
-        
+        {
+            url: `${ofertacosteletacerdo}`,
+        },
+        {
+            url: `${ofertafalda}`,
+        },
+        {
+            url: `${ofertapatycasero}`,
+        },
+        {
+            url: `${ofertapicadacomun}`,
+        },
+
+
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +66,7 @@ function Ofertas() {
     }, [currentIndex]);
 
     return (
-        <div className="max-w-[1000px] w-full m-auto py-8 md:py-16 px-4 relative group" id="carrousel">
+        <div className="max-w-[600px] w-full m-auto py-8 md:py-16 px-4 relative group" id="carrousel">
             <div className="w-full h-[360px] md:h-[720px] rounded-2xl overflow-hidden relative">
                 {slides.map((slide, slideIndex) => (
                     <img
