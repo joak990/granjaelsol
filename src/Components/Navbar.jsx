@@ -1,8 +1,10 @@
-import logo from "../img/logoposta1.png"
+import logo from "../img/logo1.png"
 import { useState } from 'react';
 import { Link } from "react-scroll"
 import insta from "../img/insta.png"
 import facebook from "../img/facebook.png"
+import whatsapp from "../img/whatsapp.png"
+
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +17,9 @@ function Navbar() {
         <nav className={`bg-white py-4 px-8 fixed top-0 left-0 w-full z-50 ${menuOpen ? 'shadow-md' : 'md:shadow-none'}`}>
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                    <img data-aos="fade-right" data-aos-duration="3000" src={logo} alt="Logo" className="h-10 w-10 mr-2 rounded-full" />
+                    <Link to="carrousel" spy={true} smooth={true} offset={-100} duration={500}>
+                        <img data-aos="fade-right" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-full" />
+                    </Link>
                     <span  data-aos="zoom-im" data-aos-duration="3000" className="text-black font-semibold">Granja el Sol</span>
                 </div>
                 <div className="md:hidden"> {/* Mostrar solo en dispositivos móviles */}
@@ -50,6 +54,9 @@ function Navbar() {
                     </a>
                     <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
                         <img  className=" h-5 mb-1  mr-3 md:h-7 text-gray" src={facebook} alt="" />
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer">
+                        <img  className=" h-5 mb-1  mr-3 md:h-7 text-gray" src={whatsapp} alt="" />
                     </a>
                 </div>
             </div>
