@@ -37,7 +37,7 @@ function Navbar() {
                         <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="text-black  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000" >
-                        <Link to="productos" spy={true} smooth={true} offset={-150} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
+                        <Link to="productos" spy={true} smooth={true} offset={-350} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Productos</Link>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000">
                         <Link to="contactos" spy={true} smooth={true} offset={-150} duration={500} className="text-black md:text-base text-xl hover:text-red-600">Contáctanos</Link>
