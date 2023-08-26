@@ -219,7 +219,7 @@ const carne = [
   {
     id: 25,
     image: `${miladecarne}`,
-    name: "miladecarne",
+    name: "Milanesa de carne",
     description: "$3989",
   },
 
@@ -294,7 +294,7 @@ const pollos = [
   {
     id: 1,
     image: `${pollo}`,
-    name: "Pollo",
+    name: "Pollo entero",
     description: "$1099",
   },
   {
@@ -340,7 +340,7 @@ function Productos() {
       </h1>
       <div className="mt-24 md:mt-24">
         <div data-aos="fade-down" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Carnes
+          Carne
         </div>
         <CardProducts products={productsToShow} />
       </div>
@@ -364,7 +364,7 @@ function Productos() {
 
       <div className="mt-24">
         <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Cerdos
+          Cerdo
         </div>
         <CardProducts products={productsToShow3} />
       </div>
@@ -379,7 +379,7 @@ function Productos() {
 
       <div className="mt-24">
         <div data-aos="zoom-in-left" data-aos-duration="1500"  className="text-2xl font-extralight flex justify-center mb-6">
-          Pollos
+          Pollo
         </div>
         <CardProducts products={productsToShow4} />
       </div>
