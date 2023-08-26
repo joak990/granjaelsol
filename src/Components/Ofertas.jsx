@@ -1,9 +1,5 @@
-import { useState, useEffect } from "react";
-import {
-    BsFillArrowLeftCircleFill,
-    BsFillArrowRightCircleFill,
-} from "react-icons/bs";
-import { RxDot } from "react-icons/rx";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 import ofertaespinazo from "../img/ofertas/ofertaespinazo.png";
 import ofertabifeancho from "../img/ofertas/ofertabifeancho.png";
@@ -13,91 +9,46 @@ import ofertafalda from "../img/ofertas/ofertafalda.png";
 import ofertapatycasero from "../img/ofertas/ofertapatycasero.png";
 import ofertapicadacomun from "../img/ofertas/ofertapicadacomun.png";
 
-function Ofertas() {
-    const slides = [
-
-        {
-            url: `${ofertaespinazo}`,
-        },
-        {
-            url: `${ofertabifeangosto}`,
-        },
-        {
-            url: `${ofertabifeancho}`,
-        },
-        {
-            url: `${ofertacosteletacerdo}`,
-        },
-        {
-            url: `${ofertafalda}`,
-        },
-        {
-            url: `${ofertapatycasero}`,
-        },
-        {
-            url: `${ofertapicadacomun}`,
-        },
-
-
-    ];
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const prevSlide = () => {
-        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-        setCurrentIndex(newIndex);
-    };
-
-    const nextSlide = () => {
-        const newIndex = (currentIndex + 1) % slides.length;
-        setCurrentIndex(newIndex);
-    };
-
-    const goToSlide = (slideIndex) => {
-        setCurrentIndex(slideIndex);
-    };
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 5000); // Cambio cada 5 segundos
-
-        return () => clearInterval(interval);
-    }, [currentIndex]);
-
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay'
+function CarrouselSwip() {
     return (
-        <div className="max-w-[600px] w-full m-auto py-8 md:py-16 px-4 relative group" id="carrousel">
-            <div className="w-full h-[360px] md:h-[720px] rounded-2xl overflow-hidden relative">
-                {slides.map((slide, slideIndex) => (
-                    <img
-                        key={slideIndex}
-                        src={slide.url}
-                        alt={`Slide ${slideIndex}`}
-                        className={`w-full h-full absolute top-0 left-0 transition-opacity duration-1000 ${slideIndex === currentIndex ? "opacity-100" : "opacity-0"
-                            }`}
-                    />
-                ))}
-            </div>
-            <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 traslate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white  cursor-pointer">
-                <BsFillArrowLeftCircleFill onClick={prevSlide} size={30} />
-            </div>
-            <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 traslate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white  cursor-pointer">
-                <BsFillArrowRightCircleFill onClick={nextSlide} size={30} />
-            </div>
-            <div className="flex top-4 justify-center py-2">
-                {slides.map((slide, slideIndex) => (
-                    <div
-                        key={slideIndex}
-                        onClick={() => goToSlide(slideIndex)}
-                        className={`text-1xl cursor-pointer ${slideIndex === currentIndex ? "text-black" : "text-gray-400"
-                            }`}
+        <div className=" mt-8 w-full container"> {/* Agrega una clase contenedora para centrar */}
+            <div className="row">
+                <div className="col-lg-8 md:flex mx-auto"> {/* Utiliza una columna centrada */}
+                    <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                        spaceBetween={2}
+                        slidesPerView={1}
+                        navigation
+                        autoplay={{ delay: 4000, disableOnInteraction: false }}
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        autoHeight={true}
+                        breakpoints={{
+                            640: { slidesPerView: 1 },
+                            768: { slidesPerView: 3 },
+                            1024: { slidesPerView: 4 },
+                        }}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
                     >
-                        <RxDot />
-                    </div>
-                ))}
+                        <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertacosteletacerdo} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertafalda} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
+                        {/* ... Agrega más diapositivas según sea necesario */}
+                    </Swiper>
+                </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Ofertas;
+export default CarrouselSwip;

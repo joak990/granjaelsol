@@ -21,7 +21,7 @@ function Contactos() {
                             Llámanos: <span className='font-bold text-white'>(+54) 1131666991</span>
                         </p>
                         <p  className='mb-4'>
-                            Escríbenos: <span className='font-bold text-white'>armando@granjaelsol.com</span>
+                            Escríbenos: <span className='font-bold text-white'>armandomurayari16@gmail.com</span>
                         </p>
                         <div className="flex">
                     <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
