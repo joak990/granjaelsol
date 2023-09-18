@@ -29,6 +29,7 @@ import tortuguita from "../img/carnes/tortuguita.jpg";
 import faldapuchero from "../img/carnes/faldapuchero.jpg";
 import hamburguesas from "../img/carnes/hamburguesas.png";
 import miladecarne from "../img/carnes/miladecarne.jpg";
+import picada from "../img/carnes/picada.jpg";
 
 
 import bondiola from "../img/cerdo/bondiola.jpg";
@@ -51,7 +52,7 @@ const carne = [
     id: 1,
     image: `${asado}`,
     name: "Asado",
-    description: "$3519",
+    description: "$3199",
   },
   {
     id: 2,
@@ -63,7 +64,7 @@ const carne = [
     id: 3,
     image: `${matambre}`,
     name: "Matambre",
-    description: "$3565",
+    description: "$3289",
   },
   {
     id: 4,
@@ -75,7 +76,7 @@ const carne = [
     id: 1,
     image: `${vacio}`,
     name: "Vacio",
-    description: "$3990",
+    description: "$3799",
   },
   {
     id: 2,
@@ -87,13 +88,13 @@ const carne = [
     id: 3,
     image: `${bifeangosto}`,
     name: "Bife angosto",
-    description: "$3279",
+    description: "$3089",
   },
   {
     id: 4,
     image: `${bifeancho}`,
     name: "Bife ancho",
-    description: "$3279",
+    description: "$3089",
   },
   {
     id: 5,
@@ -105,13 +106,13 @@ const carne = [
     id: 6,
     image: `${roastbeff}`,
     name: "Roastbeff",
-    description: "$3565",
+    description: "$3269",
   },
   {
     id: 7,
     image: `${tapadeasado}`,
     name: "Tapa de asado",
-    description: "$3565",
+    description: "$3289",
   },
   {
     id: 8,
@@ -129,7 +130,7 @@ const carne = [
     id: 10,
     image: `${paleta}`,
     name: "Paleta",
-    description: "$3565",
+    description: "$3269",
   },
   {
     id: 11,
@@ -160,31 +161,31 @@ const carne = [
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$3989",
+    description: "$3789",
   },
   {
     id: 16,
     image: `${cuadril}`,
     name: "Cuadril",
-    description: "$3989",
+    description: "$3789",
   },
   {
     id: 17,
     image: `${faldaparrillera}`,
     name: "Falda parrillera",
-    description: "$2590",
+    description: "$2250",
   },
   {
     id: 18,
     image: `${nalga}`,
     name: "Nalga",
-    description: "$4370",
+    description: "$4190",
   },
   {
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$3989",
+    description: "$3789",
   },
   {
     id: 20,
@@ -222,9 +223,12 @@ const carne = [
     name: "Milanesa de carne",
     description: "$3989",
   },
-
-
-
+  {
+    id: 26,
+    image: `${picada}`,
+    name: "Picada",
+    description: "$2589",
+  }
 ];
 
 const cerdo = [
@@ -340,7 +344,7 @@ function Productos() {
       </h1>
       <div className="mt-24 md:mt-24">
         <div data-aos="fade-down" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Carne
+          Vacunos
         </div>
         <CardProducts products={productsToShow} />
       </div>

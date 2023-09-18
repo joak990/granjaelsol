@@ -8,6 +8,11 @@ import ofertacosteletacerdo from "../img/ofertas/ofertacosteletacerdo.png";
 import ofertafalda from "../img/ofertas/ofertafalda.png";
 import ofertapatycasero from "../img/ofertas/ofertapatycasero.png";
 import ofertapicadacomun from "../img/ofertas/ofertapicadacomun.png";
+import ofertaasado from "../img/ofertas/ofertaasado.png";
+import ofertamatambre from "../img/ofertas/ofertamatambre.png";
+import ofertapicadaespecial from "../img/ofertas/ofertapicadaespecial.png";
+import ofertatapaasado from "../img/ofertas/ofertatapaasado.png";
+
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css/navigation';
@@ -37,12 +42,16 @@ function CarrouselSwip() {
                         onSwiper={(swiper) => console.log(swiper)}
                     >
                         <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide>
+                        {/* <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide> */}
                         <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertacosteletacerdo} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertafalda} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertaasado} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertamatambre} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
                         {/* ... Agrega más diapositivas según sea necesario */}
                     </Swiper>
                 </div>
