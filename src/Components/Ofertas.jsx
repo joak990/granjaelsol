@@ -20,6 +20,8 @@ import ofertapaleta from "../img/ofertas/ofertapaleta.png";
 import ofertapechitodecerdo from "../img/ofertas/ofertapechitodecerdo.png";
 import ofertatapadenalga from "../img/ofertas/ofertatapadenalga.png";
 import ofertadescuento from "../img/ofertas/ofertadescuento.png";
+import ofertaroastebeef from "../img/ofertas/ofertaroastebeef.png";
+
 
 
 
@@ -68,7 +70,7 @@ function CarrouselSwip() {
                         <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapaleta} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapaleta} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertaroastebeef} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertatapadenalga} alt="" /></SwiperSlide>
                         
                         {/* ... Agrega más diapositivas según sea necesario */}
