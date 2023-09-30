@@ -40,7 +40,7 @@ function CarrouselSwip() {
                         spaceBetween={2}
                         slidesPerView={1}
                         navigation
-                        autoplay={{ delay: 4000, disableOnInteraction: false }}
+                        autoplay={{ delay: 7000, disableOnInteraction: false }}
                         pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
                         autoHeight={true}
