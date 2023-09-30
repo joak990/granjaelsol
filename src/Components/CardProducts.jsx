@@ -7,7 +7,7 @@ const CardProducts = ({ products }) => {
         products.map((elem, index) => (
           <div
             key={index}
-            className="bg-white flex flex-col items-center justify-center w-full h-72 p-4 md:p-8 shadow-md transition-transform transform-gpu hover:scale-105 hover:transition-transform duration-300"
+            className="bg-white flex flex-col items-center justify-center w-full h-72 p-4 md:p-8 shadow-md transition-transform transform-gpu md:hover:scale-105 hover:transition-transform duration-300"
           >
             <img
               className="mt-1 object-cover h-32 w-32 md:h-44 md:w-44 rounded-2xl"

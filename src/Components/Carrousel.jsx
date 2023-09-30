@@ -50,7 +50,7 @@ function Carrousel() {
     }, [currentIndex]);
 
     return (
-        <div className="w-full m-auto py-14 md:py-14 px-4 relative group" id="carrousel">
+        <div className="w-full py-0 md:px-1 relative group" id="carrousel">
             <div className="w-full h-[360px] md:h-[600px]  overflow-hidden relative">
                 {slides.map((slide, slideIndex) => (
                     <img

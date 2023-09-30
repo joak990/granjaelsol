@@ -32,9 +32,9 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay'
 function CarrouselSwip() {
     return (
-        <div className=" mt-8 w-full container"> {/* Agrega una clase contenedora para centrar */}
-            <div className="row">
-                <div className="col-lg-8 md:flex mx-auto"> {/* Utiliza una columna centrada */}
+        <div className=" mt-8 w-full md:w-full container"> {/* Agrega una clase contenedora para centrar */}
+            <div className=" row">
+                <div className=" col-lg-8 md:flex mx-auto"> {/* Utiliza una columna centrada */}
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                         spaceBetween={2}
@@ -48,7 +48,7 @@ function CarrouselSwip() {
                             640: { slidesPerView: 1 },
                             768: { slidesPerView: 3 },
                             1024: { slidesPerView: 4 },
-                        }}
+                        }}  
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
