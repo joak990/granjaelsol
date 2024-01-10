@@ -52,7 +52,7 @@ const carne = [
     id: 1,
     image: `${asado}`,
     name: "Asado",
-    description: "$3199",
+    description: "$6690",
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ const carne = [
     id: 3,
     image: `${matambre}`,
     name: "Matambre",
-    description: "$3289",
+    description: "$6790",
   },
   {
     id: 4,
@@ -76,7 +76,7 @@ const carne = [
     id: 1,
     image: `${vacio}`,
     name: "Vacio",
-    description: "$3799",
+    description: "$7490",
   },
   {
     id: 2,
@@ -106,13 +106,13 @@ const carne = [
     id: 6,
     image: `${roastbeff}`,
     name: "Roastbeff",
-    description: "$3190",
+    description: "$5290",
   },
   {
     id: 7,
     image: `${tapadeasado}`,
     name: "Tapa de asado",
-    description: "$3190",
+    description: "$6690",
   },
   {
     id: 8,
@@ -130,13 +130,13 @@ const carne = [
     id: 10,
     image: `${paleta}`,
     name: "Paleta",
-    description: "$3190",
+    description: "$5390",
   },
   {
     id: 11,
     image: `${peceto}`,
     name: "Peceto",
-    description: "$4199",
+    description: "$7190",
   },
   {
     id: 12,
@@ -161,13 +161,13 @@ const carne = [
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$3499",
+    description: "$6490",
   },
   {
     id: 16,
     image: `${cuadril}`,
     name: "Cuadril",
-    description: "$3499",
+    description: "$6590",
   },
   {
     id: 17,
@@ -179,13 +179,13 @@ const carne = [
     id: 18,
     image: `${nalga}`,
     name: "Nalga",
-    description: "$4990",
+    description: "$7190",
   },
   {
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$3499",
+    description: "$6490",
   },
   {
     id: 20,
