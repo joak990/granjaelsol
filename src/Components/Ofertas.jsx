@@ -58,19 +58,19 @@ function CarrouselSwip() {
                         <SwiperSlide><img className='w-100' src={ofertacosteletacerdo} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertafalda} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaasado} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertamatambre} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide>
+                        {/* <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide> */}
+                        {/* <SwiperSlide><img className='w-100' src={ofertaasado} alt="" /></SwiperSlide> */}
+                        {/* <SwiperSlide><img className='w-100' src={ofertamatambre} alt="" /></SwiperSlide> */}
+                        {/* <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide> */}
                         <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertaboladelomo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertacuadrada} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide>
+                        {/* <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide> */}
+                        {/* <SwiperSlide><img className='w-100' src={ofertacuadrada} alt="" /></SwiperSlide> */}
+                        {/* <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide> */}
                         <SwiperSlide><img className='w-100' src={ofertapaleta} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaroastebeef} alt="" /></SwiperSlide>
+                        {/* <SwiperSlide><img className='w-100' src={ofertaroastebeef} alt="" /></SwiperSlide> */}
                         <SwiperSlide><img className='w-100' src={ofertatapadenalga} alt="" /></SwiperSlide>
                         
                         {/* ... Agrega más diapositivas según sea necesario */}
