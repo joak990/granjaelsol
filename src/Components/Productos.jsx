@@ -221,7 +221,7 @@ const carne = [
     id: 25,
     image: `${miladecarne}`,
     name: "Milanesa de carne",
-    description: "$6990",
+    description: "$7290",
   },
   {
     id: 26,
@@ -281,7 +281,7 @@ const pollos = [
     id: 2,
     image: `${mila}`,
     name: "Milanesa de pollo",
-    description: "$4290",
+    description: "$4789",
   },
   {
     id: 3,
