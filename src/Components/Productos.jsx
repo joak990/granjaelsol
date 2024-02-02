@@ -305,7 +305,7 @@ const pollos = [
     id: 2,
     image: `${suprema}`,
     name: "Suprema",
-    description: "$5090",
+    description: "$5449",
   },
 ];
 
