@@ -58,7 +58,7 @@ const carne = [
     id: 2,
     image: `${americano}`,
     name: "Americano",
-    description: "$6790",
+    description: "$7890",
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ const carne = [
     id: 4,
     image: `${entraña}`,
     name: "Entraña",
-    description: "$7990",
+    description: "$8990",
   },
   {
     id: 1,
@@ -82,13 +82,13 @@ const carne = [
     id: 2,
     image: `${lomo}`,
     name: "Lomo",
-    description: "$9490",
+    description: "$10290",
   },
   {
     id: 3,
     image: `${bifeangosto}`,
     name: "Bife angosto",
-    description: "$5990",
+    description: "$7390",
   },
   {
     id: 4,
@@ -118,13 +118,13 @@ const carne = [
     id: 8,
     image: `${tapadenalga}`,
     name: "Tapa de nalga",
-    description: "$6790",
+    description: "$7790",
   },
   {
     id: 9,
     image: `${osobuco}`,
     name: "Osobuco",
-    description: "$2990",
+    description: "$4490",
   },
   {
     id: 10,
@@ -142,20 +142,20 @@ const carne = [
     id: 12,
     image: `${ojodebife}`,
     name: "Ojo de bife",
-    description: "$8490",
+    description: "$9990",
   },
   {
     id: 13,
     image: `${picaña}`,
     name: "Picaña",
-    description: "$7190",
+    description: "$8990",
   },
 
   {
     id: 14,
     image: `${colitacuadril}`,
     name: "Colita de cuadril",
-    description: "$7290",
+    description: "$8890",
   },
   {
     id: 15,
@@ -191,19 +191,19 @@ const carne = [
     id: 20,
     image: `${bifedechorizo}`,
     name: "Bife de chorizo",
-    description: "$4990",
+    description: "$9890",
   },
   {
     id: 21,
     image: `${espinazo}`,
     name: "Espinazo",
-    description: "$2700",
+    description: "$2990",
   },
   {
     id: 22,
     image: `${tortuguita}`,
     name: "Tortuguita",
-    description: "$3290",
+    description: "$6690",
   },
   {
     id: 23,
@@ -221,7 +221,7 @@ const carne = [
     id: 25,
     image: `${miladecarne}`,
     name: "Milanesa de carne",
-    description: "$7290",
+    description: "$7990",
   },
   {
     id: 26,

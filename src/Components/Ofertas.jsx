@@ -4,23 +4,17 @@ import 'swiper/css';
 import ofertaespinazo from "../img/ofertas/ofertaespinazo.png";
 import ofertabifeancho from "../img/ofertas/ofertabifeancho.png";
 import ofertabifeangosto from "../img/ofertas/ofertabifeangosto.png";
-import ofertacosteletacerdo from "../img/ofertas/ofertacosteletacerdo.png";
-import ofertafalda from "../img/ofertas/ofertafalda.png";
 import ofertapatycasero from "../img/ofertas/ofertapatycasero.png";
 import ofertapicadacomun from "../img/ofertas/ofertapicadacomun.png";
-import ofertaasado from "../img/ofertas/ofertaasado.png";
 import ofertamatambre from "../img/ofertas/ofertamatambre.png";
 import ofertapicadaespecial from "../img/ofertas/ofertapicadaespecial.png";
 import ofertatapaasado from "../img/ofertas/ofertatapaasado.png";
 import ofertaboladelomo from "../img/ofertas/ofertaboladelomo.png";
-import ofertabondiola from "../img/ofertas/ofertabondiola.png";
-import ofertacuadrada from "../img/ofertas/ofertacuadrada.png";
 import ofertaosobuco from "../img/ofertas/ofertaosobuco.png";
 import ofertapaleta from "../img/ofertas/ofertapaleta.png";
-import ofertapechitodecerdo from "../img/ofertas/ofertapechitodecerdo.png";
 import ofertatapadenalga from "../img/ofertas/ofertatapadenalga.png";
 import ofertadescuento from "../img/ofertas/ofertadescuento.png";
-import ofertaroastebeef from "../img/ofertas/ofertaroastebeef.png";
+import ofertaroastebeef from "../img/ofertas/ofertaroastbeef.png";
 
 
 
@@ -55,23 +49,19 @@ function CarrouselSwip() {
                         <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertacosteletacerdo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertafalda} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
-                        {/* <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide> */}
-                        {/* <SwiperSlide><img className='w-100' src={ofertaasado} alt="" /></SwiperSlide> */}
-                        {/* <SwiperSlide><img className='w-100' src={ofertamatambre} alt="" /></SwiperSlide> */}
-                        {/* <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide> */}
-                        <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertaboladelomo} alt="" /></SwiperSlide>
-                        {/* <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide> */}
-                        {/* <SwiperSlide><img className='w-100' src={ofertacuadrada} alt="" /></SwiperSlide> */}
-                        {/* <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide> */}
+                        <SwiperSlide><img className='w-100' src={ofertamatambre} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapaleta} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
-                        {/* <SwiperSlide><img className='w-100' src={ofertaroastebeef} alt="" /></SwiperSlide> */}
+                        <SwiperSlide><img className='w-100' src={ofertaroastebeef} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertatapadenalga} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
                         
                         {/* ... Agrega más diapositivas según sea necesario */}
                     </Swiper>
