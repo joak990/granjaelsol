@@ -70,7 +70,7 @@ const carne = [
     id: 4,
     image: `${entraña}`,
     name: "Entraña",
-    description: "$9890",//*
+    description: "$10900",//*
   },
   {
     id: 1,
@@ -82,25 +82,25 @@ const carne = [
     id: 2,
     image: `${lomo}`,
     name: "Lomo",
-    description: "$11590",//*
+    description: "$10990",//*
   },
   {
     id: 3,
     image: `${bifeangosto}`,
     name: "Bife angosto",
-    description: "$7390",//*
+    description: "$7290",//*
   },
   {
     id: 4,
     image: `${bifeancho}`,
     name: "Bife ancho",
-    description: "$3089",//*
+    description: "$6990",//*
   },
   {
     id: 5,
     image: `${palomita}`,
     name: "Palomita",
-    description: "$7350",//*
+    description: "$7490",//*
   },
   {
     id: 6,
@@ -118,7 +118,7 @@ const carne = [
     id: 8,
     image: `${tapadenalga}`,
     name: "Tapa de nalga",
-    description: "$7790",//*
+    description: "$8990",//*
   },
   {
     id: 9,
@@ -148,7 +148,7 @@ const carne = [
     id: 13,
     image: `${picaña}`,
     name: "Picaña",
-    description: "$8990",//*
+    description: "$9590",//*
   },
 
   {
@@ -191,7 +191,7 @@ const carne = [
     id: 20,
     image: `${bifedechorizo}`,
     name: "Bife de chorizo",
-    description: "$9890",//*
+    description: "$10119",//*
   },
   {
     id: 21,
@@ -203,19 +203,19 @@ const carne = [
     id: 22,
     image: `${tortuguita}`,
     name: "Tortuguita",
-    description: "$7350",//*
+    description: "$7490",//*
   },
   {
     id: 23,
     image: `${faldapuchero}`,
     name: "Falda puchero",
-    description: "$3890",//*
+    description: "$5259",//*
   },
   {
     id: 24,
     image: `${hamburguesas}`,
     name: "hamburguesas",
-    description: "$6400",//*
+    description: "$6900",//*
   },
   {
     id: 25,
@@ -248,7 +248,7 @@ const cerdo = [
     id: 3,
     image: `${churrasquito}`,
     name: "Churrasquito",
-    description: "$6990", //
+    description: "$7889", //
   },
   {
     id: 4,
@@ -281,7 +281,7 @@ const pollos = [
     id: 2,
     image: `${mila}`,
     name: "Milanesa de pollo",
-    description: "$5190",//
+    description: "$5590",//
   },
   {
     id: 3,
