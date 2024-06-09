@@ -12,6 +12,7 @@ import ofertapaleta from "../img/ofertas/ofertapaleta.png";//
 import ofertadescuento from "../img/ofertas/ofertadescuento.png";
 import ofertabondiola from "../img/ofertas/ofertabondiola.png";//
 import ofertapechitodecerdo from "../img/ofertas/ofertapechitodecerdo.png";//
+import ofertadescuento2 from "../img/ofertas/ofertadescuento2.png";//
 
 // import ofertaosobuco from "../img/ofertas/ofertaosobuco.png";
 // import ofertaboladelomo from "../img/ofertas/ofertaboladelomo.png";
@@ -48,6 +49,7 @@ function CarrouselSwip() {
                         onSwiper={(swiper) => console.log(swiper)}
                     >
                         <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertadescuento2} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide> 
@@ -61,6 +63,7 @@ function CarrouselSwip() {
                         <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapaleta} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
+
                         
                         {/* ... Agrega más diapositivas según sea necesario */}
                     </Swiper>
