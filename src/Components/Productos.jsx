@@ -236,7 +236,7 @@ const cerdo = [
     id: 1,
     image: `${bondiola}`,
     name: "Bondiola",
-    description: "$7690",
+    description: "$6990",
   },
   {
     id: 2,
@@ -266,7 +266,7 @@ const cerdo = [
     id: 2,
     image: `${pechito}`,
     name: "Pechito",
-    description: "$5590",
+    description: "$3890",
   },
 ];
 
