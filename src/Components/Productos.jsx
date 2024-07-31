@@ -118,7 +118,7 @@ const carne = [
     id: 8,
     image: `${tapadenalga}`,
     name: "Tapa de nalga",
-    description: "$8990",//
+    description: "$7795",//
   },
   {
     id: 9,
@@ -209,13 +209,13 @@ const carne = [
     id: 23,
     image: `${faldapuchero}`,
     name: "Falda puchero",
-    description: "$5259",//*
+    description: "$5590",//*
   },
   {
     id: 24,
     image: `${hamburguesas}`,
     name: "hamburguesas",
-    description: "$6900",//*
+    description: "$6690",//*
   },
   {
     id: 25,

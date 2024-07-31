@@ -54,7 +54,6 @@ function CarrouselSwip() {
                         <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide> 
                         <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide> 
-                        <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide> 
                         <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
@@ -62,7 +61,6 @@ function CarrouselSwip() {
                         <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapaleta} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
 
                         
                         {/* ... Agrega más diapositivas según sea necesario */}
