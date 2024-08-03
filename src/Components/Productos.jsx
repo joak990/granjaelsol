@@ -88,13 +88,13 @@ const carne = [
     id: 3,
     image: `${bifeangosto}`,
     name: "Bife angosto",
-    description: "$7795",
+    description: "$7595",
   },
   {
     id: 4,
     image: `${bifeancho}`,
     name: "Bife ancho",
-    description: "$6990",//
+    description: "$7395",//
   },
   {
     id: 5,
@@ -130,7 +130,7 @@ const carne = [
     id: 10,
     image: `${paleta}`,
     name: "Paleta",
-    description: "7695", 
+    description: "$7695", 
   },
   {
     id: 11,
@@ -242,7 +242,7 @@ const cerdo = [
     id: 2,
     image: `${carre}`,
     name: "Carre",
-    description: "$6990",
+    description: "$4490",
   },
   {
     id: 3,
@@ -266,7 +266,7 @@ const cerdo = [
     id: 2,
     image: `${pechito}`,
     name: "Pechito",
-    description: "$3890",
+    description: "$4990",
   },
 ];
 
