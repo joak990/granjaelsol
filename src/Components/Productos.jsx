@@ -221,7 +221,7 @@ const carne = [
     id: 25,
     image: `${miladecarne}`,
     name: "Milanesa de carne",
-    description: "$8895",
+    description: "$9200",
   },
   {
     id: 26,
