@@ -76,7 +76,7 @@ const carne = [
     id: 1,
     image: `${vacio}`,
     name: "Vacio",
-    description: "$9290", 
+    description: "$9780", 
   },
   {
     id: 2,
@@ -94,7 +94,7 @@ const carne = [
     id: 4,
     image: `${bifeancho}`,
     name: "Bife ancho",
-    description: "$7395",//
+    description: "$7590",//
   },
   {
     id: 5,
@@ -136,7 +136,7 @@ const carne = [
     id: 11,
     image: `${peceto}`,
     name: "Peceto",
-    description: "$9990", 
+    description: "$10290", 
   },
   {
     id: 12,
@@ -161,13 +161,13 @@ const carne = [
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$9200", 
+    description: "$9380", 
   },
   {
     id: 16,
     image: `${cuadril}`,
     name: "Cuadril",
-    description: "$9200", 
+    description: "$9380", 
   },
   {
     id: 17,
@@ -179,13 +179,13 @@ const carne = [
     id: 18,
     image: `${nalga}`,
     name: "Nalga",
-    description: "$9990", 
+    description: "$10290", 
   },
   {
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$9200",
+    description: "$9380",
   },
   {
     id: 20,
@@ -236,13 +236,13 @@ const cerdo = [
     id: 1,
     image: `${bondiola}`,
     name: "Bondiola",
-    description: "$8890",
+    description: "$10590",
   },
   {
     id: 2,
     image: `${carre}`,
     name: "Carre s/ hueso",
-    description: "$6750",
+    description: "$7590",
   },
   {
     id: 3,
@@ -266,7 +266,7 @@ const cerdo = [
     id: 2,
     image: `${pechito}`,
     name: "Pechito",
-    description: "$6890",
+    description: "$7690",
   },
 ];
 
