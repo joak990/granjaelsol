@@ -1,24 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-import ofertaespinazo from "../img/ofertas/ofertaespinazo.png";//
+import ofertaosobuco from "../img/ofertas/ofertaosobuco.png";//
 import ofertabifeancho from "../img/ofertas/ofertabifeancho.png";//
+import ofertamarucha from "../img/ofertas/ofertamarucha.png";//
 import ofertabifeangosto from "../img/ofertas/ofertabifeangosto.png";//
-import ofertapatycasero from "../img/ofertas/ofertapatycasero.png";//
-import ofertamatambre from "../img/ofertas/ofertamatambre.png";//
-import ofertatapaasado from "../img/ofertas/ofertatapaasado.png";//
-import ofertadescuento from "../img/ofertas/ofertadescuento.png";
-import ofertabondiola from "../img/ofertas/ofertabondiola.png";//
-import ofertapechitodecerdo from "../img/ofertas/ofertapechitodecerdo.png";//
-import ofertadescuento2 from "../img/ofertas/ofertadescuento2.png";//
+import ofertaasadoorilla from "../img/ofertas/ofertaasadoorilla.png";//
+import ofertaroastbeef from "../img/ofertas/ofertaroastbeef.png";//
+import ofertapatycasero from "../img/ofertas/ofertapatycasero.png";
+import ofertaespinazo from "../img/ofertas/ofertaespinazo.png";//
 import ofertapernil from "../img/ofertas/ofertapernil.png";//
-import ofertacarre from "../img/ofertas/ofertacarre.png";//
+import ofertapicadaespecial from "../img/ofertas/ofertapicadaespecial.png";//
+import ofertacarredecerdo from "../img/ofertas/ofertacarredecerdo.png";//
+import ofertapechitodecerdo from "../img/ofertas/ofertapechitodecerdo.png";//
+import ofertapicadacomun from "../img/ofertas/ofertapicadacomun.png";//
+import ofertafaldaparrillera from "../img/ofertas/ofertafaldaparrillera.png";//
+import ofertabondiola from "../img/ofertas/ofertabondiola.png";//
 
-// import ofertaosobuco from "../img/ofertas/ofertaosobuco.png";
-// import ofertapaleta from "../img/ofertas/ofertapaleta.png";//
-// import ofertaboladelomo from "../img/ofertas/ofertaboladelomo.png";
-// import ofertapicadaespecial from "../img/ofertas/ofertapicadaespecial.png";
-// import ofertaroastebeef from "../img/ofertas/ofertaroastbeef.png";
+
+import ofertadescuento from "../img/ofertas/ofertadescuento.png";//
+import ofertadescuento2 from "../img/ofertas/ofertadescuento2.png";//
 
 
 
@@ -51,16 +52,22 @@ function CarrouselSwip() {
                     >
                         <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertadescuento2} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide> 
-                        <SwiperSlide><img className='w-100' src={ofertacarre} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide> 
+                        <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertamarucha} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide> 
+                        <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertaasadoorilla} alt="" /></SwiperSlide> 
+                        <SwiperSlide><img className='w-100' src={ofertaroastbeef} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertatapaasado} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertamatambre} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertacarredecerdo} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertafaldaparrillera} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-100' src={ofertapernil} alt="" /></SwiperSlide>
                         {/* ... Agrega más diapositivas según sea necesario */}
                     </Swiper>
