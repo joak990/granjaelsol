@@ -52,37 +52,37 @@ const carne = [
     id: 1,
     image: `${asado}`,
     name: "Asado",
-    description: "$7990", 
+    description: "$8940", 
   },
   {
     id: 2,
     image: `${americano}`,
     name: "Americano",
-    description: "$8790", 
+    description: "$9490", 
   },
   {
     id: 3,
     image: `${matambre}`,
     name: "Matambre",
-    description: "$7990", 
+    description: "$9190", 
   },
   {
     id: 4,
     image: `${entraña}`,
     name: "Entraña",
-    description: "$14990",
+    description: "$15550",
   },
   {
     id: 1,
     image: `${vacio}`,
     name: "Vacio",
-    description: "$9790", 
+    description: "$10490", 
   },
   {
     id: 2,
     image: `${lomo}`,
     name: "Lomo",
-    description: "$12190",
+    description: "$12890",
   },
   {
     id: 3,
@@ -94,7 +94,7 @@ const carne = [
     id: 4,
     image: `${bifeancho}`,
     name: "Bife ancho",
-    description: "$7590",//
+    description: "$7790",//
   },
   {
     id: 5,
@@ -106,13 +106,13 @@ const carne = [
     id: 6,
     image: `${roastbeff}`,
     name: "Roastbeff",
-    description: "$7990", 
+    description: "$7890", 
   },
   {
     id: 7,
     image: `${tapadeasado}`,
     name: "Tapa de asado",
-    description: "$7990", //
+    description: "$8940", //
   },
   {
     id: 8,
@@ -130,68 +130,68 @@ const carne = [
     id: 10,
     image: `${paleta}`,
     name: "Paleta",
-    description: "$8190", 
+    description: "$7890", 
   },
   {
     id: 11,
     image: `${peceto}`,
     name: "Peceto",
-    description: "$11490", 
+    description: "$11790", 
   },
   {
     id: 12,
     image: `${ojodebife}`,
     name: "Ojo de bife",
-    description: "$11690",
+    description: "$11990",
   },
   {
     id: 13,
     image: `${picaña}`,
     name: "Picaña",
-    description: "$10880",
+    description: "$11590",
   },
 
   {
     id: 14,
     image: `${colitacuadril}`,
     name: "Colita de cuadril",
-    description: "$10880",
+    description: "$11390",
   },
   {
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$9380", 
+    description: "$9890", 
   },
   {
     id: 16,
     image: `${cuadril}`,
     name: "Cuadril",
-    description: "$9380", 
+    description: "$9990", 
   },
   {
     id: 17,
     image: `${faldaparrillera}`,
     name: "Falda parrillera",
-    description: "$6690", //
+    description: "$6900", //
   },
   {
     id: 18,
     image: `${nalga}`,
     name: "Nalga",
-    description: "$10780", 
+    description: "$11290", 
   },
   {
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$9380",
+    description: "$9890",
   },
   {
     id: 20,
     image: `${bifedechorizo}`,
     name: "Bife de chorizo",
-    description: "$11190",
+    description: "11490",
   },
   {
     id: 21,
@@ -227,7 +227,7 @@ const carne = [
     id: 26,
     image: `${picada}`,
     name: "Picada Especial",
-    description: "$6890", 
+    description: "$6900", 
   }
 ];
 
@@ -242,7 +242,7 @@ const cerdo = [
     id: 2,
     image: `${carre}`,
     name: "Carre s/ hueso",
-    description: "$7590",
+    description: "$9890",
   },
   {
     id: 3,
@@ -260,7 +260,7 @@ const cerdo = [
     id: 1,
     image: `${matambrito}`,
     name: "Matambrito",
-    description: "$10980",
+    description: "$11190",
   },
   {
     id: 2,
@@ -287,7 +287,7 @@ const pollos = [
     id: 3,
     image: `${patamuslo}`,
     name: "Pata y muslo",
-    description: "$3890",
+    description: "$4100",
   },
   {
     id: 4,
@@ -305,7 +305,7 @@ const pollos = [
     id: 2,
     image: `${suprema}`,
     name: "Suprema",
-    description: "$6890",
+    description: "$7490",
   },
 ];
 
