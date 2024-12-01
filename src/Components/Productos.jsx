@@ -58,7 +58,7 @@ const carne = [
     id: 2,
     image: `${americano}`,
     name: "Americano",
-    description: "$9490", 
+    description: "$9660", 
   },
   {
     id: 3,
@@ -136,7 +136,7 @@ const carne = [
     id: 11,
     image: `${peceto}`,
     name: "Peceto",
-    description: "$11790", 
+    description: "$12780", 
   },
   {
     id: 12,
