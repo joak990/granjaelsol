@@ -52,13 +52,13 @@ const carne = [
     id: 1,
     image: `${asado}`,
     name: "Asado",
-    description: "$11.490", 
+    description: "$12.490", 
   },
   {
     id: 2,
     image: `${americano}`,
     name: "Americano",
-    description: "$11.900", 
+    description: "$13.090", 
   },
   {
     id: 3,
@@ -76,19 +76,19 @@ const carne = [
     id: 1,
     image: `${vacio}`,
     name: "Vacio",
-    description: "$13.900", 
+    description: "$15.900", 
   },
   {
     id: 2,
     image: `${lomo}`,
     name: "Lomo",
-    description: "$19.900",
+    description: "$22.900",
   },
   {
     id: 3,
     image: `${bifeangosto}`,
     name: "Bife angosto",
-    description: "$9900",
+    description: "$11.790",
   },
   {
     id: 4,
@@ -142,20 +142,20 @@ const carne = [
     id: 12,
     image: `${ojodebife}`,
     name: "Ojo de bife",
-    description: "$16.900",
+    description: "$19.900",
   },
   {
     id: 13,
     image: `${picaña}`,
     name: "Picaña",
-    description: "$15.900",
+    description: "$18.900",
   },
 
   {
     id: 14,
     image: `${colitacuadril}`,
     name: "Colita de cuadril",
-    description: "$14.900",
+    description: "$18.900",
   },
   {
     id: 15,
@@ -191,7 +191,7 @@ const carne = [
     id: 20,
     image: `${bifedechorizo}`,
     name: "Bife de chorizo",
-    description: "15900",
+    description: "19.400",
   },
   {
     id: 21,
@@ -221,7 +221,7 @@ const carne = [
     id: 25,
     image: `${miladecarne}`,
     name: "Milanesa de carne",
-    description: "$11.600",
+    description: "$13.190",
   },
   {
     id: 26,
