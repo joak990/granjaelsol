@@ -29,54 +29,53 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay'
+
 function CarrouselSwip() {
     return (
-        <div className=" mt-8 w-full md:w-full container"> {/* Agrega una clase contenedora para centrar */}
-            <div className=" row">
-                <div className=" col-lg-8 md:flex mx-auto"> {/* Utiliza una columna centrada */}
-                    <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                        spaceBetween={2}
-                        slidesPerView={1}
-                        navigation
-                        autoplay={{ delay: 7000, disableOnInteraction: false }}
-                        pagination={{ clickable: true }}
-                        scrollbar={{ draggable: true }}
-                        autoHeight={true}
-                        breakpoints={{
-                            640: { slidesPerView: 1 },
-                            768: { slidesPerView: 3 },
-                            1024: { slidesPerView: 4 },
-                        }}  
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
-                    >
-                        <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertadescuento2} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaosobuco} alt="" /></SwiperSlide> 
-                        <SwiperSlide><img className='w-100' src={ofertabifeancho} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertamarucha} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabifeangosto} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaasadoorilla} alt="" /></SwiperSlide> 
-                        <SwiperSlide><img className='w-100' src={ofertaroastbeef} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapatycasero} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertadescuento} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertaespinazo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapicadaespecial} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertacarredecerdo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapechitodecerdo} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapicadacomun} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertafaldaparrillera} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertatapadenalga} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertabondiola} alt="" /></SwiperSlide>
-                        <SwiperSlide><img className='w-100' src={ofertapernil} alt="" /></SwiperSlide>
-                        {/* ... Agrega más diapositivas según sea necesario */}
-                    </Swiper>
-                </div>
+        <div className="w-full px-4 lg:px-10 mt-8"> {/* Contenedor responsivo con márgenes */}
+            <div className="max-w-screen-xl mx-auto"> {/* Centra y limita el ancho máximo */}
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    navigation
+                    autoplay={{ delay: 7000, disableOnInteraction: false }}
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                    autoHeight={true}
+                    breakpoints={{
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 3 },
+                        1024: { slidesPerView: 4 },
+                    }}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide><img className="w-full object-cover" src={ofertadescuento} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertadescuento2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertaosobuco} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertabifeancho} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertamarucha} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertabifeangosto} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertabifeangosto} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertaasadoorilla} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertaroastbeef} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertapatycasero} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertadescuento} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertaespinazo} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertapicadaespecial} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertacarredecerdo} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertapechitodecerdo} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertapicadacomun} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertafaldaparrillera} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertatapadenalga} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertabondiola} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="w-full object-cover" src={ofertapernil} alt="" /></SwiperSlide>
+                </Swiper>
             </div>
         </div>
-    )
+    );
 }
+
 
 export default CarrouselSwip;
