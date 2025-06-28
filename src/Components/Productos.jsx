@@ -39,11 +39,11 @@ import lechon from "../img/cerdo/lechon.jpg";
 import matambrito from "../img/cerdo/matambrito.jpg";
 import pechito from "../img/cerdo/pechito.png";
 
-import Alitas from "../img/pollo/Alitas.jpg";
+//import Alitas from "../img/pollo/Alitas.jpg";
 import mila from "../img/pollo/mila.png";
 import patamuslo from "../img/pollo/patamuslo.jpg";
-import pechuga from "../img/pollo/pechuga.jpg";
-import pollo from "../img/pollo/pollo.png";
+//import pechuga from "../img/pollo/pechuga.jpg";
+//import pollo from "../img/pollo/pollo.png";
 import suprema from "../img/pollo/suprema.jpg";
 
 import {Link} from "react-scroll"
@@ -58,7 +58,7 @@ const carne = [
     id: 2,
     image: `${americano}`,
     name: "Americano",
-    description: "$13300", //
+    description: "$13890", //
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ const carne = [
     id: 4,
     image: `${entraña}`,
     name: "Entraña",
-    description: "$20900",
+    description: "$20500",
   },
   {
     id: 1,
@@ -155,7 +155,7 @@ const carne = [
     id: 14,
     image: `${colitacuadril}`,
     name: "Colita de cuadril",
-    description: "$18900",
+    description: "$17900",
   },
   {
     id: 15,
@@ -271,12 +271,14 @@ const cerdo = [
 ];
 
 const pollos = [
+  /*
   {
     id: 1,
     image: `${Alitas}`,
     name: "Alitas",
     description: "$2000",
   },
+  */
   {
     id: 2,
     image: `${mila}`,
@@ -289,6 +291,7 @@ const pollos = [
     name: "Pata y muslo",
     description: "$4490", //
   },
+    /*
   {
     id: 4,
     image: `${pechuga}`,
@@ -301,6 +304,7 @@ const pollos = [
     name: "Pollo entero",
     description: "$3490",
   },
+  */
   {
     id: 2,
     image: `${suprema}`,
