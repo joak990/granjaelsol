@@ -5,7 +5,7 @@ import {
 } from "react-icons/bs";
 import { RxDot } from "react-icons/rx";
 
-import logo1 from "../img/foto1.jpg";
+import logo1 from "../img/imagenfachada.jpg";
 import logo2 from "../img/foto2.jpg";
 import logo3 from "../img/foto3.jpg";
 
@@ -50,7 +50,7 @@ function Carrousel() {
     }, [currentIndex]);
 
     return (
-        <div className="w-full py-0 md:px-1 relative group" id="carrousel">
+        <div className="w-full py-8 md:px-1 relative group" id="carrousel">
             <div className="w-full h-[360px] md:h-[600px]  overflow-hidden relative">
                 {slides.map((slide, slideIndex) => (
                     <img

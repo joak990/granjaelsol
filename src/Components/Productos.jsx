@@ -356,14 +356,14 @@ function Productos() {
       {showMore? (
         <Link to="productos"  spy={true} smooth={true} offset={-100} duration={500}>
         <button
-          className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
+          className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore}
           >
           {showMore ? "Ver menos" : "Ver más"}
         </button>
         </Link>
       ) : (<button
-        className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
+        className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
         onClick={toggleShowMore}
         >
         {showMore ? "Ver menos" : "Ver más"}
@@ -378,7 +378,7 @@ function Productos() {
       </div>
       <div className="mt-10 flex justify-center">
         <button
-          className="bg-red-600  rounded-lg w-44 items-center text-white text-2xl hover:bg-red-900"
+          className="bg-orange-200  rounded-lg w-44 items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore3}
         >
           {showMore3 ? "Ver menos" : "Ver más"}
@@ -393,7 +393,7 @@ function Productos() {
       </div>
       <div className="mt-10 flex justify-center">
         <button
-          className="bg-red-600 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
+          className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
           onClick={toggleShowMore4}
         >
           {showMore4 ? "Ver menos" : "Ver más"}
