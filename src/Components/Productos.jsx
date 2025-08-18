@@ -52,7 +52,7 @@ const carne = [
     id: 1,
     image: `${asado}`,
     name: "Asado",
-    description: "$13590", // 
+    description: "$13750", // 
   },
   {
     id: 2,
@@ -130,7 +130,7 @@ const carne = [
     id: 10,
     image: `${paleta}`,
     name: "Paleta",
-    description: "$11590", 
+    description: "$11750", 
   },
   {
     id: 11,
@@ -161,13 +161,13 @@ const carne = [
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$12500", 
+    description: "$12750", 
   },
   {
     id: 16,
     image: `${cuadril}`,
     name: "Cuadril",
-    description: "$13130", // 
+    description: "$13490", // 
   },
   {
     id: 17,
@@ -185,7 +185,7 @@ const carne = [
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$12500",
+    description: "$12750",
   },
   {
     id: 20,
@@ -226,8 +226,8 @@ const carne = [
   {
     id: 26,
     image: `${picada}`,
-    name: "Picada Especial",
-    description: "$12100",  //
+    name: "Picada",
+    description: "$8900",  //
   }
 ];
 
@@ -260,7 +260,7 @@ const cerdo = [
     id: 1,
     image: `${matambrito}`,
     name: "Matambrito",
-    description: "$14250",
+    description: "$14900",
   },
   {
     id: 2,
