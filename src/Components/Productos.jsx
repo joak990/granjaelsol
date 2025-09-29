@@ -43,7 +43,7 @@ import pechito from "../img/cerdo/pechito.png";
 import mila from "../img/pollo/mila.png";
 import patamuslo from "../img/pollo/patamuslo.jpg";
 //import pechuga from "../img/pollo/pechuga.jpg";
-//import pollo from "../img/pollo/pollo.png";
+import pollo from "../img/pollo/pollo.png";
 import suprema from "../img/pollo/suprema.jpg";
 
 import {Link} from "react-scroll"
@@ -106,7 +106,7 @@ const carne = [
     id: 6,
     image: `${roastbeff}`,
     name: "Roastbeff",
-    description: "$11590", // 
+    description: "$11260", // 
   },
   {
     id: 7,
@@ -142,13 +142,13 @@ const carne = [
     id: 12,
     image: `${ojodebife}`,
     name: "Ojo de bife",
-    description: "$19900", //
+    description: "$19300", //
   },
   {
     id: 13,
     image: `${picaña}`,
     name: "Picaña",
-    description: "$17900",
+    description: "$17600",
   },
 
   {
@@ -161,7 +161,7 @@ const carne = [
     id: 15,
     image: `${cuadrada}`,
     name: "Cuadrada",
-    description: "$12750", 
+    description: "$13250", 
   },
   {
     id: 16,
@@ -179,19 +179,19 @@ const carne = [
     id: 18,
     image: `${nalga}`,
     name: "Nalga",
-    description: "$15900", 
+    description: "$15500", 
   },
   {
     id: 19,
     image: `${boladelomo}`,
     name: "Bola de lomo",
-    description: "$12750",
+    description: "$13250",
   },
   {
     id: 20,
     image: `${bifedechorizo}`,
     name: "Bife de chorizo",
-    description: "18900", //
+    description: "18300", //
   },
   {
     id: 21,
@@ -227,7 +227,7 @@ const carne = [
     id: 26,
     image: `${picada}`,
     name: "Picada",
-    description: "$8900",  //
+    description: "$9350",  //
   }
 ];
 
@@ -236,7 +236,7 @@ const cerdo = [
     id: 1,
     image: `${bondiola}`,
     name: "Bondiola",
-    description: "$10390", //
+    description: "$10170", //
   },
   {
     id: 2,
@@ -260,13 +260,13 @@ const cerdo = [
     id: 1,
     image: `${matambrito}`,
     name: "Matambrito",
-    description: "$14900",
+    description: "$14890",
   },
   {
     id: 2,
     image: `${pechito}`,
     name: "Pechito",
-    description: "$7490", //
+    description: "$7590", //
   },
 ];
 
@@ -283,13 +283,13 @@ const pollos = [
     id: 2,
     image: `${mila}`,
     name: "Milanesa de pollo",
-    description: "$8650",//
+    description: "$8750",//
   },
   {
     id: 3,
     image: `${patamuslo}`,
     name: "Pata y muslo",
-    description: "$4490", //
+    description: "$3750", //
   },
     /*
   {
@@ -298,18 +298,18 @@ const pollos = [
     name: "Pechuga",
     description: "$5890",
   },
+  */
   {
     id: 1,
     image: `${pollo}`,
     name: "Pollo entero",
     description: "$3490",
   },
-  */
   {
     id: 2,
     image: `${suprema}`,
     name: "Suprema",
-    description: "$9500", //
+    description: "$9590", //
   },
 ];
 

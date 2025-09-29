@@ -25,7 +25,7 @@ function About() {
                     
                     {/* Párrafo central */}
                     <div className="font-medium rounded-lg p-6 md:p-8 leading-relaxed text-gray-800" id="quienes-somos">
-                        En <span className="text-[#f59e0b] font-bold">Granja El Sol</span>, creemos que la calidad y el buen trato hacen la diferencia. Nos dedicamos a ofrecer cortes de carne de excelencia, seleccionados cuidadosamente para llevar a tu mesa sabor, frescura y confianza. Nuestro compromiso es contigo y tu familia, brindándote atención cercana y productos que reflejan el cariño con el que trabajamos cada día.
+                        En <span className="text-[#f59e0b] font-bold">Granja El Sol</span>, creemos que la calidad y el buen trato hacen la diferencia. Nos dedicamos a ofrecer cortes de carne de excelencia, seleccionados cuidadosamente para llevar a tu mesa sabor, frescura y confianza. Nuestro compromiso es con vos  y tu familia, brindándote atención cercana y productos que reflejan el cariño con el que trabajamos cada día.
                     </div>
 
                     {/* Lista de valores */}
