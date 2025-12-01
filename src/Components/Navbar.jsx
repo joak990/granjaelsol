@@ -1,10 +1,13 @@
-import logo from "../img/LOGHO.png"
 import { useState } from 'react';
-import { Link } from "react-scroll"
-import insta from "../img/insta.png"
-import facebook from "../img/facebook.png"
-import whatsapp from "../img/whatsapp.png"
+import { Menu, X, Instagram, Facebook, Send } from 'lucide-react'; // Importamos íconos Lucide
 
+// Función de scroll simulada (reemplazando react-scroll para evitar errores de dependencia)
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+};
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,61 +16,91 @@ function Navbar() {
         setMenuOpen(!menuOpen);
     };
 
+    // Componente de enlace de navegación adaptado para el scroll simulado
+    const NavLink = ({ to, children }) => (
+        <div 
+            onClick={() => {
+                scrollToSection(to);
+                setMenuOpen(false); // Cierra el menú en móvil después de hacer clic
+            }} 
+            // Clases de estilo del enlace
+            className="text-text-dark md:text-lg text-xl hover:text-primary transition duration-300 cursor-pointer block py-2"
+        >
+            {children}
+        </div>
+    );
+
     return (
-        <nav className={` bg-orange-200 py-4 px-8 fixed top-0 left-0 w-full z-50 ${menuOpen ? 'shadow-md' : 'md:shadow-none'}`}>
-            <div className="flex items-center justify-between">
+        // Aplicamos bg-base y font-heading
+        <nav className={`bg-base py-4 px-8 fixed top-0 left-0 w-full z-50 font-heading ${menuOpen ? 'shadow-md' : 'md:shadow-none'}`}>
+            <div className="flex items-center justify-between max-w-7xl mx-auto">
                 <div className="flex items-center">
-                    <Link to="carrousel" spy={true} smooth={true} offset={-100} duration={500}>
-                        <img data-aos="fade-right" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
-                    </Link>
-                    <span  data-aos="zoom-im" data-aos-duration="3000" className="text-white font-semibold">Granja el Sol</span>
+                    {/* Placeholder para el Logo (simulando el Link y la imagen) */}
+                    <div 
+                        onClick={() => scrollToSection("carrousel")} 
+                        className="cursor-pointer flex items-center"
+                        data-aos="fade-right" data-aos-duration="3000"
+                    >
+                        {/* Sustituimos la imagen por un placeholder visualmente agradable con bg-secondary */}
+                        <div className="h-14 w-14 mr-2 rounded-lg bg-secondary flex items-center justify-center text-text-light text-2xl font-black object-cover">
+                            GS
+                        </div>
+                        {/* Color del texto principal actualizado a text-text-dark */}
+                        <span data-aos="zoom-im" data-aos-duration="3000" className="text-text-dark font-extrabold text-xl">Granja el Sol</span>
+                    </div>
                 </div>
+
                 <div className="md:hidden"> {/* Mostrar solo en dispositivos móviles */}
-                    <button className="text-gray-600 hover:text-red-600 focus:outline-none" onClick={toggleMenu}>
-                        <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            {menuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            )}
-                        </svg>
+                    {/* Ícono de menú con hover text-primary */}
+                    <button className="text-text-dark hover:text-primary focus:outline-none" onClick={toggleMenu}>
+                        {menuOpen ? (
+                            <X className="h-7 w-7" />
+                        ) : (
+                            <Menu className="h-7 w-7" />
+                        )}
                     </button>
                 </div>
-                <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'} md:space-x-6 mt-4  md:mt-0`}>
+
+                {/* Menú de navegación */}
+                <ul className={`md:flex ${menuOpen ? 'flex flex-col absolute top-full left-0 w-full bg-base shadow-lg p-4' : 'hidden'} md:space-x-8 md:mt-0 items-center justify-center`}>
                     <li data-aos="zoom-im" data-aos-duration="3000" >
-                        <Link to="carrousel" spy={true} smooth={true} offset={-100} duration={500} className="text-white md:text-base text-xl hover:text-red-600">Inicio</Link>
+                        <NavLink to="carrousel">Inicio</NavLink>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000">
-                        <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="text-white  md:text-base text-xl hover:text-red-600" >Quienes Somos</Link>
+                        <NavLink to="about">Quienes Somos</NavLink>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000" >
-                        <Link to="productos" spy={true} smooth={true} offset={-350} duration={500} className="text-white md:text-base text-xl hover:text-red-600">Productos</Link>
+                        <NavLink to="productos">Productos</NavLink>
                     </li>
                     <li data-aos="zoom-im" data-aos-duration="3000">
-                        <Link to="contactos" spy={true} smooth={true} offset={-150} duration={500} className="text-white md:text-base text-xl hover:text-red-600">Contáctanos</Link>
+                        <NavLink to="contactos">Contáctanos</NavLink>
                     </li>
                 </ul>
-                <div> 
-                <div data-aos="zoom-im" data-aos-duration="3000" className="flex">
-                    <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer">
-                        <img  className=" h-5 mb-1  mr-3 md:h-7" src={insta} alt="" />
-                    </a>
-                    <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer">
-                        <img  className=" h-5 mb-1  mr-3 md:h-7 text-gray" src={facebook} alt="" />
-                    </a>
-                    <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer">
-                        <img  className=" h-5 mb-1  mr-3 md:h-7 text-gray" src={whatsapp} alt="" />
-                    </a>
+                
+                {/* Íconos de redes sociales */}
+                <div className="hidden md:block">
+                    <div data-aos="zoom-im" data-aos-duration="3000" className="flex items-center space-x-4">
+                        {/* Sustitución de imágenes por íconos Lucide, usando hover:text-primary */}
+                        <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer" 
+                        className="text-text-dark hover:text-primary transition duration-300">
+                            <Instagram className="h-6 w-6" />
+                        </a>
+                        <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" 
+                        className="text-text-dark hover:text-primary transition duration-300">
+                            <Facebook className="h-6 w-6" />
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer" 
+                        className="text-text-dark hover:text-primary transition duration-300">
+                            <Send className="h-6 w-6" /> 
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-    </nav>
+        </nav>
     );
 }
 
 export default Navbar;
-
 
 
 
