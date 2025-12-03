@@ -44,9 +44,6 @@ const CardProducts = ({ products }) => {
               </span>
 
               {/* Botón para futuro Carrito/Pedido */}
-              <button className="mt-2 w-full py-2 text-sm md:text-base font-bold rounded-lg bg-primary text-text-light hover:bg-secondary transition duration-200 shadow-md">
-                Ver Detalles
-              </button>
             </div>
           </div>
         ))}
