@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, Instagram, Facebook, Send } from 'lucide-react'; // Importamos íconos Lucide
-
+import logo from "../img/LOGHO.png"
 // Función de scroll simulada (reemplazando react-scroll para evitar errores de dependencia)
 const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -42,8 +42,8 @@ function Navbar() {
                         data-aos="fade-right" data-aos-duration="3000"
                     >
                         {/* Sustituimos la imagen por un placeholder visualmente agradable con bg-secondary */}
-                        <div className="h-14 w-14 mr-2 rounded-lg bg-secondary flex items-center justify-center text-text-light text-2xl font-black object-cover">
-                            GS
+                        <div className="h-14 w-14 mr-2 rounded-lg  flex items-center justify-center text-text-light text-2xl font-black object-cover">
+                            <img data-aos="fade-right" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
                         </div>
                         {/* Color del texto principal actualizado a text-text-dark */}
                         <span data-aos="zoom-im" data-aos-duration="3000" className="text-text-dark font-extrabold text-xl">Granja el Sol</span>

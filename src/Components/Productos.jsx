@@ -48,272 +48,49 @@ import suprema from "../img/pollo/suprema.jpg";
 
 import {Link} from "react-scroll"
 const carne = [
-  {
-    id: 1,
-    image: `${asado}`,
-    name: "Asado",
-    description: "$15900", // 
-  },
-  {
-    id: 2,
-    image: `${americano}`,
-    name: "Americano",
-    description: "$16890", //
-  },
-  {
-    id: 3,
-    image: `${matambre}`,
-    name: "Matambre",
-    description: "$15700", 
-  },
-  {
-    id: 4,
-    image: `${entraña}`,
-    name: "Entraña",
-    description: "$23900",
-  },
-  {
-    id: 1,
-    image: `${vacio}`,
-    name: "Vacio",
-    description: "$18900", //
-  },
-  {
-    id: 2,
-    image: `${lomo}`,
-    name: "Lomo",
-    description: "$25350",
-  },
-  {
-    id: 3,
-    image: `${bifeangosto}`,
-    name: "Bife angosto",
-    description: "$14990",//
-  },
-  {
-    id: 4,
-    image: `${bifeancho}`,
-    name: "Bife ancho",
-    description: "$14900",//
-  },
-  {
-    id: 5,
-    image: `${palomita}`,
-    name: "Palomita",
-    description: "$11590", //
-  },
-  {
-    id: 6,
-    image: `${roastbeff}`,
-    name: "Roastbeff",
-    description: "$14250", // 
-  },
-  {
-    id: 7,
-    image: `${tapadeasado}`,
-    name: "Tapa de asado",
-    description: "$14900", 
-  },
-  {
-    id: 8,
-    image: `${tapadenalga}`,
-    name: "Tapa de nalga",
-    description: "$14450", //
-  },
-  {
-    id: 9,
-    image: `${osobuco}`,
-    name: "Osobuco",
-    description: "$7790", //
-  },
-  {
-    id: 10,
-    image: `${paleta}`,
-    name: "Paleta",
-    description: "$14250", 
-  },
-  {
-    id: 11,
-    image: `${peceto}`,
-    name: "Peceto",
-    description: "$19900", // 
-  },
-  {
-    id: 12,
-    image: `${ojodebife}`,
-    name: "Ojo de bife",
-    description: "$23900", //
-  },
-  {
-    id: 13,
-    image: `${picaña}`,
-    name: "Picaña",
-    description: "$22500",
-  },
-
-  {
-    id: 14,
-    image: `${colitacuadril}`,
-    name: "Colita de cuadril",
-    description: "$22500",
-  },
-  {
-    id: 15,
-    image: `${cuadrada}`,
-    name: "Cuadrada",
-    description: "$16200", 
-  },
-  {
-    id: 16,
-    image: `${cuadril}`,
-    name: "Cuadril",
-    description: "$16900", // 
-  },
-  {
-    id: 17,
-    image: `${faldaparrillera}`,
-    name: "Falda parrillera",
-    description: "$11900", //
-  },
-  {
-    id: 18,
-    image: `${nalga}`,
-    name: "Nalga",
-    description: "$17900", 
-  },
-  {
-    id: 19,
-    image: `${boladelomo}`,
-    name: "Bola de lomo",
-    description: "$16200",
-  },
-  {
-    id: 20,
-    image: `${bifedechorizo}`,
-    name: "Bife de chorizo",
-    description: "22900", //
-  },
-  {
-    id: 21,
-    image: `${espinazo}`,
-    name: "Espinazo",
-    description: "$4900", //
-  },
-  {
-    id: 22,
-    image: `${tortuguita}`,
-    name: "Tortuguita",
-    description: "$11.590",//
-  },
-  {
-    id: 23,
-    image: `${faldapuchero}`,
-    name: "Falda puchero",
-    description: "$5590",
-  },
-  {
-    id: 24,
-    image: `${hamburguesas}`,
-    name: "hamburguesas",
-    description: "$6690",
-  },
-  {
-    id: 25,
-    image: `${miladecarne}`,
-    name: "Milanesa de carne",
-    description: "$12500",
-  },
-  {
-    id: 26,
-    image: `${picadaespecial}`,
-    name: "Picada comun",
-    description: "$9990",  //
-  }
-];
+    {id: 1, image: `${asado}`,name: "Asado", description: "$15900"},
+    {id: 2, image: `${americano}`, name: "Americano", description: "$16890"},
+    {id: 3, image: `${matambre}`, name: "Matambre", description: "$15700"},
+    {id: 4, image: `${entraña}`, name: "Entraña", description: "$23900"},
+    {id: 5, image: `${vacio}`, name: "Vacio", description: "$18900"},
+    {id: 6, image: `${lomo}`, name: "Lomo", description: "$25350"},
+    {id: 7, image: `${bifeangosto}`, name: "Bife angosto", description: "$14990"},
+    {id: 8, image: `${bifeancho}`, name: "Bife ancho", description: "$14900"},
+    {id: 9, image: `${palomita}`, name: "Palomita", description: "$11590"},
+    {id: 10, image: `${roastbeff}`, name: "Roastbeff", description: "$14250"},
+    {id: 11, image: `${tapadeasado}`, name: "Tapa de asado", description: "$14900"},
+    {id: 12, image: `${tapadenalga}`, name: "Tapa de nalga", description: "$14450"},
+    {id: 13, image: `${osobuco}`, name: "Osobuco", description: "$7790"},
+    {id: 14, image: `${paleta}`, name: "Paleta", description: "$14250"},
+    {id: 15, image: `${peceto}`, name: "Peceto", description: "$19900"},
+    {id: 16, image: `${ojodebife}`, name: "Ojo de bife", description: "$23900"},
+    {id: 17, image: `${picaña}`, name: "Picaña", description: "$22500"},
+    {id: 19, image: `${colitacuadril}`, name: "Colita de cuadril", description: "$22500"},
+    {id: 20, image: `${cuadrada}`, name: "Cuadrada", description: "$16200"},
+    {id: 21, image: `${cuadril}`, name: "Cuadril", description: "$16900"},
+    {id: 22, image: `${faldaparrillera}`, name: "Falda parrillera", description: "$11900"},
+    {id: 23, image: `${nalga}`, name: "Nalga", description: "$17900"},
+    {id: 24, image: `${boladelomo}`, name: "Bola de lomo", description: "$16200"},
+    {id: 25, image: `${bifedechorizo}`, name: "Bife de chorizo", description: "22900"},
+    {id: 26, image: `${espinazo}`, name: "Espinazo", description: "$4900"},
+    {id: 27, image: `${tortuguita}`, name: "Tortuguita", description: "$11.590"},
+    {id: 28, image: `${faldapuchero}`, name: "Falda puchero", description: "$5590"},
+    {id: 24, image: `${hamburguesas}`, name: "hamburguesas", description: "$6690"},
+    {id: 25, image: `${miladecarne}`, name: "Milanesa de carne", description: "$12500"},
+    {id: 26, image: `${picadaespecial}`, name: "Picada comun", description: "$9990"}];
 
 const cerdo = [
-  {
-    id: 1,
-    image: `${bondiola}`,
-    name: "Bondiola",
-    description: "$10900", //
-  },
-  {
-    id: 2,
-    image: `${carre}`,
-    name: "Carre s/ hueso",
-    description: "$10200", //
-  },
-  {
-    id: 3,
-    image: `${churrasquito}`,
-    name: "Churrasquito",
-    description: "$14250", //
-  },
-  /*
-  {
-    id: 4,
-    image: `${lechon}`,
-    name: "Lechon",
-    description: "$4000",
-  },
-  */
-  {
-    id: 1,
-    image: `${matambrito}`,
-    name: "Matambrito",
-    description: "$17900",
-  },
-  {
-    id: 2,
-    image: `${pechito}`,
-    name: "Pechito",
-    description: "$8190", //
-  },
-];
+    {id: 1, image: `${bondiola}`, name: "Bondiola", description: "$10900"},
+    {id: 2, image: `${carre}`, name: "Carre s/ hueso", description: "$10200"},
+    {id: 3, image: `${churrasquito}`, name: "Churrasquito", description: "$14250"},
+    {id: 4, image: `${matambrito}`, name: "Matambrito", description: "$17900"},
+    {id: 5, image: `${pechito}`, name: "Pechito", description: "$8190"}];
 
 const pollos = [
-  /*
-  {
-    id: 1,
-    image: `${Alitas}`,
-    name: "Alitas",
-    description: "$2000",
-  },
-  */
-  {
-    id: 2,
-    image: `${mila}`,
-    name: "Milanesa de pollo",
-    description: "$8850",//
-  },
-  {
-    id: 3,
-    image: `${patamuslo}`,
-    name: "Pata y muslo",
-    description: "$3900", //
-  },
-    /*
-  {
-    id: 4,
-    image: `${pechuga}`,
-    name: "Pechuga",
-    description: "$5890",
-  },
-  */
-  {
-    id: 1,
-    image: `${pollo}`,
-    name: "Pollo entero",
-    description: "$3490",
-  },
-  {
-    id: 2,
-    image: `${suprema}`,
-    name: "Suprema",
-    description: "$9690", //
-  },
-];
+    {id: 1, image: `${mila}`, name: "Milanesa de pollo", description: "$8850"},
+    {id: 2, image: `${patamuslo}`, name: "Pata y muslo", description: "$3900"},
+    {id: 3, image: `${pollo}`, name: "Pollo entero", description: "$3490"},
+    {id: 4, image: `${suprema}`, name: "Suprema", description: "$9690"}];
 
 const limitedProducts = carne.slice(0, 4);
 
@@ -322,88 +99,86 @@ const limitedProducts3 = cerdo.slice(0, 4);
 const limitedProducts4 = pollos.slice(0, 4);
 
 function Productos() {
-  const [showMore, setShowMore] = useState(false);
-
-  const [showMore3, setShowMore3] = useState(false);
-  const [showMore4, setShowMore4] = useState(false);
-
-  const toggleShowMore = () => {
+    const [showMore, setShowMore] = useState(false);
+    const [showMore3, setShowMore3] = useState(false);
+    const [showMore4, setShowMore4] = useState(false);
+    const toggleShowMore = () => {
     setShowMore(!showMore);
-  };
+    };
 
-  const toggleShowMore3 = () => {
+    const toggleShowMore3 = () => {
     setShowMore3(!showMore3);
-  };
+    };
 
-  const toggleShowMore4 = () => {
-    setShowMore4(!showMore4);
-  };
+    const toggleShowMore4 = () => {
+        setShowMore4(!showMore4);
+    };
 
-  const productsToShow = showMore ? carne : limitedProducts;
-  const productsToShow3 = showMore3 ? cerdo : limitedProducts3;
-  const productsToShow4 = showMore4 ? pollos : limitedProducts4;
+    const productsToShow = showMore ? carne : limitedProducts;
+    const productsToShow3 = showMore3 ? cerdo : limitedProducts3;
+    const productsToShow4 = showMore4 ? pollos : limitedProducts4;
 
-  return (
+    return (
     <div data-aos="zoom-in-right"  data-aos-duration="1500" className=" md:mt-28 bg-white px-4 md:px-8 py-16 " id="productos">
-      <h1 className="text-center text-4xl md:text-5xl font-extralight mb-6 font-serif">
+        <h1 className="text-center text-4xl md:text-5xl font-extralight mb-6 font-serif">
         Nuestros Productos
-      </h1>
-      <div className="mt-24 md:mt-24">
+        </h1>
+        <div className="mt-24 md:mt-24">
         <div data-aos="fade-down" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Vacunos
+            Vacunos
         </div>
         <CardProducts products={productsToShow} />
-      </div>
-      <div className="mt-10 flex justify-center">
-      {showMore? (
+        </div>
+        <div className="mt-10 flex justify-center">
+        {showMore? (
         <Link to="productos"  spy={true} smooth={true} offset={-100} duration={500}>
         <button
-          className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
-          onClick={toggleShowMore}
-          >
-          {showMore ? "Ver menos" : "Ver más"}
+            className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
+            onClick={toggleShowMore}
+            >
+            {showMore ? "Ver menos" : "Ver más"}
         </button>
         </Link>
-      ) : (<button
+        ) : (<button
         className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
         onClick={toggleShowMore}
         >
         {showMore ? "Ver menos" : "Ver más"}
-      </button>)}
-      </div>
+        </button>)}
+        </div>
 
-      <div className="mt-24">
+        <div className="mt-24">
         <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-          Cerdo
+            Cerdo
         </div>
         <CardProducts products={productsToShow3} />
-      </div>
-      <div className="mt-10 flex justify-center">
+        </div>
+        <div className="mt-10 flex justify-center">
         <button
-          className="bg-orange-200  rounded-lg w-44 items-center text-white text-2xl hover:bg-red-900"
-          onClick={toggleShowMore3}
+            className="bg-orange-200  rounded-lg w-44 items-center text-white text-2xl hover:bg-red-900"
+            onClick={toggleShowMore3}
         >
-          {showMore3 ? "Ver menos" : "Ver más"}
+            {showMore3 ? "Ver menos" : "Ver más"}
         </button>
-      </div>
+        </div>
 
-      <div className="mt-24">
+        <div className="mt-24">
         <div data-aos="zoom-in-left" data-aos-duration="1500"  className="text-2xl font-extralight flex justify-center mb-6">
-          Pollo
+            Pollo
         </div>
         <CardProducts products={productsToShow4} />
-      </div>
-      <div className="mt-10 flex justify-center">
+        </div>
+        <div className="mt-10 flex justify-center">
         <button
-          className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
-          onClick={toggleShowMore4}
+            className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
+            onClick={toggleShowMore4}
         >
-          {showMore4 ? "Ver menos" : "Ver más"}
+            {showMore4 ? "Ver menos" : "Ver más"}
         </button>
-      </div>
-      
+        </div>
+            
     </div>
-  );
+    );
 }
 
 export default Productos;
