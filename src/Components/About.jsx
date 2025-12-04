@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react"; // Usamos Lucide para los íconos
-import logo from "../img/LOGHO.png"
+import logo from "../img/logoo.png"
 
 function About() {
     return (

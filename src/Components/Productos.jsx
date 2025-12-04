@@ -30,23 +30,17 @@ import faldapuchero from "../img/carnes/faldapuchero.jpg";
 import hamburguesas from "../img/carnes/hamburguesas.png";
 import miladecarne from "../img/carnes/miladecarne.jpg";
 import picadaespecial from "../img/carnes/picada.jpg";
-
-
 import bondiola from "../img/cerdo/bondiola.jpg";
 import carre from "../img/cerdo/carre.jpg";
 import churrasquito from "../img/cerdo/churrasquito.jpg";
-//import lechon from "../img/cerdo/lechon.jpg";
 import matambrito from "../img/cerdo/matambrito.jpg";
 import pechito from "../img/cerdo/pechito.png";
-
-//import Alitas from "../img/pollo/Alitas.jpg";
 import mila from "../img/pollo/mila.png";
 import patamuslo from "../img/pollo/patamuslo.jpg";
-//import pechuga from "../img/pollo/pechuga.jpg";
 import pollo from "../img/pollo/pollo.png";
 import suprema from "../img/pollo/suprema.jpg";
-
 import {Link} from "react-scroll"
+
 const carne = [
     {id: 1, image: `${asado}`,name: "Asado", description: "$15900"},
     {id: 2, image: `${americano}`, name: "Americano", description: "$16890"},
@@ -93,9 +87,7 @@ const pollos = [
     {id: 4, image: `${suprema}`, name: "Suprema", description: "$9690"}];
 
 const limitedProducts = carne.slice(0, 4);
-
 const limitedProducts3 = cerdo.slice(0, 4);
-
 const limitedProducts4 = pollos.slice(0, 4);
 
 function Productos() {
@@ -161,7 +153,6 @@ function Productos() {
             {showMore3 ? "Ver menos" : "Ver más"}
         </button>
         </div>
-
         <div className="mt-24">
         <div data-aos="zoom-in-left" data-aos-duration="1500"  className="text-2xl font-extralight flex justify-center mb-6">
             Pollo

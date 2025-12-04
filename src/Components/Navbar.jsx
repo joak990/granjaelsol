@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, Instagram, Facebook, Send } from 'lucide-react'; // Importamos íconos Lucide
-import logo from "../img/LOGHO.png"
+import logo from "../img/logoo.png"
 // Función de scroll simulada (reemplazando react-scroll para evitar errores de dependencia)
 const scrollToSection = (id) => {
     const element = document.getElementById(id);

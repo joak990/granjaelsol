@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Circle } from "lucide-react"; // Usamos Lucide para los íconos
-import logo1 from "../img/imagenfachada.jpg";
+import logo1 from "../img/imagenfachada2.jpg";
 import logo2 from "../img/foto2.jpg";
 import logo3 from "../img/foto3.jpg";
 
@@ -41,7 +41,7 @@ function Carrousel() {
     return (
         // Añadimos mt-16 para bajarlo del navbar fijo (que es h-14)
         <div className="w-full pt-16 md:pt-20 relative group overflow-hidden" id="carrousel"> 
-            <div className="w-full h-[400px] md:h-[70vh] max-h-[800px] relative rounded-b-xl shadow-2xl mx-auto overflow-hidden">
+            <div className="w-full h-[500px] md:h-[80vh] max-h-[800px] relative rounded-b-xl shadow-2xl mx-auto overflow-hidden">
                 
                 {slides.map((slide, slideIndex) => (
                     <div
