@@ -1,174 +1,140 @@
-import CardProducts from "./CardProducts";
 import { useState } from "react";
-import asado from "../img/carnes/asado.jpg";
-import americano from "../img/carnes/americano.jpg";
-import matambre from "../img/carnes/Matambre.jpg";
-import entraña from "../img/carnes/entraña.jpg";
-import vacio from "../img/carnes/vacio.jpg";
-import lomo from "../img/carnes/lomo.jpg";
-import bifeangosto from "../img/carnes/bifeangosto.jpg";
-import bifeancho from "../img/carnes/bifeancho.jpg";
-import palomita from "../img/carnes/palomita.jpg";
-import roastbeff from "../img/carnes/roastbeef.jpg";
-import tapadeasado from "../img/carnes/tapadeasado.jpg";
-import tapadenalga from "../img/carnes/tapadenalga.png";
-import osobuco from "../img/carnes/osobuco.jpg";
-import paleta from "../img/carnes/paleta.jpg";
-import peceto from "../img/carnes/peceto.jpg";
-import picaña from "../img/carnes/picaña.jpg";
-import ojodebife from "../img/carnes/ojodebife.png";
-import colitacuadril from "../img/carnes/colitacuadril.jpg";
-import cuadrada from "../img/carnes/cuadrada.png";
-import cuadril from "../img/carnes/cuadril.png";
-import faldaparrillera from "../img/carnes/faldaparrillera.jpg";
-import nalga from "../img/carnes/nalga.png";
-import boladelomo from "../img/carnes/boladelomo.png";
-import bifedechorizo from "../img/carnes/bifedechorizo.jpg";
-import espinazo from "../img/carnes/espinazo.jpg";
-import tortuguita from "../img/carnes/tortuguita.jpg";
-import faldapuchero from "../img/carnes/faldapuchero.jpg";
-import hamburguesas from "../img/carnes/hamburguesas.png";
-import miladecarne from "../img/carnes/miladecarne.jpg";
-import picadaespecial from "../img/carnes/picada.jpg";
-import bondiola from "../img/cerdo/bondiola.jpg";
-import carre from "../img/cerdo/carre.jpg";
-import churrasquito from "../img/cerdo/churrasquito.jpg";
-import matambrito from "../img/cerdo/matambrito.jpg";
-import pechito from "../img/cerdo/pechito.png";
-import mila from "../img/pollo/mila.png";
-import patamuslo from "../img/pollo/patamuslo.jpg";
-import pollo from "../img/pollo/pollo.png";
-import suprema from "../img/pollo/suprema.jpg";
-import {Link} from "react-scroll"
+// Usaremos 'react-scroll' para el botón de 'Hacer un Pedido' si tu componente lo usa.
+import { Link, animateScroll as scroll } from "react-scroll"; 
 
-const carne = [
-    {id: 1, image: `${asado}`,name: "Asado", description: "$15900"},
-    {id: 2, image: `${americano}`, name: "Americano", description: "$16890"},
-    {id: 3, image: `${matambre}`, name: "Matambre", description: "$15700"},
-    {id: 4, image: `${entraña}`, name: "Entraña", description: "$23900"},
-    {id: 5, image: `${vacio}`, name: "Vacio", description: "$18900"},
-    {id: 6, image: `${lomo}`, name: "Lomo", description: "$25350"},
-    {id: 7, image: `${bifeangosto}`, name: "Bife angosto", description: "$14990"},
-    {id: 8, image: `${bifeancho}`, name: "Bife ancho", description: "$14900"},
-    {id: 9, image: `${palomita}`, name: "Palomita", description: "$11590"},
-    {id: 10, image: `${roastbeff}`, name: "Roastbeff", description: "$14250"},
-    {id: 11, image: `${tapadeasado}`, name: "Tapa de asado", description: "$14900"},
-    {id: 12, image: `${tapadenalga}`, name: "Tapa de nalga", description: "$14450"},
-    {id: 13, image: `${osobuco}`, name: "Osobuco", description: "$7790"},
-    {id: 14, image: `${paleta}`, name: "Paleta", description: "$14250"},
-    {id: 15, image: `${peceto}`, name: "Peceto", description: "$19900"},
-    {id: 16, image: `${ojodebife}`, name: "Ojo de bife", description: "$23900"},
-    {id: 17, image: `${picaña}`, name: "Picaña", description: "$22500"},
-    {id: 19, image: `${colitacuadril}`, name: "Colita de cuadril", description: "$22500"},
-    {id: 20, image: `${cuadrada}`, name: "Cuadrada", description: "$16200"},
-    {id: 21, image: `${cuadril}`, name: "Cuadril", description: "$16900"},
-    {id: 22, image: `${faldaparrillera}`, name: "Falda parrillera", description: "$11900"},
-    {id: 23, image: `${nalga}`, name: "Nalga", description: "$17900"},
-    {id: 24, image: `${boladelomo}`, name: "Bola de lomo", description: "$16200"},
-    {id: 25, image: `${bifedechorizo}`, name: "Bife de chorizo", description: "22900"},
-    {id: 26, image: `${espinazo}`, name: "Espinazo", description: "$4900"},
-    {id: 27, image: `${tortuguita}`, name: "Tortuguita", description: "$11.590"},
-    {id: 28, image: `${faldapuchero}`, name: "Falda puchero", description: "$5590"},
-    {id: 24, image: `${hamburguesas}`, name: "hamburguesas", description: "$6690"},
-    {id: 25, image: `${miladecarne}`, name: "Milanesa de carne", description: "$12500"},
-    {id: 26, image: `${picadaespecial}`, name: "Picada comun", description: "$9990"}];
+// ⭐️ Importación de tus datos locales desde el archivo separado
+import { carne, cerdo, pollos } from "./productosData"; 
 
-const cerdo = [
-    {id: 1, image: `${bondiola}`, name: "Bondiola", description: "$10900"},
-    {id: 2, image: `${carre}`, name: "Carre s/ hueso", description: "$10200"},
-    {id: 3, image: `${churrasquito}`, name: "Churrasquito", description: "$14250"},
-    {id: 4, image: `${matambrito}`, name: "Matambrito", description: "$17900"},
-    {id: 5, image: `${pechito}`, name: "Pechito", description: "$8190"}];
+// 1. Definición de la función de desplazamiento (simula una función faltante en el segundo código)
+const scrollToSection = (id) => {
+    scroll.scrollTo(id, {
+        duration: 500,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        offset: -100 // Ajusta si es necesario
+    });
+};
 
-const pollos = [
-    {id: 1, image: `${mila}`, name: "Milanesa de pollo", description: "$8850"},
-    {id: 2, image: `${patamuslo}`, name: "Pata y muslo", description: "$3900"},
-    {id: 3, image: `${pollo}`, name: "Pollo entero", description: "$3490"},
-    {id: 4, image: `${suprema}`, name: "Suprema", description: "$9690"}];
+// 2. Definición del objeto de datos mapeado a categorías
+// Esto es crucial para usar la lógica de pestañas (activeCategory)
+const allProducts = {
+    'Vacunos': carne,
+    'Cerdo': cerdo,
+    'Pollos': pollos
+};
 
-const limitedProducts = carne.slice(0, 4);
-const limitedProducts3 = cerdo.slice(0, 4);
-const limitedProducts4 = pollos.slice(0, 4);
+const CATEGORIES = ['Vacunos', 'Cerdo', 'Pollos']; 
 
-function Productos() {
-    const [showMore, setShowMore] = useState(false);
-    const [showMore3, setShowMore3] = useState(false);
-    const [showMore4, setShowMore4] = useState(false);
-    const toggleShowMore = () => {
-    setShowMore(!showMore);
+// 3. Componente CardProducts (Movido al archivo Productos.jsx para simplificar el ejemplo, 
+//    aunque idealmente debe estar en CardProducts.jsx como lo tenías originalmente)
+
+const CardProducts = ({ products }) => {
+    const getPlaceholderImage = (index, name) => {
+        // Colores placeholder. Reemplaza con tus clases de Tailwind reales si son diferentes.
+        const colors = ['bg-primary', 'bg-secondary', 'bg-accent-positive', 'bg-text-dark']; 
+        const color = colors[index % colors.length];
+        return (
+            <div className={`mt-1 h-32 w-32 md:h-44 md:w-44 rounded-2xl flex items-center justify-center text-3xl font-extrabold text-text-light ${color} shadow-inner`}>
+                {name ? name.substring(0, 2) : 'PZ'} 
+            </div>
+        );
     };
-
-    const toggleShowMore3 = () => {
-    setShowMore3(!showMore3);
-    };
-
-    const toggleShowMore4 = () => {
-        setShowMore4(!showMore4);
-    };
-
-    const productsToShow = showMore ? carne : limitedProducts;
-    const productsToShow3 = showMore3 ? cerdo : limitedProducts3;
-    const productsToShow4 = showMore4 ? pollos : limitedProducts4;
 
     return (
-    <div data-aos="zoom-in-right"  data-aos-duration="1500" className=" md:mt-28 bg-white px-4 md:px-8 py-16 " id="productos">
-        <h1 className="text-center text-4xl md:text-5xl font-extralight mb-6 font-serif">
-        Nuestros Productos
-        </h1>
-        <div className="mt-24 md:mt-24">
-        <div data-aos="fade-down" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-            Vacunos
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-7 max-w-7xl mx-auto">
+            {products &&
+                products.map((elem, index) => (
+                    <div
+                        key={elem.id || index} 
+                        // Clases de diseño de las tarjetas
+                        className="bg-text-light flex flex-col items-center justify-center w-full p-4 md:p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-[1.03] duration-300 border border-primary/20"
+                    >
+                        {elem.image ? (
+                            <img
+                                className="mt-1 object-cover h-32 w-32 md:h-44 md:w-44 rounded-2xl shadow-md"
+                                src={elem.image}
+                                alt={elem.name}
+                            />
+                        ) : (
+                            getPlaceholderImage(index, elem.name)
+                        )}
+                        
+                        <div className="flex flex-col gap-1 items-center justify-start w-full mt-4">
+                            <h6 className="text-text-dark text-lg md:text-xl font-heading font-bold text-center leading-tight">{elem.name}</h6>
+                            <span className="text-center text-primary w-full font-bold text-lg md:text-2xl mt-1">
+                                {elem.description}
+                            </span>
+                            {/* Botón de "Ver Detalles" del diseño nuevo */}
+                            <button className="mt-2 w-full py-2 text-sm md:text-base font-bold rounded-lg bg-primary text-text-light hover:bg-secondary transition duration-200 shadow-md">
+                                Ver Detalles
+                            </button>
+                        </div>
+                    </div>
+                ))}
         </div>
-        <CardProducts products={productsToShow} />
-        </div>
-        <div className="mt-10 flex justify-center">
-        {showMore? (
-        <Link to="productos"  spy={true} smooth={true} offset={-100} duration={500}>
-        <button
-            className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
-            onClick={toggleShowMore}
-            >
-            {showMore ? "Ver menos" : "Ver más"}
-        </button>
-        </Link>
-        ) : (<button
-        className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
-        onClick={toggleShowMore}
-        >
-        {showMore ? "Ver menos" : "Ver más"}
-        </button>)}
-        </div>
+    );
+};
 
-        <div className="mt-24">
-        <div data-aos="zoom-in-right" data-aos-duration="1500" className="text-2xl font-extralight flex justify-center mb-6">
-            Cerdo
-        </div>
-        <CardProducts products={productsToShow3} />
-        </div>
-        <div className="mt-10 flex justify-center">
-        <button
-            className="bg-orange-200  rounded-lg w-44 items-center text-white text-2xl hover:bg-red-900"
-            onClick={toggleShowMore3}
-        >
-            {showMore3 ? "Ver menos" : "Ver más"}
-        </button>
-        </div>
-        <div className="mt-24">
-        <div data-aos="zoom-in-left" data-aos-duration="1500"  className="text-2xl font-extralight flex justify-center mb-6">
-            Pollo
-        </div>
-        <CardProducts products={productsToShow4} />
-        </div>
-        <div className="mt-10 flex justify-center">
-        <button
-            className="bg-orange-200 w-44 rounded-lg items-center text-white text-2xl hover:bg-red-900"
-            onClick={toggleShowMore4}
-        >
-            {showMore4 ? "Ver menos" : "Ver más"}
-        </button>
-        </div>
+
+// 4. Componente Principal Productos
+
+function Productos() {
+    // Estado para manejar la pestaña activa (Vacunos, Cerdo, Pollos)
+    const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]); 
+    
+    // Obtiene los productos del array local según la pestaña activa
+    const productsToShow = allProducts[activeCategory] || [];
+
+    return (
+        <div data-aos="zoom-in-right" data-aos-duration="1500" className="md:mt-28 bg-white px-4 md:px-8 py-16" id="productos">
+            <h1 className="text-center text-4xl md:text-5xl font-extralight mb-12 font-serif text-text-dark">
+                Nuestros Productos
+            </h1>
+
+            {/* Selector de Categorías (Pestañas) */}
+            <div className="flex justify-center mb-10 overflow-x-auto">
+                <div className="flex space-x-2 p-1 rounded-xl bg-gray-200 shadow-inner">
+                    {CATEGORIES.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveCategory(category)}
+                            className={`
+                                py-2 px-6 rounded-xl text-lg font-heading font-semibold transition duration-300 whitespace-nowrap
+                                ${activeCategory === category
+                                    // ⭐️ Reemplacé tus clases de color por las del código original para mantener el estilo
+                                    ? 'bg-orange-200 text-white shadow-md' // Adaptado del código original (bg-orange-200, text-white)
+                                    : 'text-text-dark hover:bg-gray-300 hover:text-red-900' // Adaptado del código original (hover:bg-red-900)
+                                }
+                            `}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+            </div>
             
-    </div>
+            {/* Visualización de Productos */}
+            {productsToShow.length > 0 ? (
+                // Usamos el nuevo componente CardProducts para mostrar los datos de la pestaña activa
+                <CardProducts products={productsToShow} />
+            ) : (
+                <div className="text-center py-10 text-xl text-secondary font-heading">
+                    {`No hay productos disponibles en la categoría de ${activeCategory}.`}
+                </div>
+            )}
+
+            {/* Botón de Pedido */}
+            <div className="mt-16 flex justify-center">
+                <Link to="contactos" spy={true} smooth={true} offset={-100} duration={500}>
+                    {/* Botón adaptado al estilo de tu código original (bg-orange-200, hover:bg-red-900) */}
+                    <button
+                        className="bg-orange-200 w-60 py-3 rounded-xl items-center text-white text-xl font-bold hover:bg-red-900 transition duration-300 shadow-lg font-heading"
+                    >
+                        Hacer un Pedido 📞
+                    </button>
+                </Link>
+            </div>
+        </div>
     );
 }
 
