@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll"; 
 
 // ⭐️ Importación de tus datos locales desde el archivo separado
-import { carne, cerdo, pollos } from "./productosData"; 
+import { carne, cerdo, pollos } from "./Productosdata"; 
 
 // 1. Definición de la función de desplazamiento (simula una función faltante en el segundo código)
 const scrollToSection = (id) => {
