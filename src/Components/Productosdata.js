@@ -66,19 +66,19 @@ export const carne = [
     {id: 26, image: `${espinazo}`, name: "Espinazo", description: "$4900"},
     {id: 27, image: `${tortuguita}`, name: "Tortuguita", description: "$11.590"},
     {id: 28, image: `${faldapuchero}`, name: "Falda puchero", description: "$5590"},
-    {id: 24, image: `${hamburguesas}`, name: "hamburguesas", description: "$6690"},
-    {id: 25, image: `${miladecarne}`, name: "Milanesa de carne", description: "$12500"},
-    {id: 26, image: `${picadaespecial}`, name: "Picada comun", description: "$9990"}];
+    {id: 29, image: `${hamburguesas}`, name: "hamburguesas", description: "$6690"},
+    {id: 30, image: `${miladecarne}`, name: "Milanesa de carne", description: "$12500"},
+    {id: 31, image: `${picadaespecial}`, name: "Picada comun", description: "$9990"}];
 
 export const cerdo = [
-    {id: 1, image: `${bondiola}`, name: "Bondiola", description: "$10900"},
-    {id: 2, image: `${carre}`, name: "Carre s/ hueso", description: "$10200"},
-    {id: 3, image: `${churrasquito}`, name: "Churrasquito", description: "$14250"},
-    {id: 4, image: `${matambrito}`, name: "Matambrito", description: "$17900"},
-    {id: 5, image: `${pechito}`, name: "Pechito", description: "$8190"}];
+    {id: 32, image: `${bondiola}`, name: "Bondiola", description: "$10900"},
+    {id: 33, image: `${carre}`, name: "Carre s/ hueso", description: "$10200"},
+    {id: 34, image: `${churrasquito}`, name: "Churrasquito", description: "$14250"},
+    {id: 35, image: `${matambrito}`, name: "Matambrito", description: "$17900"},
+    {id: 36, image: `${pechito}`, name: "Pechito", description: "$8190"}];
 
 export const pollos = [
-    {id: 1, image: `${mila}`, name: "Milanesa de pollo", description: "$8850"},
-    {id: 2, image: `${patamuslo}`, name: "Pata y muslo", description: "$3900"},
-    {id: 3, image: `${pollo}`, name: "Pollo entero", description: "$3490"},
-    {id: 4, image: `${suprema}`, name: "Suprema", description: "$9690"}];
+    {id: 37, image: `${mila}`, name: "Milanesa de pollo", description: "$8850"},
+    {id: 38, image: `${patamuslo}`, name: "Pata y muslo", description: "$3900"},
+    {id: 39, image: `${pollo}`, name: "Pollo entero", description: "$3490"},
+    {id: 40, image: `${suprema}`, name: "Suprema", description: "$9690"}];

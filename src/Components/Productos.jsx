@@ -65,9 +65,6 @@ const CardProducts = ({ products }) => {
                                 {elem.description}
                             </span>
                             {/* Botón de "Ver Detalles" del diseño nuevo */}
-                            <button className="mt-2 w-full py-2 text-sm md:text-base font-bold rounded-lg bg-primary text-text-light hover:bg-secondary transition duration-200 shadow-md">
-                                Ver Detalles
-                            </button>
                         </div>
                     </div>
                 ))}
@@ -102,7 +99,7 @@ function Productos() {
                                 py-2 px-6 rounded-xl text-lg font-heading font-semibold transition duration-300 whitespace-nowrap
                                 ${activeCategory === category
                                     // ⭐️ Reemplacé tus clases de color por las del código original para mantener el estilo
-                                    ? 'bg-orange-200 text-white shadow-md' // Adaptado del código original (bg-orange-200, text-white)
+                                    ? 'bg-primary text-white shadow-md' // Adaptado del código original (bg-orange-200, text-white)
                                     : 'text-text-dark hover:bg-gray-300 hover:text-red-900' // Adaptado del código original (hover:bg-red-900)
                                 }
                             `}
@@ -128,7 +125,7 @@ function Productos() {
                 <Link to="contactos" spy={true} smooth={true} offset={-100} duration={500}>
                     {/* Botón adaptado al estilo de tu código original (bg-orange-200, hover:bg-red-900) */}
                     <button
-                        className="bg-orange-200 w-60 py-3 rounded-xl items-center text-white text-xl font-bold hover:bg-red-900 transition duration-300 shadow-lg font-heading"
+                        className="bg-primary w-60 py-3 rounded-xl items-center text-white text-xl font-bold hover:bg-secondary transition duration-300 shadow-lg font-heading"
                     >
                         Hacer un Pedido 📞
                     </button>
