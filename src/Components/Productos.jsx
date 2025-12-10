@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Search, X } from "lucide-react";
 // Usaremos 'react-scroll' para el botón de 'Hacer un Pedido' si tu componente lo usa.
 import { Link, animateScroll as scroll } from "react-scroll"; 
 
@@ -41,13 +42,13 @@ const CardProducts = ({ products }) => {
     };
 
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-7 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 max-w-7xl mx-auto">
             {products &&
                 products.map((elem, index) => (
                     <div
                         key={elem.id || index} 
                         // Clases de diseño de las tarjetas
-                        className="bg-text-light flex flex-col items-center justify-center w-full p-4 md:p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-[1.03] duration-300 border border-primary/20"
+                        className="bg-text-light flex flex-col items-center justify-center w-full p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 duration-300 border border-primary/20 hover:border-primary/50"
                     >
                         {elem.image ? (
                             <img
@@ -77,30 +78,67 @@ const CardProducts = ({ products }) => {
 
 function Productos() {
     // Estado para manejar la pestaña activa (Vacunos, Cerdo, Pollos)
-    const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]); 
+    const [activeCategory, setActiveCategory] = useState(CATEGORIES[0]);
+    const [searchTerm, setSearchTerm] = useState("");
     
     // Obtiene los productos del array local según la pestaña activa
-    const productsToShow = allProducts[activeCategory] || [];
+    let productsToShow = allProducts[activeCategory] || [];
+    
+    // Filtrar por búsqueda
+    if (searchTerm.trim()) {
+        productsToShow = productsToShow.filter(product =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    }
 
     return (
-        <div data-aos="zoom-in-right" data-aos-duration="1500" className="md:mt-28 bg-white px-4 md:px-8 py-16" id="productos">
-            <h1 className="text-center text-4xl md:text-5xl font-extralight mb-12 font-serif text-text-dark">
-                Nuestros Productos
-            </h1>
+        <div data-aos="zoom-in-right" data-aos-duration="1500" className="md:mt-28 bg-gradient-to-b from-white to-gray-50 px-4 md:px-8 py-16" id="productos">
+            <div className="text-center mb-12">
+                <h1 className="text-center text-4xl md:text-5xl font-heading font-extrabold mb-4 text-text-dark">
+                    Nuestros Productos
+                </h1>
+                <p className="text-lg text-text-dark/70 font-body max-w-2xl mx-auto">
+                    Selecciona entre nuestras categorías premium de carnes frescas
+                </p>
+            </div>
+
+            {/* Barra de búsqueda */}
+            <div className="flex justify-center mb-8 px-2">
+                <div className="relative w-full md:w-96">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+                        type="text"
+                        placeholder="Buscar producto..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="w-full pl-10 pr-10 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition"
+                    />
+                    {searchTerm && (
+                        <button
+                            onClick={() => setSearchTerm("")}
+                            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                        >
+                            <X className="w-5 h-5" />
+                        </button>
+                    )}
+                </div>
+            </div>
 
             {/* Selector de Categorías (Pestañas) */}
-            <div className="flex justify-center mb-10 overflow-x-auto">
-                <div className="flex space-x-2 p-1 rounded-xl bg-gray-200 shadow-inner">
+            <div className="flex justify-center mb-12 px-2">
+                <div className="flex flex-wrap gap-2 md:gap-3 p-2 md:p-3 rounded-xl bg-gray-100 shadow-md border border-gray-200 justify-center w-full md:w-auto">
                     {CATEGORIES.map((category) => (
                         <button
                             key={category}
-                            onClick={() => setActiveCategory(category)}
+                            onClick={() => {
+                                setActiveCategory(category);
+                                setSearchTerm("");
+                            }}
                             className={`
-                                py-2 px-6 rounded-xl text-lg font-heading font-semibold transition duration-300 whitespace-nowrap
+                                py-2 md:py-3 px-5 md:px-8 rounded-lg text-base md:text-lg font-heading font-semibold transition duration-300 whitespace-nowrap transform hover:scale-105
                                 ${activeCategory === category
-                                    // ⭐️ Reemplacé tus clases de color por las del código original para mantener el estilo
-                                    ? 'bg-primary text-white shadow-md' // Adaptado del código original (bg-orange-200, text-white)
-                                    : 'text-text-dark hover:bg-gray-300 hover:text-red-900' // Adaptado del código original (hover:bg-red-900)
+                                    ? 'bg-primary text-white shadow-lg' 
+                                    : 'text-text-dark hover:bg-gray-200 bg-white'
                                 }
                             `}
                         >
@@ -112,11 +150,18 @@ function Productos() {
             
             {/* Visualización de Productos */}
             {productsToShow.length > 0 ? (
-                // Usamos el nuevo componente CardProducts para mostrar los datos de la pestaña activa
-                <CardProducts products={productsToShow} />
+                <>
+                    <div className="text-center mb-4 text-sm text-text-dark/60">
+                        Mostrando {productsToShow.length} producto{productsToShow.length !== 1 ? 's' : ''}
+                    </div>
+                    <CardProducts products={productsToShow} />
+                </>
             ) : (
                 <div className="text-center py-10 text-xl text-secondary font-heading">
-                    {`No hay productos disponibles en la categoría de ${activeCategory}.`}
+                    {searchTerm 
+                        ? `No se encontraron productos con "${searchTerm}" en ${activeCategory}.`
+                        : `No hay productos disponibles en la categoría de ${activeCategory}.`
+                    }
                 </div>
             )}
 

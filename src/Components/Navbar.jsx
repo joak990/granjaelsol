@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Facebook, Send } from 'lucide-react'; // Importamos íconos Lucide
 import logo from "../img/logoo.png"
 // Función de scroll simulada (reemplazando react-scroll para evitar errores de dependencia)
@@ -11,6 +11,19 @@ const scrollToSection = (id) => {
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            setScrollProgress(scrolled);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -31,8 +44,9 @@ function Navbar() {
     );
 
     return (
-        // Aplicamos bg-base y font-heading
-        <nav className={`bg-base py-4 px-8 fixed top-0 left-0 w-full z-50 font-heading ${menuOpen ? 'shadow-md' : 'md:shadow-none'}`}>
+        // Aplicamos bg-base y font-heading con sombra mejorada
+        <>
+            <nav className={`bg-base py-4 px-8 fixed top-0 left-0 w-full z-50 font-heading shadow-md transition-shadow duration-300 ${menuOpen ? 'shadow-lg' : 'md:shadow-md'}`}>
             <div className="flex items-center justify-between max-w-7xl mx-auto">
                 <div className="flex items-center">
                     {/* Placeholder para el Logo (simulando el Link y la imagen) */}
@@ -62,7 +76,7 @@ function Navbar() {
                 </div>
 
                 {/* Menú de navegación */}
-                <ul className={`md:flex ${menuOpen ? 'flex flex-col absolute top-full left-0 w-full bg-base shadow-lg p-4' : 'hidden'} md:space-x-8 md:mt-0 items-center justify-center`}>
+                <ul className={`md:flex ${menuOpen ? 'flex flex-col absolute top-full left-0 w-full bg-base shadow-lg p-4 border-t border-gray-200' : 'hidden'} md:space-x-8 md:mt-0 items-center justify-center`}>
                     <li data-aos="zoom-im" data-aos-duration="3000" >
                         <NavLink to="carrousel">Inicio</NavLink>
                     </li>
@@ -96,7 +110,14 @@ function Navbar() {
                     </div>
                 </div>
             </div>
-        </nav>
+            </nav>
+            
+            {/* Indicador de progreso de scroll */}
+            <div 
+                className="fixed top-0 left-0 h-1 bg-gradient-to-r from-primary to-secondary z-50 transition-all duration-300"
+                style={{ width: `${scrollProgress}%` }}
+            ></div>
+        </>
     );
 }
 
