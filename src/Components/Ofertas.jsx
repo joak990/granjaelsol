@@ -1,11 +1,16 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Flame } from 'lucide-react';
+import { Flame, Beef, AlertCircle } from 'lucide-react';
 
-import ofertaboladelomo from "../img/ofertas/ofertaboladelomo.png";
-import ofertacosteletadecerdo from "../img/ofertas/ofertacosteletacerdo.png";
-import ofertacuadrada from "../img/ofertas/ofertacuadrada.png";
-import ofertabondiola from "../img/ofertas/ofertabondiola.png";
+const Ofertas = [
+    {decripcion:"Pata y muslo", Kilos:"3Kg", Precio:"10500"},
+    {decripcion:"Bife ancho", Kilos:"kg", Precio:"14500"},
+    {decripcion:"Falda", Kilos:"2kg", Precio:"22000"},
+    {decripcion:"Carre de cerdo", Kilos:"2kg", Precio:"15000"},
+    {decripcion:"Costillar completo de cerdo", Kilos:"Kg", Precio:"6990"},
+    {decripcion:"Alitas", Kilos:"3Kg", Precio:"7000"},
+    {decripcion:"Asado de orilla", Kilos:"Kg", Precio:"13900"}
+]
 
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
@@ -31,7 +36,7 @@ function CarrouselSwip() {
                         Nuestras Ofertas
                     </h1>
                     <p className="text-lg text-text-dark/70 font-body max-w-2xl mx-auto">
-                        Descubre nuestras mejores promociones en cortes premium de carne fresca
+                        Descubrí nuestras mejores promociones en cortes premium de carne
                     </p>
                 </div>
 
@@ -61,54 +66,42 @@ function CarrouselSwip() {
                         onSwiper={(swiper) => console.log(swiper)}
                         className="pb-12"
                     >
-                        <SwiperSlide>
-                            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                                <img 
-                                    className="w-full h-80 object-cover group-hover:brightness-110 transition-all duration-300" 
-                                    src={ofertaboladelomo} 
-                                    alt="Oferta Bola de Lomo" 
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-white font-heading font-bold text-lg">Bola de Lomo Premium</span>
+                        {Ofertas.map((oferta, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-gradient-to-br from-amber-50 to-orange-50 h-80 flex flex-col items-center justify-center p-6">
+                                    {/* Icono decorativo */}
+                                    <div className="mb-4 p-4 bg-gradient-to-br from-primary to-orange-500 rounded-full group-hover:scale-110 transition-transform duration-300">
+                                        <Beef className="w-12 h-12 text-white" />
+                                    </div>
+                                    
+                                    {/* Descripción del producto */}
+                                    <h3 className="text-2xl md:text-3xl font-heading font-bold text-text-dark text-center mb-4 group-hover:text-primary transition-colors duration-300">
+                                        {oferta.decripcion}
+                                    </h3>
+                                    
+                                    {/* Información de peso */}
+                                    <div className="mb-6 text-center">
+                                        <p className="text-lg text-text-dark/70 font-body">
+                                            Por <span className="font-bold text-primary">{oferta.Kilos}</span>
+                                        </p>
+                                    </div>
+                                    
+                                    {/* Precio destacado */}
+                                    <div className="bg-gradient-to-r from-primary to-orange-500 text-white px-8 py-3 rounded-full text-center group-hover:shadow-lg transition-shadow duration-300">
+                                        <p className="text-sm font-body text-white/90 mb-1">Precio especial</p>
+                                        <p className="text-3xl font-heading font-bold">
+                                            ${oferta.Precio}
+                                        </p>
+                                    </div>
+                                    
+                                    {/* Etiqueta de oferta */}
+                                    <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                                        <Flame className="w-4 h-4" />
+                                        OFERTA
+                                    </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                                <img 
-                                    className="w-full h-80 object-cover group-hover:brightness-110 transition-all duration-300" 
-                                    src={ofertacosteletadecerdo} 
-                                    alt="Oferta Costeletada de Cerdo" 
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-white font-heading font-bold text-lg">Costeletada de Cerdo</span>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                                <img 
-                                    className="w-full h-80 object-cover group-hover:brightness-110 transition-all duration-300" 
-                                    src={ofertacuadrada} 
-                                    alt="Oferta Cuadrada" 
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-white font-heading font-bold text-lg">Corte Cuadrada</span>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                                <img 
-                                    className="w-full h-80 object-cover group-hover:brightness-110 transition-all duration-300" 
-                                    src={ofertabondiola} 
-                                    alt="Oferta Bondiola" 
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-white font-heading font-bold text-lg">Bondiola Especial</span>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
 
                     {/* Botones de navegación personalizados */}
@@ -120,11 +113,21 @@ function CarrouselSwip() {
                     </button>
                 </div>
 
-                {/* Texto descriptivo */}
-                <div className="mt-12 text-center">
-                    <p className="text-text-dark/60 font-body text-base md:text-lg">
-                        Ofertas válidas mientras dure el stock • Consulta disponibilidad
-                    </p>
+                {/* Aviso destacado */}
+                <div className="mt-12 max-w-2xl mx-auto">
+                    <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-2 border-orange-400 rounded-xl p-6 shadow-lg">
+                        <div className="flex items-start gap-4">
+                            <AlertCircle className="w-8 h-8 text-orange-600 flex-shrink-0 mt-1" />
+                            <div className="text-center w-full">
+                                <p className="text-lg md:text-xl font-heading font-bold text-orange-900 mb-2">
+                                    ⚠️ Importante
+                                </p>
+                                <p className="text-text-dark font-body text-base md:text-lg leading-relaxed">
+                                    Las ofertas se abonan <span className="font-bold text-orange-700">únicamente con efectivo o transferencia</span> • Consulta disponibilidad
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

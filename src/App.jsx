@@ -4,7 +4,7 @@ import About from './Components/About'
 import Productos from './Components/Productos'
 import Footer from './Components/Footer'
 import Contactos from './Components/Contactos'
-//import Ofertas from './Components/Ofertas';
+import Ofertas from './Components/Ofertas'
 
 const App = () => {
     return (
@@ -12,6 +12,7 @@ const App = () => {
             <Navbar />
             <Carrousel />
             <About />
+            <Ofertas />
             <Productos />
             <Contactos />
             <Footer />
