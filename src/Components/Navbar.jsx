@@ -89,6 +89,26 @@ function Navbar() {
                     <li data-aos="zoom-im" data-aos-duration="3000">
                         <NavLink to="contactos">Contáctanos</NavLink>
                     </li>
+                    
+                    {/* Redes sociales en menú móvil */}
+                    {menuOpen && (
+                        <li className="md:hidden border-t border-gray-200 pt-4 mt-4 w-full">
+                            <div className="flex items-center justify-center space-x-6">
+                                <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer" 
+                                   className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
+                                    <Instagram className="h-6 w-6" />
+                                </a>
+                                <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" 
+                                   className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
+                                    <Facebook className="h-6 w-6" />
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer" 
+                                   className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
+                                    <Send className="h-6 w-6" /> 
+                                </a>
+                            </div>
+                        </li>
+                    )}
                 </ul>
                 
                 {/* Íconos de redes sociales */}
