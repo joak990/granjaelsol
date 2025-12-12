@@ -41,10 +41,10 @@ import suprema from "../img/pollo/suprema.jpg";
 export const carne = [
     {id: 1, image: `${asado}`,name: "Asado", description: "$18200"}, //
     {id: 2, image: `${americano}`, name: "Americano", description: "$18400"}, //
-    {id: 3, image: `${matambre}`, name: "Matambre", description: "$17500"}, //
-    {id: 4, image: `${entraña}`, name: "Entraña", description: "$25500"},//
+    {id: 3, image: `${matambre}`, name: "Matambre", description: "$17790"}, //
+    {id: 4, image: `${entraña}`, name: "Entraña", description: "$24700"},//
     {id: 5, image: `${vacio}`, name: "Vacio", description: "$20600"},//
-    {id: 6, image: `${lomo}`, name: "Lomo", description: "$26600"}, //
+    {id: 6, image: `${lomo}`, name: "Lomo", description: "$27250"}, //
     {id: 7, image: `${bifeangosto}`, name: "Bife angosto", description: "$16900"},//
     {id: 8, image: `${bifeancho}`, name: "Bife ancho", description: "$15450"},//
     {id: 9, image: `${palomita}`, name: "Palomita", description: "$14690"},//
@@ -53,10 +53,10 @@ export const carne = [
     {id: 12, image: `${tapadenalga}`, name: "Tapa de nalga", description: "$16900"},
     {id: 13, image: `${osobuco}`, name: "Osobuco", description: "$9200"},//
     {id: 14, image: `${paleta}`, name: "Paleta", description: "$14690"}, //
-    {id: 15, image: `${peceto}`, name: "Peceto", description: "$21500"}, //
+    {id: 15, image: `${peceto}`, name: "Peceto", description: "$21750"}, //
     {id: 16, image: `${ojodebife}`, name: "Ojo de bife", description: "$25800"}, //
     {id: 17, image: `${picaña}`, name: "Picaña", description: "$23600"},//
-    {id: 19, image: `${colitacuadril}`, name: "Colita de cuadril", description: "$23600"}, //
+    {id: 19, image: `${colitacuadril}`, name: "Colita de cuadril", description: "$18150"}, //
     {id: 20, image: `${cuadrada}`, name: "Cuadrada", description: "$17300"}, //
     {id: 21, image: `${cuadril}`, name: "Cuadril", description: "$18500"}, //
     {id: 22, image: `${faldaparrillera}`, name: "Falda parrillera", description: "$13300"}, //
@@ -74,7 +74,7 @@ export const cerdo = [
     {id: 32, image: `${bondiola}`, name: "Bondiola", description: "$10900"},
     {id: 33, image: `${carre}`, name: "Carre s/ hueso", description: "$10200"},
     {id: 34, image: `${churrasquito}`, name: "Churrasquito", description: "$14800"},//
-    {id: 35, image: `${matambrito}`, name: "Matambrito", description: "$17900"},
+    {id: 35, image: `${matambrito}`, name: "Matambrito", description: "$19300"},
     {id: 36, image: `${pechito}`, name: "Pechito", description: "$8300"}];//
 
 export const pollos = [
