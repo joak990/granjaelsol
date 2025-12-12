@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Copy, Check } from "lucide-react"; // Importamos íconos de contacto y redes sociales
+import { MapPin, Phone, Mail, Instagram, Facebook, Copy, Check, Clock } from "lucide-react"; // Importamos íconos de contacto y redes sociales
 import { useState } from "react";
 
 // Datos de contacto centralizados
@@ -34,15 +34,14 @@ function Contactos() {
         // Usamos bg-base o un color contrastante como bg-gray-100/50 si About ya es bg-base
         <div className='bg-base p-4 md:p-12' id="contactos">
             <div className='max-w-screen-xl mx-auto'>
-                <h1 data-aos="zoom-in-right" data-aos-duration="1500" 
-                    className='text-center text-4xl md:text-5xl font-heading font-extrabold text-text-dark mt-8 mb-12'>
+                <h1 className='text-center text-4xl md:text-5xl font-heading font-extrabold text-text-dark mt-8 mb-12'>
                     Contáctanos
                 </h1>
 
                 <div className="flex flex-col md:flex-row gap-8">
                     
                     {/* COLUMNA IZQUIERDA: Mapa de Ubicación */}
-                    <div data-aos="fade-right" data-aos-duration="1500" className='w-full md:w-1/2'>
+                    <div className='w-full md:w-1/2'>
                         <h2 className="text-2xl font-heading font-bold mb-4 text-primary">Nuestra Ubicación</h2>
                         <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-primary">
                             <iframe
@@ -59,7 +58,7 @@ function Contactos() {
                     </div>
 
                     {/* COLUMNA DERECHA: Información de Contacto */}
-                    <div data-aos="zoom-in-up" data-aos-duration="1500" className="w-full md:w-1/2 p-6 md:p-8 rounded-xl bg-text-light shadow-xl border-l-4 border-primary">
+                    <div className="w-full md:w-1/2 p-6 md:p-8 rounded-xl bg-text-light shadow-xl border-l-4 border-primary">
                         <h2 className="text-2xl font-heading font-bold mb-6 text-primary">Detalles de Contacto</h2>
 
                         <div className='text-text-dark text-lg md:text-xl space-y-6 font-body'>
@@ -110,6 +109,59 @@ function Contactos() {
                                             {copiedEmail ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                                         </button>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Horarios de Atención */}
+                        <div className="mt-10 pt-6 border-t border-gray-200">
+                            <div className="flex items-center gap-3 mb-6">
+                                <Clock className="text-primary w-6 h-6" />
+                                <h3 className="text-xl font-heading font-bold text-primary">Horarios de Atención</h3>
+                            </div>
+                            
+                            <div className="space-y-4">
+                                {/* Lunes a Viernes */}
+                                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-4 rounded-lg border-l-4 border-primary hover:shadow-md transition duration-300">
+                                    <div className="flex items-start gap-3">
+                                        <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                                            📅
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="font-bold text-text-dark mb-1">Lunes a Viernes</p>
+                                            <div className="space-y-1 text-sm text-gray-700">
+                                                <p className="flex items-center gap-2">
+                                                    <span className="inline-block w-2 h-2 bg-primary rounded-full"></span>
+                                                    08:30 - 13:30 hrs
+                                                </p>
+                                                <p className="flex items-center gap-2">
+                                                    <span className="inline-block w-2 h-2 bg-primary rounded-full"></span>
+                                                    16:30 - 20:30 hrs
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Domingos y Feriados */}
+                                <div className="bg-gradient-to-r from-secondary/10 to-primary/10 p-4 rounded-lg border-l-4 border-secondary hover:shadow-md transition duration-300">
+                                    <div className="flex items-start gap-3">
+                                        <div className="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                                            ☀️
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="font-bold text-text-dark mb-1">Domingos y Feriados</p>
+                                            <p className="text-sm text-gray-700 flex items-center gap-2">
+                                                <span className="inline-block w-2 h-2 bg-secondary rounded-full"></span>
+                                                09:00 - 13:00 hrs
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Nota importante */}
+                                <div className="bg-blue-50 border border-blue-200 p-3 rounded-lg text-xs text-blue-700 flex items-start gap-2">
+                                    <p>¡Visítanos en nuestros horarios de atención para disfrutar de los mejores productos!</p>
                                 </div>
                             </div>
                         </div>

@@ -53,11 +53,11 @@ function Navbar() {
                     <div 
                         onClick={() => scrollToSection("carrousel")} 
                         className="cursor-pointer flex items-center"
-                        data-aos="fade-right" data-aos-duration="3000"
+                        data-aos="fade-im" data-aos-duration="3000"
                     >
                         {/* Sustituimos la imagen por un placeholder visualmente agradable con bg-secondary */}
                         <div className="h-14 w-14 mr-2 rounded-lg  flex items-center justify-center text-text-light text-2xl font-black object-cover">
-                            <img data-aos="fade-right" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
+                            <img data-aos="zoom-im" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
                         </div>
                         {/* Color del texto principal actualizado a text-text-dark */}
                         <span data-aos="zoom-im" data-aos-duration="3000" className="text-text-dark font-extrabold text-xl">Granja el Sol</span>

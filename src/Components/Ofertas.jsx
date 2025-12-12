@@ -50,7 +50,7 @@ function CarrouselSwip() {
                             nextEl: '.swiper-button-next-ofertas',
                             prevEl: '.swiper-button-prev-ofertas',
                         }}
-                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        autoplay={{ delay: 8000, disableOnInteraction: false }}
                         pagination={{ 
                             clickable: true,
                             dynamicBullets: true,
