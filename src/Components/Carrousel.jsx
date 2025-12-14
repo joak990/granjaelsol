@@ -1,15 +1,17 @@
 import { useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-scroll";
-import logo1 from "../img/imagenfachada2.jpg";
-import logo2 from "../img/foto2.jpg";
-import logo3 from "../img/foto3.jpg";
+import logo2 from "../img/foto21.png";
+import logo3 from "../img/foto31.png";
+import logo4 from "../img/foto4.jpg";
+import logo5 from "../img/foto5.jpg";
+import logo6 from "../img/foto6.jpg";
 
 function Carrousel() {
     const slides = [
         { 
-            url: logo1, 
-            title: "Calidad Familiar desde 2016", 
+            url: logo4, 
+            title: "Calidad Familiar desde 2015", 
             subtitle: "Lo mejor esta en Granja el sol.",
             icon: "🥩"
         },
@@ -24,6 +26,18 @@ function Carrousel() {
             title: "¡Visítanos Hoy!", 
             subtitle: "Conoce nuestra amplia variedad de cortes.",
             icon: "🏪"
+        },
+        { 
+            url: logo5, 
+            title: "¡Pedi a Domicilio!", 
+            subtitle: "Servicio de Delivery disponible.",
+            icon: "🛵"
+        },
+        { 
+            url: logo6, 
+            title: "Combos y Ofertas", 
+            subtitle: "Consulta por nuestros combos especiales.",
+            icon: "🎉"
         },
     ];
 
@@ -80,7 +94,7 @@ function Carrousel() {
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className="w-full h-[500px] md:h-[80vh] max-h-[800px] flex-shrink-0 snap-center relative overflow-hidden"
+                            className="w-full h-[600px] md:h-[80vh] max-h-[800px] flex-shrink-0 snap-center relative overflow-hidden"
                         >
                             {/* Imagen de fondo con zoom effect */}
                             <div className="absolute inset-0 overflow-hidden">
