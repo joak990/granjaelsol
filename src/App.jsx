@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import Navbar from './Components/Navbar';
 import Carrousel from './Components/Carrousel'
 import About from './Components/About'
@@ -10,7 +12,13 @@ import ChristmasBanner from './Components/ChristmasBanner'
 import Testimonios from './Components/Testimonios'
 import ProductosAdicionales from './Components/ProductosAdicionales'
 
+ReactGA.initialize('G-GLJTCBRGXT');
+
 const App = () => {
+    useEffect(() => {
+        ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
+    }, []);
+
     return (
         <div>
             <ChristmasSnow />
