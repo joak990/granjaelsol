@@ -10,37 +10,11 @@ import '../styles/ChristmasSnow.css';
 
 function Carrousel() {
     const slides = [
-        { 
-            url: logo4, 
-            title: "Calidad Familiar desde 2015", 
-            subtitle: "Lo mejor esta en Granja el sol.",
-            icon: "🥩"
-        },
-        { 
-            url: logo2, 
-            title: "Precios accesibles", 
-            subtitle: "Calidad garantizada, directamente a tu mesa.",
-            icon: "💰"
-        },
-        { 
-            url: logo3, 
-            title: "¡Visítanos Hoy!", 
-            subtitle: "Conoce nuestra amplia variedad de cortes.",
-            icon: "🏪"
-        },
-        { 
-            url: logo5, 
-            title: "¡Pedi a Domicilio!", 
-            subtitle: "Servicio de Delivery disponible.",
-            icon: "🛵"
-        },
-        { 
-            url: logo6, 
-            title: "Combos y Ofertas", 
-            subtitle: "Consulta por nuestras ofertas y combos.",
-            icon: "🎉"
-        },
-    ];
+        { url: logo4, title: "Calidad Familiar desde 2015", subtitle: "Lo mejor esta en Granja el sol.", icon: "🥩"},
+        { url: logo2, title: "Precios accesibles", subtitle: "Calidad garantizada, directamente a tu mesa.",icon: "💰"},
+        { url: logo3, title: "¡Visítanos Hoy!", subtitle: "Conoce nuestra amplia variedad de cortes.",icon: "🏪"},
+        { url: logo5, title: "¡Pedi a Domicilio!", subtitle: "Servicio de Delivery disponible.",icon: "🛵"},
+        { url: logo6, title: "Combos y Ofertas", subtitle: "Consulta por nuestras ofertas y combos.",icon: "🎉"}];
 
     const carouselRef = useRef(null);
     const autoPlayRef = useRef(null);

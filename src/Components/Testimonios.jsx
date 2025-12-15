@@ -6,57 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const testimonios = [
-    {
-        id: 1,
-        nombre: "Martín Colombres",
-        rol: "Cliente verificado",
-        foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=santiago",
-        calificacion: 5,
-        tiempo: "Hace un año",
-        comentario: "Muy buena calidad y precios. Excelente atención de Armando, su dueño.",
-        opiniones: 4
-    },
-    {
-        id: 2,
-        nombre: "Andrés Molinario",
-        rol: "Guía Local",
-        foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=sol",
-        calificacion: 4,
-        tiempo: "Hace 5 años",
-        comentario: "Muy buena calidad de los productos y el dueño que atiende es muy amable.",
-        opiniones: 9
-    },
-    {
-        id: 3,
-        nombre: "Pablo Marafuschi",
-        rol: "Cliente verificado",
-        foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",
-        calificacion: 5,
-        tiempo: "Hace 2 meses",
-        comentario: "Excelente calidad, atencion y precios.",
-        opiniones: 3
-    },
-    {
-        id: 4,
-        nombre: "Elizabet Arzamendia",
-        rol: "Cliente verificado",
-        foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=mariano",
-        calificacion: 5,
-        tiempo: "Hace 3 años",
-        comentario: "Calidad, variedad e higiene. Muy recomendable.",
-        opiniones: 5
-    },
-    {
-        id: 5,
-        nombre: "Guillermo Alonso",
-        rol: "Cliente verificado",
-        foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",
-        calificacion: 5,
-        tiempo: "Hace 1 mes",
-        comentario: "Excelente! Atencion y mercaderia.",
-        opiniones: 2
-    }
-];
+    {id: 1, nombre: "Martín Colombres", rol: "Cliente verificado", foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=santiago", calificacion: 5, tiempo: "Hace un año", comentario: "Muy buena calidad y precios. Excelente atención de Armando, su dueño.", opiniones: 4},
+    {id: 2,nombre: "Andrés Molinario",rol: "Guía Local",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=sol",calificacion: 4,tiempo: "Hace 5 años",comentario: "Muy buena calidad de los productos y el dueño que atiende es muy amable.",opiniones: 9},
+    {id: 3,nombre: "Pablo Marafuschi",rol: "Cliente verificado",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",calificacion: 5,tiempo: "Hace 2 meses",comentario: "Excelente calidad, atencion y precios.",opiniones: 3},
+    {id: 4,nombre: "Elizabet Arzamendia",rol: "Cliente verificado",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=mariano",calificacion: 5,tiempo: "Hace 3 años",comentario: "Calidad, variedad e higiene. Muy recomendable.",opiniones: 5},
+    {id: 5,nombre: "Guillermo Alonso",rol: "Cliente verificado",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",calificacion: 5,tiempo: "Hace 1 mes",comentario: "Excelente! Atencion y mercaderia.",opiniones: 2}];
 
 function RenderStars({ calificacion = 5 }) {
     return (

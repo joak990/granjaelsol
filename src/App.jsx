@@ -8,6 +8,7 @@ import Ofertas from './Components/Ofertas'
 import ChristmasSnow from './Components/ChristmasSnow'
 import ChristmasBanner from './Components/ChristmasBanner'
 import Testimonios from './Components/Testimonios'
+import ProductosAdicionales from './Components/ProductosAdicionales'
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
             <About />
             <Ofertas />
             <Productos />
+            <ProductosAdicionales />
             <Testimonios />
             <Contactos />
             <Footer />

@@ -1,3 +1,4 @@
+import { ShoppingCart, Wine, Leaf } from 'lucide-react';
 import asado from "../img/carnes/asado.jpg";
 import americano from "../img/carnes/americano.jpg";
 import matambre from "../img/carnes/Matambre.jpg";
@@ -37,6 +38,46 @@ import mila from "../img/pollo/mila.png";
 import patamuslo from "../img/pollo/patamuslo.jpg";
 import pollo from "../img/pollo/pollo.png";
 import suprema from "../img/pollo/suprema.jpg";
+
+import pataMuslo from '../img/pollo/patamuslo.jpg';
+import bifeAncho from '../img/carnes/bifeancho.jpg';
+import falda from '../img/carnes/faldaparrillera.jpg';
+import costillar from '../img/cerdo/bondiola.jpg';
+import alitas from '../img/pollo/Alitas.jpg';
+
+import vino1 from '../img/varios/vino1.jpg';
+import vino2 from '../img/varios/vinos2.jpg';
+import vino3 from '../img/varios/vinos3.jpg';
+
+import snacks1 from '../img/varios/snacks1.jpg';
+import snacks2 from '../img/varios/snacks2.jpg';
+import snacks3 from '../img/varios/snacks3.jpg';
+
+import salame1 from '../img/varios/salame1.jpg';
+import salame2 from '../img/varios/salame2.jpg';
+import salame3 from '../img/varios/salame3.png';
+
+import apargatas1 from '../img/varios/apargatas1.jpg';
+import apargatas2 from '../img/varios/apargatas2.jpg';
+import apargatas3 from '../img/varios/apargatas3.jpg';
+
+
+export const productosAdicionales = [
+    {id: 1, nombre: "Vinos", descripcion: "Selección de vinos premium para acompañar tus comidas", icon: Wine, color: "from-red-600 to-red-800", imagenes: [vino1, vino2, vino3]},
+    {id: 2,nombre: "Snacks",descripcion: "Variedad de snacks deliciosos y saludables",icon: ShoppingCart,color: "from-amber-600 to-amber-800",imagenes: [snacks1, snacks2, snacks3]},
+    {id: 3,nombre: "Salames",descripcion: "Salames artesanales de excelente calidad",icon: Leaf,color: "from-orange-600 to-orange-800",imagenes: [salame1, salame2, salame3]},
+    {id: 4,nombre: "Apargatas",descripcion: "Apargatas tradicionales y cómodas",icon: ShoppingCart,color: "from-yellow-600 to-yellow-800",imagenes: [apargatas1, apargatas2, apargatas3]}];
+
+
+ export const Ofertas = [
+    {decripcion:"Pata y muslo", Kilos:"3Kg", Precio:"10500", descuento: "25%", original: "14000", imagen: pataMuslo},
+    {decripcion:"Bife ancho", Kilos:"kg", Precio:"14500", descuento: "30%", original: "20700", imagen: bifeAncho},
+    {decripcion:"Falda", Kilos:"2kg", Precio:"22000", descuento: "20%", original: "27500", imagen: falda},
+    {decripcion:"Carre de cerdo", Kilos:"2kg", Precio:"15000", descuento: "28%", original: "20800", imagen: carre},
+    {decripcion:"Costillar de cerdo", Kilos:"Kg", Precio:"6990", descuento: "35%", original: "10750", imagen: costillar},
+    {decripcion:"Alitas", Kilos:"3Kg", Precio:"7000", descuento: "22%", original: "8970", imagen: alitas},
+    {decripcion:"Asado de orilla", Kilos:"Kg", Precio:"13900", descuento: "32%", original: "20440", imagen: asado}
+]
 
 export const carne = [
     {id: 1, image: `${asado}`,name: "Asado", description: "$18200"}, //

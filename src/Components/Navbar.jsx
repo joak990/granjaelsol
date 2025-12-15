@@ -119,7 +119,7 @@ function Navbar() {
                 <div className="hidden md:block">
                     <div data-aos="zoom-im" data-aos-duration="3000" className="flex items-center space-x-4">
                         {/* Sustitución de imágenes por íconos Lucide, usando hover:text-primary */}
-                        <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer" 
+                        <a href="https://www.instagram.com/granjaelsol.1/" target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
                             <Instagram className="h-6 w-6" />
                         </a>

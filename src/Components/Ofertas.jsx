@@ -1,21 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-import { Beef, Zap, Star } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
-
-const Ofertas = [
-    {decripcion:"Pata y muslo", Kilos:"3Kg", Precio:"10500", descuento: "25%", original: "14000"},
-    {decripcion:"Bife ancho", Kilos:"kg", Precio:"14500", descuento: "30%", original: "20700"},
-    {decripcion:"Falda", Kilos:"2kg", Precio:"22000", descuento: "20%", original: "27500"},
-    {decripcion:"Carre de cerdo", Kilos:"2kg", Precio:"15000", descuento: "28%", original: "20800"},
-    {decripcion:"Costillar de cerdo", Kilos:"Kg", Precio:"6990", descuento: "35%", original: "10750"},
-    {decripcion:"Alitas", Kilos:"3Kg", Precio:"7000", descuento: "22%", original: "8970"},
-    {decripcion:"Asado de orilla", Kilos:"Kg", Precio:"13900", descuento: "32%", original: "20440"}
-]
+import { Ofertas } from "./Productosdata"; 
 
 function CarrouselSwip() {
     return (
@@ -71,28 +62,35 @@ function CarrouselSwip() {
                             <SwiperSlide key={index}>
                                 <div 
                                     className="relative h-96 rounded-3xl overflow-hidden group/card cursor-pointer"
+                                    style={{
+                                        backgroundImage: `url(${oferta.imagen})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center'
+                                    }}
                                 >
-                                    {/* Fondo gradiente animado */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/30 to-primary/40 group-hover/card:from-primary/60 group-hover/card:via-secondary/50 group-hover/card:to-primary/60 transition-all duration-500"></div>
+                                    {/* Imagen de fondo */}
+                                    <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${oferta.imagen})`}}></div>
+                                    
+                                    {/* Overlay oscuro con gradiente */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-gray-900/40 group-hover/card:from-gray-900 group-hover/card:via-gray-900/60 group-hover/card:to-gray-900/30 transition-all duration-500"></div>
+                                    
+                                    {/* Overlay de color con los colores de la marca */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/30 group-hover/card:from-primary/20 group-hover/card:via-secondary/10 group-hover/card:to-primary/20 transition-all duration-500"></div>
                                     
                                     {/* Efecto de brillo */}
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 group-hover/card:translate-x-full transition-transform duration-1000"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 group-hover/card:translate-x-full transition-transform duration-1000"></div>
 
                                     {/* Contenido de la tarjeta */}
                                     <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-                                        {/* Icono superior */}
-                                        <div className="mb-6 p-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 group-hover/card:bg-white/20 group-hover/card:scale-110 transition-all duration-300">
-                                            <Beef className="w-12 h-12 text-white" />
-                                        </div>
 
                                         {/* Nombre del producto */}
-                                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 group-hover/card:text-primary transition-colors duration-300">
+                                        <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4 group-hover/card:text-primary transition-colors duration-300 drop-shadow-lg">
                                             {oferta.decripcion}
                                         </h3>
 
                                         {/* Peso */}
-                                        <div className="mb-6 inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                                            <p className="text-white/90 font-body text-sm">
+                                        <div className="mb-6 inline-block px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full border border-white/30 shadow-md">
+                                            <p className="text-white/95 font-body text-sm">
                                                 Cantidad: <span className="font-bold text-primary">{oferta.Kilos}</span>
                                             </p>
                                         </div>
@@ -100,26 +98,20 @@ function CarrouselSwip() {
                                         {/* Sección de precios */}
                                         <div className="mb-6 space-y-2">
                                             <div className="flex items-center justify-center gap-3">
-                                                <span className="text-white/60 line-through text-lg">
+                                                <span className="text-white/70 line-through text-lg drop-shadow">
                                                     ${oferta.original}
                                                 </span>
-                                                <div className="bg-red-500/80 px-3 py-1 rounded-full">
+                                                <div className="bg-red-500/90 px-3 py-1 rounded-full shadow-lg">
                                                     <span className="text-white font-bold text-sm">
                                                         -{oferta.descuento}
                                                     </span>
                                                 </div>
                                             </div>
                                             
-                                            <div className="text-5xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                                            <div className="text-5xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-100 drop-shadow-lg">
                                                 ${oferta.Precio}
                                             </div>
                                         </div>
-
-                                        {/* Botón de acción */}
-                                        <button className="mt-auto px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform group-hover/card:scale-110 flex items-center justify-center gap-2">
-                                            <Star className="w-5 h-5" />
-                                            Consultar
-                                        </button>
                                     </div>
 
                                     {/* Borde brillante */}

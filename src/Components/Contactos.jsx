@@ -7,7 +7,7 @@ const CONTACT_INFO = {
     phone: "(+54) 1131666991",
     phoneRaw: "541131666991",
     email: "granjaelsol1015@gmail.com",
-    instagramUrl: "https://www.instagram.com/elgustoenfamilia/",
+    instagramUrl: "https://www.instagram.com/granjaelsol.1/",
     facebookUrl: "https://www.facebook.com/Granjaelsolarman"
 };
 
