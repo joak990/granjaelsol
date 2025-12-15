@@ -1,23 +1,12 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Copy, Check, Clock } from "lucide-react"; // Importamos íconos de contacto y redes sociales
+import { MapPin, Phone, Mail, Instagram, Facebook, Copy, Check, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
-
-// Datos de contacto centralizados
-const CONTACT_INFO = {
-    address: "Isla Jorge 299, Buenos Aires, Argentina",
-    phone: "(+54) 1131666991",
-    phoneRaw: "541131666991",
-    email: "granjaelsol1015@gmail.com",
-    instagramUrl: "https://www.instagram.com/granjaelsol.1/",
-    facebookUrl: "https://www.facebook.com/Granjaelsolarman"
-};
+import { CONTACT_INFO } from "../constants/contactInfo";
 
 function Contactos() {
     const [copiedPhone, setCopiedPhone] = useState(false);
     const [copiedEmail, setCopiedEmail] = useState(false);
 
-    // URL simulada de Google Maps para incrustar la ubicación
-    // Nota: Sustituir la URL con el enlace de compartir de Google Maps de la ubicación exacta.
-    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.2632205033274!2d-58.9942179993321!3d-34.4373224488841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc820c93606e8f%3A0x9f80921bf9c25643!2sIsla%20Jorge%20299%2C%20B1633BRB%20Fatima%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1764788029553!5m2!1ses-419!2sar";
+    const mapEmbedUrl = CONTACT_INFO.mapEmbedUrl;
 
     useEffect(() => {
         const link = document.createElement('link');

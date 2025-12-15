@@ -3,7 +3,7 @@ import logo from "../img/logoo.png"
 
 function About() {
     return (
-        <div data-aos="fade-in" data-aos-duration="1500" className="bg-gradient-to-b from-gray-50 to-white px-4 md:px-16 py-16" id="about">
+        <div className="bg-gradient-to-b from-gray-50 to-white px-4 md:px-16 py-16" id="about">
             <h1 className="text-center text-4xl md:text-5xl font-heading font-extrabold mb-4 text-text-dark">
                 ¿Quiénes Somos?
             </h1>
@@ -26,7 +26,7 @@ function About() {
                     />
                 </div>
 
-                <div data-aos="zoom-in" data-aos-duration="1500" className="w-full md:w-7/12 mt-10 md:mt-0 text-text-dark">
+                <div className="w-full md:w-7/12 mt-10 md:mt-0 text-text-dark">
                     
                     <div className="font-body text-lg md:text-xl rounded-2xl p-8 leading-relaxed bg-text-light shadow-lg border-l-4 border-primary hover:shadow-xl transition-shadow duration-300" id="quienes-somos">
                         <p className="mb-4">

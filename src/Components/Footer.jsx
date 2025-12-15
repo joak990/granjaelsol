@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Send, ArrowUp } from 'lucide-react';
 import ChristmasDecorations from './ChristmasDecorations';
+import { CONTACT_INFO } from '../constants/contactInfo';
 import '../styles/ChristmasSnow.css';
 
 function Footer() {
@@ -34,14 +35,14 @@ function Footer() {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Phone className="w-4 h-4 flex-shrink-0" />
-                                <a href="tel:+541131666991" className="text-text-light/80 hover:text-text-light transition">
-                                    (+54) 1131666991
+                                <a href={`tel:+${CONTACT_INFO.phoneRaw}`} className="text-text-light/80 hover:text-text-light transition">
+                                    {CONTACT_INFO.phone}
                                 </a>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Mail className="w-4 h-4 flex-shrink-0" />
-                                <a href="mailto:granjaelsol1015@gmail.com" className="text-text-light/80 hover:text-text-light transition">
-                                    granjaelsol1015@gmail.com
+                                <a href={`mailto:${CONTACT_INFO.email}`} className="text-text-light/80 hover:text-text-light transition">
+                                    {CONTACT_INFO.email}
                                 </a>
                             </div>
                         </div>
@@ -51,15 +52,15 @@ function Footer() {
                     <div>
                         <h3 className="text-xl font-heading font-bold mb-4 text-text-light">Síguenos</h3>
                         <div className="flex gap-4">
-                            <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer" 
+                            <a href={CONTACT_INFO.instagramUrlAlt} target="_blank" rel="noopener noreferrer" 
                                className="text-text-light/80 hover:text-text-light transition transform hover:scale-110">
                                 <Instagram className="w-6 h-6" />
                             </a>
-                            <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" 
+                            <a href={CONTACT_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" 
                                className="text-text-light/80 hover:text-text-light transition transform hover:scale-110">
                                 <Facebook className="w-6 h-6" />
                             </a>
-                            <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer" 
+                            <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" 
                                className="text-text-light/80 hover:text-text-light transition transform hover:scale-110">
                                 <Send className="w-6 h-6" />
                             </a>

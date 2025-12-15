@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import RenderStars from './RenderStars';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -11,20 +12,6 @@ const testimonios = [
     {id: 3,nombre: "Pablo Marafuschi",rol: "Cliente verificado",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",calificacion: 5,tiempo: "Hace 2 meses",comentario: "Excelente calidad, atencion y precios.",opiniones: 3},
     {id: 4,nombre: "Elizabet Arzamendia",rol: "Cliente verificado",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=mariano",calificacion: 5,tiempo: "Hace 3 años",comentario: "Calidad, variedad e higiene. Muy recomendable.",opiniones: 5},
     {id: 5,nombre: "Guillermo Alonso",rol: "Cliente verificado",foto: "https://api.dicebear.com/7.x/avataaars/svg?seed=maria",calificacion: 5,tiempo: "Hace 1 mes",comentario: "Excelente! Atencion y mercaderia.",opiniones: 2}];
-
-function RenderStars({ calificacion = 5 }) {
-    return (
-        <div className="flex gap-1">
-            {[...Array(5)].map((_, i) => (
-                <Star
-                    key={i}
-                    size={16}
-                    className={i < calificacion ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}
-                />
-            ))}
-        </div>
-    );
-}
 
 function Testimonios() {
     return (

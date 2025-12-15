@@ -1,4 +1,5 @@
 import { ShoppingCart, Wine, Leaf } from 'lucide-react';
+
 import asado from "../img/carnes/asado.jpg";
 import americano from "../img/carnes/americano.jpg";
 import matambre from "../img/carnes/Matambre.jpg";
@@ -61,15 +62,14 @@ import apargatas1 from '../img/varios/apargatas1.jpg';
 import apargatas2 from '../img/varios/apargatas2.jpg';
 import apargatas3 from '../img/varios/apargatas3.jpg';
 
-
 export const productosAdicionales = [
     {id: 1, nombre: "Vinos", descripcion: "Selección de vinos premium para acompañar tus comidas", icon: Wine, color: "from-red-600 to-red-800", imagenes: [vino1, vino2, vino3]},
     {id: 2,nombre: "Snacks",descripcion: "Variedad de snacks deliciosos y saludables",icon: ShoppingCart,color: "from-amber-600 to-amber-800",imagenes: [snacks1, snacks2, snacks3]},
     {id: 3,nombre: "Salames",descripcion: "Salames artesanales de excelente calidad",icon: Leaf,color: "from-orange-600 to-orange-800",imagenes: [salame1, salame2, salame3]},
-    {id: 4,nombre: "Apargatas",descripcion: "Apargatas tradicionales y cómodas",icon: ShoppingCart,color: "from-yellow-600 to-yellow-800",imagenes: [apargatas1, apargatas2, apargatas3]}];
+    {id: 4,nombre: "Apargatas",descripcion: "Apargatas tradicionales y cómodas",icon: ShoppingCart,color: "from-yellow-600 to-yellow-800",imagenes: [apargatas1, apargatas2, apargatas3]}
+];
 
-
- export const Ofertas = [
+export const Ofertas = [
     {decripcion:"Pata y muslo", Kilos:"3Kg", Precio:"10500", descuento: "25%", original: "14000", imagen: pataMuslo},
     {decripcion:"Bife ancho", Kilos:"kg", Precio:"14500", descuento: "30%", original: "20700", imagen: bifeAncho},
     {decripcion:"Falda", Kilos:"2kg", Precio:"22000", descuento: "20%", original: "27500", imagen: falda},

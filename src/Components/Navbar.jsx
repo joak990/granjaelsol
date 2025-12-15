@@ -1,14 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Facebook, Send } from 'lucide-react'; // Importamos íconos Lucide
+import { Menu, X, Instagram, Facebook, Send } from 'lucide-react';
 import logo from "../img/logoo.png"
 import ChristmasDecorations from './ChristmasDecorations';
-// Función de scroll simulada (reemplazando react-scroll para evitar errores de dependencia)
-const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-};
+import { CONTACT_INFO } from '../constants/contactInfo';
+import { scrollToSection } from '../utils/scrollUtils';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -54,15 +49,14 @@ function Navbar() {
                     <div 
                         onClick={() => scrollToSection("carrousel")} 
                         className="cursor-pointer flex items-center"
-                        data-aos="fade-im" data-aos-duration="3000"
                     >
                         {/* Sustituimos la imagen por un placeholder visualmente agradable con bg-secondary */}
                         <div className="h-14 w-14 mr-2 rounded-lg  flex items-center justify-center text-text-light text-2xl font-black object-cover">
-                            <img data-aos="zoom-im" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
+                            <img src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
                         </div>
                         {/* Color del texto principal actualizado a text-text-dark */}
                         <div className="flex items-center gap-2">
-                            <span data-aos="zoom-im" data-aos-duration="3000" className="text-text-dark font-extrabold text-xl">Granja el Sol</span>
+                            <span className="text-text-dark font-extrabold text-xl">Granja el Sol</span>
                             <ChristmasDecorations />
                         </div>
                     </div>
@@ -81,16 +75,16 @@ function Navbar() {
 
                 {/* Menú de navegación */}
                 <ul className={`md:flex ${menuOpen ? 'flex flex-col absolute top-full left-0 w-full bg-base shadow-lg p-4 border-t border-gray-200' : 'hidden'} md:space-x-8 md:mt-0 items-center justify-center`}>
-                    <li data-aos="zoom-im" data-aos-duration="3000" >
+                    <li>
                         <NavLink to="carrousel">Inicio</NavLink>
                     </li>
-                    <li data-aos="zoom-im" data-aos-duration="3000">
+                    <li>
                         <NavLink to="about">Quienes Somos</NavLink>
                     </li>
-                    <li data-aos="zoom-im" data-aos-duration="3000" >
+                    <li>
                         <NavLink to="productos">Productos</NavLink>
                     </li>
-                    <li data-aos="zoom-im" data-aos-duration="3000">
+                    <li>
                         <NavLink to="contactos">Contáctanos</NavLink>
                     </li>
                     
@@ -98,15 +92,15 @@ function Navbar() {
                     {menuOpen && (
                         <li className="md:hidden border-t border-gray-200 pt-4 mt-4 w-full">
                             <div className="flex items-center justify-center space-x-6">
-                                <a href="https://www.instagram.com/elgustoenfamilia/" target="_blank" rel="noopener noreferrer" 
+                                <a href={CONTACT_INFO.instagramUrlAlt} target="_blank" rel="noopener noreferrer" 
                                    className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
                                     <Instagram className="h-6 w-6" />
                                 </a>
-                                <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" 
+                                <a href={CONTACT_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" 
                                    className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
                                     <Facebook className="h-6 w-6" />
                                 </a>
-                                <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer" 
+                                <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" 
                                    className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
                                     <Send className="h-6 w-6" /> 
                                 </a>
@@ -117,17 +111,17 @@ function Navbar() {
                 
                 {/* Íconos de redes sociales */}
                 <div className="hidden md:block">
-                    <div data-aos="zoom-im" data-aos-duration="3000" className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4">
                         {/* Sustitución de imágenes por íconos Lucide, usando hover:text-primary */}
-                        <a href="https://www.instagram.com/granjaelsol.1/" target="_blank" rel="noopener noreferrer" 
+                        <a href={CONTACT_INFO.instagramUrl} target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
                             <Instagram className="h-6 w-6" />
                         </a>
-                        <a href="https://www.facebook.com/Granjaelsolarman" target="_blank" rel="noopener noreferrer" 
+                        <a href={CONTACT_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
                             <Facebook className="h-6 w-6" />
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=541131666991" target="_blank" rel="noopener noreferrer" 
+                        <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
                             <Send className="h-6 w-6" /> 
                         </a>
