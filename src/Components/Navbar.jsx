@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Facebook, Send } from 'lucide-react'; // Importamos íconos Lucide
 import logo from "../img/logoo.png"
+import ChristmasDecorations from './ChristmasDecorations';
 // Función de scroll simulada (reemplazando react-scroll para evitar errores de dependencia)
 const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -60,7 +61,10 @@ function Navbar() {
                             <img data-aos="zoom-im" data-aos-duration="3000" src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
                         </div>
                         {/* Color del texto principal actualizado a text-text-dark */}
-                        <span data-aos="zoom-im" data-aos-duration="3000" className="text-text-dark font-extrabold text-xl">Granja el Sol</span>
+                        <div className="flex items-center gap-2">
+                            <span data-aos="zoom-im" data-aos-duration="3000" className="text-text-dark font-extrabold text-xl">Granja el Sol</span>
+                            <ChristmasDecorations />
+                        </div>
                     </div>
                 </div>
 

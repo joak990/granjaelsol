@@ -5,15 +5,21 @@ import Productos from './Components/Productos'
 import Footer from './Components/Footer'
 import Contactos from './Components/Contactos'
 import Ofertas from './Components/Ofertas'
+import ChristmasSnow from './Components/ChristmasSnow'
+import ChristmasBanner from './Components/ChristmasBanner'
+import Testimonios from './Components/Testimonios'
 
 const App = () => {
     return (
         <div>
+            <ChristmasSnow />
             <Navbar />
             <Carrousel />
+            <ChristmasBanner />
             <About />
             <Ofertas />
             <Productos />
+            <Testimonios />
             <Contactos />
             <Footer />
         </div>

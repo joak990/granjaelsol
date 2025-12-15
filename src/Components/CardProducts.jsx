@@ -1,23 +1,9 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Heart, ChevronDown, ChevronUp, Zap } from 'lucide-react';
+import React from 'react';
+import { Heart, ChevronDown, ChevronUp, Zap } from 'lucide-react';
+import { useProductCard } from '../hooks/useProductCard';
 
 const CardProducts = ({ products }) => {
-  const [favorites, setFavorites] = useState(new Set());
-  const [expandedProduct, setExpandedProduct] = useState(null);
-
-  const toggleFavorite = (productId) => {
-    const newFavorites = new Set(favorites);
-    if (newFavorites.has(productId)) {
-      newFavorites.delete(productId);
-    } else {
-      newFavorites.add(productId);
-    }
-    setFavorites(newFavorites);
-  };
-
-  const toggleExpanded = (productId) => {
-    setExpandedProduct(expandedProduct === productId ? null : productId);
-  };
+  const { favorites, expandedProduct, toggleFavorite, toggleExpanded } = useProductCard();
 
   const getPlaceholderImage = (index, name) => {
     const colors = ['bg-gradient-to-br from-primary to-secondary', 'bg-gradient-to-br from-secondary to-primary', 'bg-gradient-to-br from-accent-positive to-primary', 'bg-gradient-to-br from-text-dark to-secondary'];

@@ -1,7 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Beef, Zap, Star } from 'lucide-react';
 import 'swiper/css';
-import { Flame, Beef, AlertCircle, TrendingDown, Zap, Star } from 'lucide-react';
-import { useState } from 'react';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 
 const Ofertas = [
     {decripcion:"Pata y muslo", Kilos:"3Kg", Precio:"10500", descuento: "25%", original: "14000"},
@@ -13,16 +17,7 @@ const Ofertas = [
     {decripcion:"Asado de orilla", Kilos:"Kg", Precio:"13900", descuento: "32%", original: "20440"}
 ]
 
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay'
-
 function CarrouselSwip() {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-
     return (
         <div className="w-full px-4 lg:px-10 py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden" id="ofertas">
             {/* Elementos decorativos de fondo */}
@@ -76,8 +71,6 @@ function CarrouselSwip() {
                             <SwiperSlide key={index}>
                                 <div 
                                     className="relative h-96 rounded-3xl overflow-hidden group/card cursor-pointer"
-                                    onMouseEnter={() => setHoveredIndex(index)}
-                                    onMouseLeave={() => setHoveredIndex(null)}
                                 >
                                     {/* Fondo gradiente animado */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-secondary/30 to-primary/40 group-hover/card:from-primary/60 group-hover/card:via-secondary/50 group-hover/card:to-primary/60 transition-all duration-500"></div>
