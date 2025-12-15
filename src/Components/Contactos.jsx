@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Copy, Check, Clock } from "lucide-react"; // Importamos íconos de contacto y redes sociales
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Datos de contacto centralizados
 const CONTACT_INFO = {
@@ -15,6 +15,27 @@ function Contactos() {
     const [copiedPhone, setCopiedPhone] = useState(false);
     const [copiedEmail, setCopiedEmail] = useState(false);
 
+    // URL simulada de Google Maps para incrustar la ubicación
+    // Nota: Sustituir la URL con el enlace de compartir de Google Maps de la ubicación exacta.
+    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.2632205033274!2d-58.9942179993321!3d-34.4373224488841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc820c93606e8f%3A0x9f80921bf9c25643!2sIsla%20Jorge%20299%2C%20B1633BRB%20Fatima%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1764788029553!5m2!1ses-419!2sar";
+
+    useEffect(() => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = mapEmbedUrl;
+        document.head.appendChild(link);
+
+        const preloadIframe = () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = mapEmbedUrl;
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+        };
+
+        window.addEventListener('load', preloadIframe);
+        return () => window.removeEventListener('load', preloadIframe);
+    }, [mapEmbedUrl]);
+
     const copyToClipboard = (text, type) => {
         navigator.clipboard.writeText(text);
         if (type === 'phone') {
@@ -25,10 +46,6 @@ function Contactos() {
             setTimeout(() => setCopiedEmail(false), 2000);
         }
     };
-
-    // URL simulada de Google Maps para incrustar la ubicación
-    // Nota: Sustituir la URL con el enlace de compartir de Google Maps de la ubicación exacta.
-    const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.2632205033274!2d-58.9942179993321!3d-34.4373224488841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc820c93606e8f%3A0x9f80921bf9c25643!2sIsla%20Jorge%20299%2C%20B1633BRB%20Fatima%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1764788029553!5m2!1ses-419!2sar";
 
     return (
         // Usamos bg-base o un color contrastante como bg-gray-100/50 si About ya es bg-base
