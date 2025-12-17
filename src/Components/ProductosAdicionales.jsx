@@ -10,21 +10,21 @@ function ProductCard({ producto }) {
     const IconComponent = producto.icon;
 
     return (
-        <div className="h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
-            {/* Encabezado con gradiente */}
-            <div className={`bg-gradient-to-r ${producto.color} p-6 text-white relative overflow-hidden`}>
+        <div className="flex flex-col bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group">
+            {/* Encabezado con gradiente - altura fija */}
+            <div className={`bg-gradient-to-r ${producto.color} p-3 sm:p-6 text-white relative overflow-hidden min-h-[140px] sm:min-h-[180px] flex items-center`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                <div className="relative z-10">
-                    <div className="inline-block p-3 bg-white/20 rounded-lg mb-3 group-hover:bg-white/30 transition-colors">
-                        <IconComponent className="w-6 h-6" />
+                <div className="relative z-10 w-full">
+                    <div className="inline-block p-2 sm:p-3 bg-white/20 rounded-lg mb-2 sm:mb-3 group-hover:bg-white/30 transition-colors">
+                        <IconComponent className="w-4 h-4 sm:w-6 sm:h-6" />
                     </div>
-                    <h3 className="text-2xl font-heading font-bold">{producto.nombre}</h3>
-                    <p className="text-white/90 text-sm mt-2">{producto.descripcion}</p>
+                    <h3 className="text-lg sm:text-2xl font-heading font-bold line-clamp-1">{producto.nombre}</h3>
+                    <p className="text-white/90 text-xs sm:text-sm mt-1 sm:mt-2 line-clamp-2">{producto.descripcion}</p>
                 </div>
             </div>
 
-            {/* Carrusel de imágenes */}
-            <div className="flex-grow">
+            {/* Carrusel de imágenes - altura fija */}
+            <div className="h-48 sm:h-64">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={10}
@@ -35,7 +35,7 @@ function ProductCard({ producto }) {
                 >
                     {producto.imagenes.map((imagen, idx) => (
                         <SwiperSlide key={idx}>
-                            <div className="relative w-full h-64 bg-gray-100">
+                            <div className="relative w-full h-full bg-gray-100">
                                 <img
                                     src={imagen}
                                     alt={`${producto.nombre} ${idx + 1}`}
@@ -60,42 +60,42 @@ function ProductosAdicionales() {
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Encabezado */}
-                <div className="text-center mb-16">
-                    <div className="inline-flex items-center justify-center gap-3 mb-6 px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/30">
-                        <ShoppingCart className="w-5 h-5 text-primary" />
-                        <span className="text-sm md:text-base font-heading font-bold text-primary uppercase tracking-widest">
+                <div className="text-center mb-10 sm:mb-16">
+                    <div className="inline-flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/30">
+                        <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                        <span className="text-xs sm:text-sm md:text-base font-heading font-bold text-primary uppercase tracking-widest">
                             Más Productos
                         </span>
-                        <ShoppingCart className="w-5 h-5 text-primary" />
+                        <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-text-dark mb-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-text-dark mb-3 sm:mb-4 px-2">
                         Productos Adicionales
                     </h2>
 
-                    <p className="text-lg text-text-dark/70 font-body max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg text-text-dark/70 font-body max-w-3xl mx-auto px-4">
                         Complementa tu compra con nuestra selección de vinos, snacks, salames y apargatas de excelente calidad
                     </p>
                 </div>
 
                 {/* Grid de productos */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
                     {productosAdicionales.map((producto) => (
                         <ProductCard key={producto.id} producto={producto} />
                     ))}
                 </div>
 
                 {/* Sección informativa */}
-                <div className="mt-16 max-w-4xl mx-auto">
-                    <div className="bg-white rounded-2xl shadow-lg border-l-4 border-primary p-8">
-                        <div className="flex items-start gap-4">
-                            <div className="text-4xl flex-shrink-0">🛒</div>
+                <div className="mt-10 sm:mt-16 max-w-4xl mx-auto">
+                    <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg border-l-4 border-primary p-4 sm:p-8">
+                        <div className="flex items-start gap-3 sm:gap-4">
+                            <div className="text-2xl sm:text-4xl flex-shrink-0">🛒</div>
                             <div>
-                                <h3 className="text-2xl font-heading font-bold text-text-dark mb-2">
+                                <h3 className="text-lg sm:text-2xl font-heading font-bold text-text-dark mb-1 sm:mb-2">
                                     Compra Completa
                                 </h3>
-                                <p className="text-text-dark/70 font-body">
-                                    Aprovecha nuestros productos adicionales para complementar tu compra. Contáctanos para consultar disponibilidad, precios y ofertas especiales en combos. ¡Estamos aquí para servir!
+                                <p className="text-sm sm:text-base text-text-dark/70 font-body">
+                                    Aprovecha nuestros productos adicionales para complementar tu compra. Contáctanos para consultar disponibilidad, precios y ofertas especiales en combos. ¡Estamos para ofrecerte el mejor servicio!
                                 </p>
                             </div>
                         </div>

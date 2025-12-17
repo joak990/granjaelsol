@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Send, ArrowUp } from 'lucide-react';
 import ChristmasDecorations from './ChristmasDecorations';
+import ChristmasSnow from './ChristmasSnow';
 import { CONTACT_INFO } from '../constants/contactInfo';
 import '../styles/ChristmasSnow.css';
 
@@ -9,7 +10,8 @@ function Footer() {
     };
 
     return (
-        <footer className="bg-secondary text-text-light font-body">
+        <footer className="bg-secondary text-text-light font-body relative overflow-hidden">
+            <ChristmasSnow />
             {/* Contenido Principal del Footer */}
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

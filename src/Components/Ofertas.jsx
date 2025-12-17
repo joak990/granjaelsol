@@ -147,7 +147,7 @@ function CarrouselSwip() {
                                     ¡Ofertas por Tiempo Limitado!
                                 </p>
                                 <p className="text-gray-200 font-body text-base md:text-lg leading-relaxed">
-                                    Las ofertas se abonan <span className="font-bold text-amber-300">únicamente con efectivo o transferencia</span> • Stock limitado • Consulta disponibilidad llamando al <span className="font-bold text-primary">(+54) 1131666991</span>
+                                    Las ofertas se abonan <span className="font-bold text-amber-300">únicamente con efectivo o transferencia</span> • Stock limitado
                                 </p>
                             </div>
                         </div>
