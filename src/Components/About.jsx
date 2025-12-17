@@ -14,15 +14,11 @@ function About() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:mt-16 justify-between items-center gap-8">
                 
                 {/* INYECTAMOS EL TAG <img> CON LOS ESTILOS MODERNOS */}
-                <div className="md:w-5/12 pr-0 md:pr-10 mt-10 md:mt-0 flex justify-center">
+                <div className="w-full md:w-5/12 pr-0 md:pr-10 mt-0 md:mt-0 flex justify-center">
                     <img 
-                        data-aos="zoom-in-down" 
-                        data-aos-duration="1500" 
-                        // Asegúrate de que esta URL/ruta apunte a tu archivo LOGO.jpg
                         src={logo} 
                         alt="Logo Original Granja El Sol" 
-                        // Mantenemos los estilos de tamaño, borde y sombra
-                        className="w-80 h-80 md:h-96 md:w-96 border-4 rounded-3xl object-cover shadow-2xl border-primary"
+                        className="w-64 h-64 md:w-96 md:h-96 border-4 rounded-3xl object-cover shadow-2xl border-primary"
                     />
                 </div>
 
@@ -37,7 +33,7 @@ function About() {
                         </p>
                     </div>
 
-                    <div data-aos="fade-right" data-aos-duration="1500" className="mt-10 flex flex-col gap-5 text-lg md:text-xl font-heading font-semibold">
+                    <div className="mt-10 flex flex-col gap-5 text-lg md:text-xl font-heading font-semibold">
                         <div className="flex items-center gap-4 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
                             <CheckCircle className="text-primary w-7 h-7 flex-shrink-0" /> 
                             <span>Carne de calidad superior</span>

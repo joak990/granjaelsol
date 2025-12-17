@@ -25,11 +25,11 @@ const App = () => {
             <Navbar />
             <Carrousel />
             <ChristmasBanner />
-            <About />
             <Ofertas />
             <Productos />
             <ProductosAdicionales />
             <Testimonios />
+            <About />
             <Contactos />
             <Footer />
         </div>

@@ -33,7 +33,7 @@ function Navbar() {
                 setMenuOpen(false); // Cierra el menú en móvil después de hacer clic
             }} 
             // Clases de estilo del enlace
-            className="text-text-dark md:text-lg text-xl hover:text-primary transition duration-300 cursor-pointer block py-2"
+            className="text-text-dark text-base md:text-lg hover:text-primary transition duration-300 cursor-pointer block py-1.5 md:py-0"
         >
             {children}
         </div>
@@ -42,7 +42,7 @@ function Navbar() {
     return (
         // Aplicamos bg-base y font-heading con sombra mejorada
         <>
-            <nav className={`bg-base py-4 px-8 fixed top-0 left-0 w-full z-50 font-heading shadow-md transition-shadow duration-300 ${menuOpen ? 'shadow-lg' : 'md:shadow-md'}`}>
+            <nav className={`bg-base py-2 px-4 md:px-8 fixed top-0 left-0 w-full z-50 font-heading shadow-md transition-shadow duration-300 ${menuOpen ? 'shadow-lg' : 'md:shadow-md'}`}>
             <div className="flex items-center justify-between max-w-7xl mx-auto">
                 <div className="flex items-center">
                     {/* Placeholder para el Logo (simulando el Link y la imagen) */}
@@ -51,12 +51,12 @@ function Navbar() {
                         className="cursor-pointer flex items-center"
                     >
                         {/* Sustituimos la imagen por un placeholder visualmente agradable con bg-secondary */}
-                        <div className="h-14 w-14 mr-2 rounded-lg  flex items-center justify-center text-text-light text-2xl font-black object-cover">
-                            <img src={logo} alt="Logo" className="h-14 w-14 mr-2 rounded-sm" />
+                        <div className="h-10 w-10 md:h-12 md:w-12 mr-2 rounded-lg flex items-center justify-center text-text-light text-2xl font-black object-cover">
+                            <img src={logo} alt="Logo" className="h-10 w-10 md:h-12 md:w-12 rounded-sm" />
                         </div>
                         {/* Color del texto principal actualizado a text-text-dark */}
                         <div className="flex items-center gap-2">
-                            <span className="text-text-dark font-extrabold text-xl">Granja el Sol</span>
+                            <span className="text-text-dark font-extrabold text-base md:text-lg">Granja el Sol</span>
                             <ChristmasDecorations />
                         </div>
                     </div>
@@ -66,15 +66,15 @@ function Navbar() {
                     {/* Ícono de menú con hover text-primary */}
                     <button className="text-text-dark hover:text-primary focus:outline-none" onClick={toggleMenu}>
                         {menuOpen ? (
-                            <X className="h-7 w-7" />
+                            <X className="h-6 w-6" />
                         ) : (
-                            <Menu className="h-7 w-7" />
+                            <Menu className="h-6 w-6" />
                         )}
                     </button>
                 </div>
 
                 {/* Menú de navegación */}
-                <ul className={`md:flex ${menuOpen ? 'flex flex-col absolute top-full left-0 w-full bg-base shadow-lg p-4 border-t border-gray-200' : 'hidden'} md:space-x-8 md:mt-0 items-center justify-center`}>
+                <ul className={`md:flex ${menuOpen ? 'flex flex-col absolute top-full left-0 w-full bg-base shadow-lg p-3 border-t border-gray-200' : 'hidden'} md:space-x-6 md:mt-0 items-center justify-center`}>
                     <li>
                         <NavLink to="carrousel">Inicio</NavLink>
                     </li>
@@ -90,19 +90,19 @@ function Navbar() {
                     
                     {/* Redes sociales en menú móvil */}
                     {menuOpen && (
-                        <li className="md:hidden border-t border-gray-200 pt-4 mt-4 w-full">
+                        <li className="md:hidden border-t border-gray-200 pt-3 mt-3 w-full">
                             <div className="flex items-center justify-center space-x-6">
                                 <a href={CONTACT_INFO.instagramUrlAlt} target="_blank" rel="noopener noreferrer" 
                                    className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
-                                    <Instagram className="h-6 w-6" />
+                                    <Instagram className="h-5 w-5" />
                                 </a>
                                 <a href={CONTACT_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" 
                                    className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
-                                    <Facebook className="h-6 w-6" />
+                                    <Facebook className="h-5 w-5" />
                                 </a>
                                 <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" 
                                    className="text-text-dark hover:text-primary transition duration-300 transform hover:scale-125">
-                                    <Send className="h-6 w-6" /> 
+                                    <Send className="h-5 w-5" /> 
                                 </a>
                             </div>
                         </li>
@@ -111,19 +111,19 @@ function Navbar() {
                 
                 {/* Íconos de redes sociales */}
                 <div className="hidden md:block">
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-3">
                         {/* Sustitución de imágenes por íconos Lucide, usando hover:text-primary */}
                         <a href={CONTACT_INFO.instagramUrl} target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
-                            <Instagram className="h-6 w-6" />
+                            <Instagram className="h-5 w-5" />
                         </a>
                         <a href={CONTACT_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
-                            <Facebook className="h-6 w-6" />
+                            <Facebook className="h-5 w-5" />
                         </a>
                         <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" 
                         className="text-text-dark hover:text-primary transition duration-300">
-                            <Send className="h-6 w-6" /> 
+                            <Send className="h-5 w-5" /> 
                         </a>
                     </div>
                 </div>
