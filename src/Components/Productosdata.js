@@ -80,7 +80,7 @@ export const Ofertas = [
 ]
 
 export const carne = [
-    {id: 1, image: `${asado}`,name: "Asado", description: "$18200"}, //
+    {id: 1, image: `${asado}`,name: "Asado", description: "$18500"}, //
     {id: 2, image: `${americano}`, name: "Americano", description: "$18400"}, //
     {id: 3, image: `${matambre}`, name: "Matambre", description: "$17790"}, //
     {id: 4, image: `${entraña}`, name: "Entraña", description: "$24700"},//
