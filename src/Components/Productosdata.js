@@ -93,11 +93,11 @@ export const carne = [
     {id: 11, image: `${tapadeasado}`, name: "Tapa de asado", description: "$16600"}, //
     {id: 12, image: `${tapadenalga}`, name: "Tapa de nalga", description: "$16900"},
     {id: 13, image: `${osobuco}`, name: "Osobuco", description: "$9200"},//
-    {id: 14, image: `${paleta}`, name: "Paleta", description: "$14690"}, //
-    {id: 15, image: `${peceto}`, name: "Peceto", description: "$21750"}, //
+    {id: 14, image: `${paleta}`, name: "Paleta", description: "$14900"}, //
+    {id: 15, image: `${peceto}`, name: "Peceto", description: "$22900"}, //
     {id: 16, image: `${ojodebife}`, name: "Ojo de bife", description: "$25800"}, //
     {id: 17, image: `${picaña}`, name: "Picaña", description: "$23600"},//
-    {id: 19, image: `${colitacuadril}`, name: "Colita de cuadril", description: "$18150"}, //
+    {id: 19, image: `${colitacuadril}`, name: "Colita de cuadril", description: "$23600"}, //
     {id: 20, image: `${cuadrada}`, name: "Cuadrada", description: "$17300"}, //
     {id: 21, image: `${cuadril}`, name: "Cuadril", description: "$18500"}, //
     {id: 22, image: `${faldaparrillera}`, name: "Falda parrillera", description: "$13300"}, //

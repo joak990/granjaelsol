@@ -142,7 +142,7 @@ function Contactos() {
                                                 </p>
                                                 <p className="flex items-center gap-2">
                                                     <span className="inline-block w-2 h-2 bg-primary rounded-full"></span>
-                                                    16:30 - 20:30 hrs
+                                                    17:30 - 20:30 hrs
                                                 </p>
                                             </div>
                                         </div>
