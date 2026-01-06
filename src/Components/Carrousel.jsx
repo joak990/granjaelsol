@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { Link } from "react-scroll";
 import logo2 from "../img/foto21.png";
 import logo3 from "../img/foto31.png";
@@ -7,68 +7,102 @@ import logo4 from "../img/foto4.jpg";
 import logo5 from "../img/foto5.jpg";
 import logo6 from "../img/foto6.jpg";
 
-function Carrousel() {
-    const slides = [
-        { url: logo4, title: "Calidad Familiar desde 2015", subtitle: "Lo mejor esta en Granja el sol.", icon: "🥩"},
-        { url: logo2, title: "Precios accesibles", subtitle: "Calidad garantizada, directamente a tu mesa.",icon: "💰"},
-        { url: logo3, title: "¡Visítanos Hoy!", subtitle: "Conoce nuestra amplia variedad de cortes.",icon: "🏪"},
-        { url: logo5, title: "¡Pedi a Domicilio!", subtitle: "Servicio de Delivery disponible.",icon: "🛵"},
-        { url: logo6, title: "Combos y Ofertas", subtitle: "Consulta por nuestras ofertas y combos.",icon: "🎉"}];
+const slides = [
+    { url: logo4, title: "Calidad Familiar desde 2015", subtitle: "Lo mejor esta en Granja el sol.", icon: "🥩" },
+    { url: logo2, title: "Precios accesibles", subtitle: "Calidad garantizada, directamente a tu mesa.", icon: "💰" },
+    { url: logo3, title: "¡Visítanos Hoy!", subtitle: "Conoce nuestra amplia variedad de cortes.", icon: "🏪" },
+    { url: logo5, title: "¡Pedi a Domicilio!", subtitle: "Servicio de Delivery disponible.", icon: "🛵" },
+    { url: logo6, title: "Combos y Ofertas", subtitle: "Consulta por nuestras ofertas y combos.", icon: "🎉" },
+];
 
+function Carrousel() {
     const carouselRef = useRef(null);
     const autoPlayRef = useRef(null);
+    const isInteractingRef = useRef(false);
 
-    const scroll = (direction) => {
-        if (carouselRef.current) {
-            const scrollAmount = carouselRef.current.offsetWidth;
-            carouselRef.current.scrollBy({
-                left: direction === "next" ? scrollAmount : -scrollAmount,
+    const getSlideWidth = useCallback(() => {
+        if (!carouselRef.current) return 0;
+        return carouselRef.current.offsetWidth;
+    }, []);
+
+    const getCurrentIndex = useCallback(() => {
+        if (!carouselRef.current) return 0;
+        const width = getSlideWidth();
+        if (!width) return 0;
+        return Math.round(carouselRef.current.scrollLeft / width);
+    }, [getSlideWidth]);
+
+    const scrollToIndex = useCallback(
+        (index) => {
+            if (!carouselRef.current) return;
+            const width = getSlideWidth();
+            if (!width) return;
+
+            carouselRef.current.scrollTo({
+                left: index * width,
                 behavior: "smooth",
             });
-        }
-        resetAutoPlay();
-    };
+        },
+        [getSlideWidth]
+    );
 
-    const resetAutoPlay = () => {
+    const scroll = useCallback(
+        (direction) => {
+            const currentIndex = getCurrentIndex();
+
+            let nextIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
+            if (nextIndex >= slides.length) nextIndex = 0;
+            if (nextIndex < 0) nextIndex = slides.length - 1;
+
+            scrollToIndex(nextIndex);
+        },
+        [getCurrentIndex, scrollToIndex]
+    );
+
+    const startAutoPlay = useCallback(() => {
         if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-        startAutoPlay();
-    };
-
-    const startAutoPlay = () => {
         autoPlayRef.current = setInterval(() => {
-            if (carouselRef.current) {
-                carouselRef.current.scrollBy({
-                    left: carouselRef.current.offsetWidth,
-                    behavior: "smooth",
-                });
-            }
+            if (isInteractingRef.current) return;
+            scroll("next");
         }, 5000);
-    };
+    }, [scroll]);
+
+    const resetAutoPlay = useCallback(() => {
+        startAutoPlay();
+    }, [startAutoPlay]);
 
     useEffect(() => {
         startAutoPlay();
         return () => {
             if (autoPlayRef.current) clearInterval(autoPlayRef.current);
         };
-    }, []);
+    }, [startAutoPlay]);
 
     return (
-        <div className="w-full pt-1 md:pt-9 relative overflow-hidden" id="carrousel">
+        <div className="w-full h-screen pt-14 md:pt-16 relative overflow-hidden" id="carrousel">
             {/* Contenedor principal del carrusel */}
             <div className="relative group">
                 {/* Carrusel con scroll horizontal */}
                 <div
                     ref={carouselRef}
-                    className="flex overflow-x-hidden scroll-smooth snap-x snap-mandatory"
+                    className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory touch-pan-x overscroll-x-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
                     onMouseEnter={() => {
                         if (autoPlayRef.current) clearInterval(autoPlayRef.current);
                     }}
                     onMouseLeave={resetAutoPlay}
+                    onTouchStart={() => {
+                        isInteractingRef.current = true;
+                        if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+                    }}
+                    onTouchEnd={() => {
+                        isInteractingRef.current = false;
+                        resetAutoPlay();
+                    }}
                 >
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className="w-full h-[600px] md:h-[80vh] max-h-[800px] flex-shrink-0 snap-center relative overflow-hidden"
+                            className="w-full h-[calc(100vh-3.5rem)] md:h-[calc(100vh-4rem)] flex-shrink-0 snap-center relative overflow-hidden"
                         >
                             {/* Imagen de fondo con zoom effect */}
                             <div className="absolute inset-0 overflow-hidden">
@@ -103,11 +137,13 @@ function Carrousel() {
                                 </p>
 
                                 {/* Botón CTA */}
-                                <Link to="productos" spy={true} smooth={true} offset={-100} duration={500}>
-                                    <button className="mt-8 px-8 md:px-12 py-3 md:py-4 bg-gradient-to-r from-primary to-secondary text-text-light font-bold text-lg md:text-xl rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:from-secondary hover:to-primary cursor-pointer">
-                                        Explorar Productos
-                                    </button>
-                                </Link>
+                                {index === 0 && (
+                                    <Link to="productos" spy={true} smooth={true} offset={-100} duration={500}>
+                                        <button className="mt-8 px-8 md:px-12 py-3 md:py-4 bg-gradient-to-r from-primary to-secondary text-text-light font-bold text-lg md:text-xl rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:from-secondary hover:to-primary cursor-pointer">
+                                            Explorar Productos
+                                        </button>
+                                    </Link>
+                                )}
                             </div>
 
                             {/* Indicador de slide */}
@@ -121,7 +157,7 @@ function Carrousel() {
                 {/* Botón Anterior */}
                 <button
                     onClick={() => scroll("prev")}
-                    className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-primary text-primary hover:text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 backdrop-blur-sm group-hover:opacity-100 opacity-0 md:opacity-100"
+                    className="hidden md:flex absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-primary text-primary hover:text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 backdrop-blur-sm group-hover:opacity-100 opacity-0 md:opacity-100"
                     aria-label="Anterior"
                 >
                     <ChevronLeft size={28} />
@@ -130,7 +166,7 @@ function Carrousel() {
                 {/* Botón Siguiente */}
                 <button
                     onClick={() => scroll("next")}
-                    className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-primary text-primary hover:text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 backdrop-blur-sm group-hover:opacity-100 opacity-0 md:opacity-100"
+                    className="hidden md:flex absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-primary text-primary hover:text-white p-3 md:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 backdrop-blur-sm group-hover:opacity-100 opacity-0 md:opacity-100"
                     aria-label="Siguiente"
                 >
                     <ChevronRight size={28} />
@@ -147,6 +183,19 @@ function Carrousel() {
                             }}
                         ></div>
                     ))}
+                </div>
+
+                {/* Indicador sutil para scrollear */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+                    <Link to="ofertas" spy={true} smooth={true} offset={-80} duration={500}>
+                        <button
+                            type="button"
+                            aria-label="Ver más"
+                            className="text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
+                        >
+                            <ChevronDown className="w-7 h-7 animate-bounce" />
+                        </button>
+                    </Link>
                 </div>
             </div>
 
