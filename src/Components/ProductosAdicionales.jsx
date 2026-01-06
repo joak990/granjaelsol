@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ShoppingCart } from 'lucide-react';
+import PropTypes from 'prop-types';
 import { productosAdicionales } from './Productosdata';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -51,6 +52,16 @@ function ProductCard({ producto }) {
     );
 }
 
+ProductCard.propTypes = {
+    producto: PropTypes.shape({
+        icon: PropTypes.elementType.isRequired,
+        color: PropTypes.string.isRequired,
+        nombre: PropTypes.string.isRequired,
+        descripcion: PropTypes.string.isRequired,
+        imagenes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }).isRequired,
+};
+
 function ProductosAdicionales() {
     return (
         <div className="w-full px-4 lg:px-10 py-20 bg-gradient-to-b from-gray-50 to-base relative overflow-hidden" id="productos-adicionales">
@@ -91,10 +102,10 @@ function ProductosAdicionales() {
                         <div className="flex items-start gap-3 sm:gap-4">
                             <div className="text-2xl sm:text-4xl flex-shrink-0">🛒</div>
                             <div>
-                                <h3 className="text-lg sm:text-2xl font-heading font-bold text-text-dark mb-1 sm:mb-2">
+                                <h3 className="text-lg sm:text-2xl font-heading font-bold !text-text-dark mb-1 sm:mb-2">
                                     Compra Completa
                                 </h3>
-                                <p className="text-sm sm:text-base text-text-dark/70 font-body">
+                                <p className="text-sm sm:text-base !text-text-dark !opacity-100 font-body">
                                     Aprovecha nuestros productos adicionales para complementar tu compra. Contáctanos para consultar disponibilidad, precios y ofertas especiales en combos. ¡Estamos para ofrecerte el mejor servicio!
                                 </p>
                             </div>

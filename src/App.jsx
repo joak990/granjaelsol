@@ -7,7 +7,6 @@ import Productos from './Components/Productos'
 import Footer from './Components/Footer'
 import Contactos from './Components/Contactos'
 import Ofertas from './Components/Ofertas'
-import ChristmasBanner from './Components/ChristmasBanner'
 import Testimonios from './Components/Testimonios'
 import ProductosAdicionales from './Components/ProductosAdicionales'
 
@@ -22,7 +21,6 @@ const App = () => {
         <div>
             <Navbar />
             <Carrousel />
-            <ChristmasBanner />
             <Ofertas />
             <Productos />
             <ProductosAdicionales />

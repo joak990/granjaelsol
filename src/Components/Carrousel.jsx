@@ -6,7 +6,6 @@ import logo3 from "../img/foto31.png";
 import logo4 from "../img/foto4.jpg";
 import logo5 from "../img/foto5.jpg";
 import logo6 from "../img/foto6.jpg";
-import '../styles/ChristmasSnow.css';
 
 function Carrousel() {
     const slides = [
@@ -86,7 +85,7 @@ function Carrousel() {
                             {/* Contenido con animación */}
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-8">
                                 {/* Icono animado con efecto navideño */}
-                                <div className="text-6xl md:text-8xl mb-6 animate-bounce christmas-pulse">
+                                <div className="text-6xl md:text-8xl mb-6 animate-bounce">
                                     {slide.icon}
                                 </div>
 

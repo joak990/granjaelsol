@@ -1,11 +1,9 @@
 import { CheckCircle } from "lucide-react"; // Usamos Lucide para los íconos
 import logo from "../img/logoo.png"
-import ChristmasSnow from './ChristmasSnow'
 
 function About() {
     return (
         <div className="bg-gradient-to-b from-gray-50 to-white px-4 md:px-16 py-16 relative overflow-hidden" id="about">
-            <ChristmasSnow />
             <h1 className="text-center text-4xl md:text-5xl font-heading font-extrabold mb-4 text-text-dark">
                 ¿Quiénes Somos?
             </h1>

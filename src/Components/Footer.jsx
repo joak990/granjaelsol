@@ -1,8 +1,5 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Send, ArrowUp } from 'lucide-react';
-import ChristmasDecorations from './ChristmasDecorations';
-import ChristmasSnow from './ChristmasSnow';
 import { CONTACT_INFO } from '../constants/contactInfo';
-import '../styles/ChristmasSnow.css';
 
 function Footer() {
     const scrollToTop = () => {
@@ -11,7 +8,6 @@ function Footer() {
 
     return (
         <footer className="bg-secondary text-text-light font-body relative overflow-hidden">
-            <ChristmasSnow />
             {/* Contenido Principal del Footer */}
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -20,7 +16,6 @@ function Footer() {
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <h3 className="text-xl font-heading font-bold text-text-light">Granja El Sol</h3>
-                            <ChristmasDecorations />
                         </div>
                         <p className="text-text-light/80 text-sm leading-relaxed">
                             Tradición de sabor desde 2016. Ofrecemos cortes de carne premium con calidad garantizada y atención personalizada.

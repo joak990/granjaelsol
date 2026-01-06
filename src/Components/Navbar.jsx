@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Menu, X, Instagram, Facebook, Send } from 'lucide-react';
 import logo from "../img/logoo.png"
-import ChristmasDecorations from './ChristmasDecorations';
 import { CONTACT_INFO } from '../constants/contactInfo';
 import { scrollToSection } from '../utils/scrollUtils';
 
@@ -39,6 +39,11 @@ function Navbar() {
         </div>
     );
 
+    NavLink.propTypes = {
+        to: PropTypes.string.isRequired,
+        children: PropTypes.node.isRequired,
+    };
+
     return (
         // Aplicamos bg-base y font-heading con sombra mejorada
         <>
@@ -57,7 +62,6 @@ function Navbar() {
                         {/* Color del texto principal actualizado a text-text-dark */}
                         <div className="flex items-center gap-2">
                             <span className="text-text-dark font-extrabold text-base md:text-lg">Granja el Sol</span>
-                            <ChristmasDecorations />
                         </div>
                     </div>
                 </div>

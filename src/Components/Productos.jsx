@@ -78,7 +78,7 @@ function Productos() {
                                 py-1.5 sm:py-2 md:py-3 px-4 sm:px-6 md:px-10 rounded-lg sm:rounded-xl text-sm sm:text-base md:text-lg font-heading font-bold transition-all duration-300 whitespace-nowrap transform hover:scale-105 relative overflow-hidden
                                 ${activeCategory === category
                                     ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg scale-105' 
-                                    : 'text-text-dark hover:bg-white bg-white/50 hover:shadow-md'
+                                    : 'bg-white !text-black !opacity-100 hover:bg-white hover:!text-primary hover:shadow-md'
                                 }
                             `}
                         >
