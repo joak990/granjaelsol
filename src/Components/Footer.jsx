@@ -57,6 +57,20 @@ function Footer() {
                                className="text-text-light/80 hover:text-text-light transition transform hover:scale-110">
                                 <Facebook className="w-6 h-6" />
                             </a>
+                            <a href={CONTACT_INFO.tiktokUrl} target="_blank" rel="noopener noreferrer" 
+                               className="text-text-light/80 hover:text-text-light transition transform hover:scale-110"
+                               aria-label="TikTok"
+                               title="TikTok"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    className="w-6 h-6"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M21 8.25c-1.74.07-3.42-.5-4.72-1.6V15.1c0 3.55-2.89 6.4-6.44 6.4A6.41 6.41 0 0 1 3.4 15.1c0-3.42 2.69-6.22 6.12-6.38v3.51a2.92 2.92 0 0 0-2.55 2.87 2.92 2.92 0 0 0 2.87 2.91 2.92 2.92 0 0 0 2.94-2.91V2.5h3.48c.13 1.19.6 2.3 1.36 3.2A5.9 5.9 0 0 0 21 7.4v.85Z" />
+                                </svg>
+                            </a>
                             <a href={CONTACT_INFO.whatsappUrl} target="_blank" rel="noopener noreferrer" 
                                className="text-text-light/80 hover:text-text-light transition transform hover:scale-110">
                                 <Send className="w-6 h-6" />
