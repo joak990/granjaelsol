@@ -9,6 +9,7 @@ import Contactos from './Components/Contactos'
 import Ofertas from './Components/Ofertas'
 import Testimonios from './Components/Testimonios'
 import ProductosAdicionales from './Components/ProductosAdicionales'
+import MetodosPago from './Components/MetodosPago'
 
 ReactGA.initialize('G-GLJTCBRGXT');
 
@@ -27,6 +28,7 @@ const App = () => {
             <Testimonios />
             <About />
             <Contactos />
+            <MetodosPago />
             <Footer />
         </div>
     );
