@@ -122,11 +122,11 @@ export const carne = [
     {id: 31, image: `${picadaespecial}`, name: "Picada comun", description: "$12900"}]; //
 
 export const cerdo = [
-    {id: 32, image: `${bondiola}`, name: "Bondiola", description: "$10900"},
-    {id: 33, image: `${carre}`, name: "Carre s/ hueso", description: "$10200"},
+    {id: 32, image: `${bondiola}`, name: "Bondiola", description: "$11500"},
+    {id: 33, image: `${carre}`, name: "Carre s/ hueso", description: "$10900"},
     {id: 34, image: `${churrasquito}`, name: "Churrasquito", description: "$14800"},//
-    {id: 35, image: `${matambrito}`, name: "Matambrito", description: "$19300"},
-    {id: 36, image: `${pechito}`, name: "Pechito", description: "$8300"}];//
+    {id: 35, image: `${matambrito}`, name: "Matambrito", description: "$18900"},
+    {id: 36, image: `${pechito}`, name: "Pechito", description: "$8900"}];//
 
 export const pollos = [
     {id: 37, image: `${mila}`, name: "Milanesa de pollo", description: "$8850"},
