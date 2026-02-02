@@ -117,8 +117,8 @@ export const carne = [
     {id: 26, image: `${espinazo}`, name: "Espinazo", description: "$6900"},//
     {id: 27, image: `${tortuguita}`, name: "Tortuguita", description: "$15500"},//
     {id: 28, image: `${faldapuchero}`, name: "Falda puchero", description: "$9200"},//
-    {id: 29, image: `${hamburguesas}`, name: "hamburguesas", description: "$12500"},//
-    {id: 30, image: `${miladecarne}`, name: "Milanesa de carne", description: "$16800"},//
+    {id: 29, image: `${hamburguesas}`, name: "hamburguesas", description: "$15950"},//
+    {id: 30, image: `${miladecarne}`, name: "Milanesa de carne", description: "$18200"},//
     {id: 31, image: `${picadaespecial}`, name: "Picada comun", description: "$12900"}]; //
 
 export const cerdo = [

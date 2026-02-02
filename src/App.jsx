@@ -22,7 +22,6 @@ const App = () => {
         <div>
             <Navbar />
             <Carrousel />
-            <Ofertas />
             <Productos />
             <ProductosAdicionales />
             <Testimonios />
