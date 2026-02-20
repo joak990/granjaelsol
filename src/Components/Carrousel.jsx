@@ -3,12 +3,12 @@ import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { Link } from "react-scroll";
 import logo2 from "../img/foto21.png";
 import logo3 from "../img/foto31.png";
-import logo4 from "../img/foto4.jpg";
+import logo4 from "../img/foto4.jpeg";
 import logo5 from "../img/foto5.jpg";
 import logo6 from "../img/foto6.jpg";
 
 const slides = [
-    { url: logo4, title: "Calidad Familiar desde 2015", subtitle: "Lo mejor esta en Granja el sol.", icon: "🥩" },
+    { url: logo4, title: "", subtitle: "", icon: "" },
     { url: logo2, title: "Precios accesibles", subtitle: "Calidad garantizada, directamente a tu mesa.", icon: "💰" },
     { url: logo3, title: "¡Visítanos Hoy!", subtitle: "Conoce nuestra amplia variedad de cortes.", icon: "🏪" },
     { url: logo5, title: "¡Pedi a Domicilio!", subtitle: "Servicio de Delivery disponible.", icon: "🛵" },
@@ -135,15 +135,6 @@ function Carrousel() {
                                 <p className="text-lg md:text-2xl lg:text-3xl font-body text-text-light drop-shadow-lg max-w-3xl">
                                     {slide.subtitle}
                                 </p>
-
-                                {/* Botón CTA */}
-                                {index === 0 && (
-                                    <Link to="productos" spy={true} smooth={true} offset={-100} duration={500}>
-                                        <button className="mt-8 px-8 md:px-12 py-3 md:py-4 bg-gradient-to-r from-primary to-secondary text-text-light font-bold text-lg md:text-xl rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:from-secondary hover:to-primary cursor-pointer">
-                                            Explorar Productos
-                                        </button>
-                                    </Link>
-                                )}
                             </div>
 
                             {/* Indicador de slide */}
