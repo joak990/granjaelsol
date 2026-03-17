@@ -3,12 +3,10 @@ import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { Link } from "react-scroll";
 import logo2 from "../img/foto21.png";
 import logo3 from "../img/foto31.png";
-import logo4 from "../img/foto4.jpeg";
 import logo5 from "../img/foto5.jpg";
 import logo6 from "../img/foto6.jpg";
 
 const slides = [
-    { url: logo4, title: "", subtitle: "", icon: "" },
     { url: logo2, title: "Precios accesibles", subtitle: "Calidad garantizada, directamente a tu mesa.", icon: "💰" },
     { url: logo3, title: "¡Visítanos Hoy!", subtitle: "Conoce nuestra amplia variedad de cortes.", icon: "🏪" },
     { url: logo5, title: "¡Pedi a Domicilio!", subtitle: "Servicio de Delivery disponible.", icon: "🛵" },
